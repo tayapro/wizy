@@ -1,22 +1,22 @@
-import { removeChance } from "./chance.js";
+import { setLifes, removeLife } from "./life.js";
 
-console.log("Hello");
+// Number of lifes
+let lifeCounter = 6;
 
-// Initial number of chances
-const initial_counter = 6;
-// Current number of chances
-export let counter = initial_counter;
-let check = document.getElementById("chance");
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Hello");
+  setLifes(lifeCounter);
+});
 
+let check = document.getElementById("lifes-button");
 check.addEventListener("click", myFunction);
 
 function myFunction() {
-  removeChance();
-  counter -= 1;
-  document.getElementById("chances").innerHTML = counter;
-  if (counter === 0) {
-    alert("You've used all your attempts.");
-    document.getElementById("chances").innerHTML = initial_counter;
-    counter = initial_counter;
+  lifeCounter -= 1;
+  document.getElementById("lifes-counter").innerHTML = lifeCounter;
+  removeLife();
+  if (lifeCounter === 0) {
+    console.log("game over");
+    check.disabled = true;
   }
 }

@@ -1,0 +1,16 @@
+#life-container {
+  background-color: rgba(0, 255, 255, 0.383);
+  width: 400px;
+  height: 60px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.life {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(0, 8, 255);
+  margin-right: 10px;
+}
