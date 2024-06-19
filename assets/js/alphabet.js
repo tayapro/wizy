@@ -1,10 +1,8 @@
-import { testCharacter, drawTheWord } from "./word.js";
-
 const theAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-export function newAlphabet() {
+export function newAlphabet(onClickLetter) {
   setAlphabetLetters();
-  setAlphabetLettersListener();
+  setAlphabetLettersListener(onClickLetter);
 }
 
 function setAlphabetLetters() {
@@ -20,13 +18,7 @@ function setAlphabetLetters() {
   }
 }
 
-function onClickLetter(event) {
-  console.log("you click letter button", event.target.innerHTML);
-  testCharacter(event.target.innerHTML);
-  drawTheWord();
-}
-
-function setAlphabetLettersListener() {
+function setAlphabetLettersListener(onClickLetter) {
   const letters = document.querySelectorAll(".alphabet-letter");
 
   for (const letter of letters) {

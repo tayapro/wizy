@@ -1,19 +1,25 @@
 import { setLifes, removeLife } from "./life.js";
-import { newWord } from "./word.js";
+import { newWord, testCharacter, drawTheWord } from "./word.js";
 import { newAlphabet } from "./alphabet.js";
 
 // Number of lifes
 let lifeCounter = 6;
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Hello");
+  console.log("New game");
   newGame();
 });
+
+function onClickLetter(event) {
+  console.log("you click letter button", event.target.innerHTML);
+  testCharacter(event.target.innerHTML);
+  drawTheWord();
+}
 
 function newGame() {
   setLifes(lifeCounter);
   newWord();
-  newAlphabet();
+  newAlphabet(onClickLetter);
 }
 
 let check = document.getElementById("lifes-button");
