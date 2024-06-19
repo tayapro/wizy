@@ -5,7 +5,6 @@ export function setLifes(num) {
   for (let i = 0; i < num; i++) {
     const newDiv = document.createElement("div");
     newDiv.className = "life";
-    document.body.appendChild(newDiv);
     container.appendChild(newDiv);
   }
 }

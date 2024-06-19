@@ -1,15 +1,17 @@
 let theWord = "";
+// TODO: theMatchedLetters
 let theMatchedCharacters = new Set();
 
 export function newWord() {
-  theWord = "stipaxa";
+  theWord = "STIPAXA";
   theMatchedCharacters = new Set();
   const container = document.getElementById("letter-container");
+  container.innerHTML = "";
 
-  for (let i = 0; i < theWord.length; i++) {
+  for (const i in theWord) {
     const newDiv = document.createElement("div");
     newDiv.className = "letter";
-    document.body.appendChild(newDiv);
+    newDiv.setAttribute("id", `letter-${i}`);
     container.appendChild(newDiv);
   }
 }
@@ -20,15 +22,19 @@ export function testCharacter(c) {
   }
 
   theMatchedCharacters.add(c);
+
   return true;
 }
 
+/**
+ * Draw the word
+ *
+ */
 export function drawTheWord() {
-  for (let i = 0; i < theWord.length; i++) {
-    if (!theMatchedCharacters.has(theWord[i])) {
-      console.log(i, "*");
-    } else {
-      console.log(i, theWord[i]);
+  for (const i in theWord) {
+    if (theMatchedCharacters.has(theWord[i])) {
+      const letter = document.getElementById(`letter-${i}`);
+      letter.innerHTML = theWord[i];
     }
   }
 }
