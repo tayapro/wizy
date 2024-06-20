@@ -1,10 +1,5 @@
 const theAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-export function newAlphabet(onClickLetter) {
-  setAlphabetLetters();
-  setAlphabetLettersListener(onClickLetter);
-}
-
 function setAlphabetLetters() {
   const container = document.getElementById("alphabet-container");
   container.innerHTML = "";
@@ -23,5 +18,24 @@ function setAlphabetLettersListener(onClickLetter) {
 
   for (const letter of letters) {
     letter.addEventListener("click", onClickLetter);
+  }
+}
+
+export function newAlphabet(onClickLetter) {
+  setAlphabetLetters();
+  setAlphabetLettersListener(onClickLetter);
+}
+
+export function disableAlphabetButton(letter) {
+  const id = `btn-${letter}`;
+  const button = document.getElementById(id);
+  button.disabled = true;
+}
+
+export function disableAllAlphabetButtons() {
+  // TODO: .alphabet-button
+  const letters = document.querySelectorAll(".alphabet-letter");
+  for (const letter of letters) {
+    letter.disabled = true;
   }
 }

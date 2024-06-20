@@ -1,6 +1,10 @@
 import { setLifes, removeLife } from "./life.js";
 import { newWord, testLetter, drawTheWord } from "./word.js";
-import { newAlphabet } from "./alphabet.js";
+import {
+  newAlphabet,
+  disableAlphabetButton,
+  disableAllAlphabetButtons,
+} from "./alphabet.js";
 
 // Number of lifes
 let lifeCounter = 6;
@@ -10,27 +14,34 @@ document.addEventListener("DOMContentLoaded", function () {
   newGame();
 });
 
-function onClickLetter(event) {
-  console.log("you click letter button", event.target.innerHTML);
-  testLetter(event.target.innerHTML);
-  drawTheWord();
-}
-
+/**
+ * Initialization new game
+ */
 function newGame() {
   setLifes(lifeCounter);
   newWord();
   newAlphabet(onClickLetter);
 }
 
-let check = document.getElementById("lifes-button");
-check.addEventListener("click", myFunction);
+/**
+ * Main game logic
+ * @param event
+ */
+function onClickLetter(event) {
+  const letter = event.target.innerHTML;
+  disableAlphabetButton(letter);
 
-function myFunction() {
-  lifeCounter -= 1;
-  document.getElementById("lifes-counter").innerHTML = lifeCounter;
-  removeLife();
+  if (!testLetter(letter)) {
+    lifeCounter -= 1;
+    removeLife();
+  }
+
+  drawTheWord();
+
+  console.log(`lifeCounter = ${lifeCounter}`);
   if (lifeCounter === 0) {
+    disableAllAlphabetButtons();
     console.log("game over");
-    check.disabled = true;
+    // check.disabled = true;
   }
 }
