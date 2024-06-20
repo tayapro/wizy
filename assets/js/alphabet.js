@@ -1,29 +1,29 @@
 const theAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-function setAlphabetLetters() {
+function setAlphabetButtons() {
   const container = document.getElementById("alphabet-container");
   container.innerHTML = "";
 
   for (const letter of theAlphabet) {
     const newButton = document.createElement("button");
-    newButton.setAttribute("class", "alphabet-letter");
+    newButton.setAttribute("class", "alphabet-button");
     newButton.setAttribute("id", `btn-${letter}`);
     newButton.innerHTML = letter;
     container.appendChild(newButton);
   }
 }
 
-function setAlphabetLettersListener(onClickLetter) {
-  const letters = document.querySelectorAll(".alphabet-letter");
+function setAlphabetButtonsListener(onClickLetter) {
+  const buttons = document.querySelectorAll(".alphabet-button");
 
-  for (const letter of letters) {
-    letter.addEventListener("click", onClickLetter);
+  for (const button of buttons) {
+    button.addEventListener("click", onClickLetter);
   }
 }
 
 export function newAlphabet(onClickLetter) {
-  setAlphabetLetters();
-  setAlphabetLettersListener(onClickLetter);
+  setAlphabetButtons();
+  setAlphabetButtonsListener(onClickLetter);
 }
 
 export function disableAlphabetButton(letter) {
@@ -33,9 +33,8 @@ export function disableAlphabetButton(letter) {
 }
 
 export function disableAllAlphabetButtons() {
-  // TODO: .alphabet-button
-  const letters = document.querySelectorAll(".alphabet-letter");
-  for (const letter of letters) {
-    letter.disabled = true;
+  const buttons = document.querySelectorAll(".alphabet-button");
+  for (const button of buttons) {
+    button.disabled = true;
   }
 }
