@@ -29,11 +29,20 @@ export function testLetter(c) {
  * Draw the word
  *
  */
-export function drawTheWord() {
+export function drawWord() {
   for (const i in theWord) {
     if (theMatchedLetters.has(theWord[i])) {
       const letter = document.getElementById(`letter-${i}`);
       letter.innerHTML = theWord[i];
     }
   }
+}
+
+export function isWordSolved() {
+  for (const letter of theWord) {
+    if (!theMatchedLetters.has(letter)) {
+      return false;
+    }
+  }
+  return true;
 }

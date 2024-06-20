@@ -1,5 +1,5 @@
 import { setLifes, removeLife } from "./life.js";
-import { newWord, testLetter, drawTheWord } from "./word.js";
+import { newWord, testLetter, drawWord, isWordSolved } from "./word.js";
 import {
   newAlphabet,
   disableAlphabetButton,
@@ -36,12 +36,15 @@ function onClickLetter(event) {
     removeLife();
   }
 
-  drawTheWord();
+  drawWord();
 
   console.log(`lifeCounter = ${lifeCounter}`);
   if (lifeCounter === 0) {
     disableAllAlphabetButtons();
     console.log("game over");
     // check.disabled = true;
+  } else if (isWordSolved()) {
+    disableAllAlphabetButtons();
+    console.log("victory");
   }
 }
