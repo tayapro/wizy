@@ -1,5 +1,5 @@
 import { setLifes, removeLife } from "./life.js";
-import { newWord, testCharacter, drawTheWord } from "./word.js";
+import { newWord, testLetter, drawTheWord } from "./word.js";
 import { newAlphabet } from "./alphabet.js";
 
 // Number of lifes
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function onClickLetter(event) {
   console.log("you click letter button", event.target.innerHTML);
-  testCharacter(event.target.innerHTML);
+  testLetter(event.target.innerHTML);
   drawTheWord();
 }
 

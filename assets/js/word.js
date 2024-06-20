@@ -1,10 +1,9 @@
 let theWord = "";
-// TODO: theMatchedLetters
-let theMatchedCharacters = new Set();
+let theMatchedLetters = new Set();
 
 export function newWord() {
   theWord = "STIPAXA";
-  theMatchedCharacters = new Set();
+  theMatchedLetters = new Set();
   const container = document.getElementById("letter-container");
   container.innerHTML = "";
 
@@ -16,12 +15,12 @@ export function newWord() {
   }
 }
 
-export function testCharacter(c) {
+export function testLetter(c) {
   if (theWord.search(c) === -1) {
     return false;
   }
 
-  theMatchedCharacters.add(c);
+  theMatchedLetters.add(c);
 
   return true;
 }
@@ -32,7 +31,7 @@ export function testCharacter(c) {
  */
 export function drawTheWord() {
   for (const i in theWord) {
-    if (theMatchedCharacters.has(theWord[i])) {
+    if (theMatchedLetters.has(theWord[i])) {
       const letter = document.getElementById(`letter-${i}`);
       letter.innerHTML = theWord[i];
     }
