@@ -53,3 +53,12 @@
   border: 1px solid orange;
   margin: 5px;
 }
+
+#game-outcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 255, 0, 0.568);
+  padding: 1rem;
+  text-align: center;
+}

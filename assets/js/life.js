@@ -1,6 +1,8 @@
 // setLifes(maxLifes)
 export function setLifes(num) {
+  console.log("setLifes:", num);
   const container = document.getElementById("life-container");
+  container.innerHTML = "";
 
   for (let i = 0; i < num; i++) {
     const newDiv = document.createElement("div");

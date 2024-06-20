@@ -2,7 +2,7 @@ let theWord = "";
 let theMatchedLetters = new Set();
 
 export function newWord() {
-  theWord = "STIPAXA";
+  theWord = "FOO";
   theMatchedLetters = new Set();
   const container = document.getElementById("letter-container");
   container.innerHTML = "";
