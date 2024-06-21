@@ -9,6 +9,7 @@ import { getScoreTier } from "./scrore.js";
 
 const maxLifes = 6;
 const maxTime = 60;
+let complexity;
 let lifeCounter;
 let startGameTime;
 
@@ -21,11 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
  * Initialization new game
  */
 function newGame() {
+  complexity = 2;
   lifeCounter = maxLifes;
   startGameTime = Date.now();
+
   setLifes(lifeCounter);
-  newWord();
+  newWord(complexity);
   newAlphabet(onClickLetter);
+  // console.log(pickRandomWord(["HELLO", "GOODBUY"]));
 
   const gameOutcomeContainer = document.getElementById(
     "game-outcome-container"
@@ -33,8 +37,6 @@ function newGame() {
   gameOutcomeContainer.style.display = "none";
   const lifeContainer = document.getElementById("life-container");
   lifeContainer.style.display = "flex";
-
-  // console.log("Score (main) = ", getScoreTier(1, 6, 118, 120, 2));
 }
 
 function gameOver(isVictory) {
