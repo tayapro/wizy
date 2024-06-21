@@ -2,7 +2,7 @@ let theWord = "";
 let theMatchedLetters = new Set();
 
 export function newWord() {
-  theWord = "FOO";
+  theWord = "OFFICE";
   theMatchedLetters = new Set();
   const container = document.getElementById("letter-container");
   container.innerHTML = "";

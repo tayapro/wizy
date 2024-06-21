@@ -5,9 +5,12 @@ import {
   disableAlphabetButton,
   disableAllAlphabetButtons,
 } from "./alphabet.js";
+import { getScoreTier } from "./scrore.js";
 
-// Number of lifes
+const maxLifes = 6;
+const maxTime = 60;
 let lifeCounter;
+let startGameTime;
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("New game");
@@ -18,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * Initialization new game
  */
 function newGame() {
-  lifeCounter = 6;
+  lifeCounter = maxLifes;
+  startGameTime = Date.now();
   setLifes(lifeCounter);
   newWord();
   newAlphabet(onClickLetter);
@@ -29,6 +33,8 @@ function newGame() {
   gameOutcomeContainer.style.display = "none";
   const lifeContainer = document.getElementById("life-container");
   lifeContainer.style.display = "flex";
+
+  // console.log("Score (main) = ", getScoreTier(1, 6, 118, 120, 2));
 }
 
 function gameOver(isVictory) {
@@ -48,8 +54,17 @@ function gameOver(isVictory) {
   }
 
   // Set score
+  const totalTime = (Date.now() - startGameTime) / 1000;
+  const tier = getScoreTier(
+    maxLifes - lifeCounter,
+    maxLifes,
+    totalTime,
+    maxTime,
+    1
+  );
+  console.log("Tier = ", tier);
   const score = document.getElementById("game-score");
-  score.innerHTML = "Score: " + lifeCounter;
+  score.innerHTML = "Stars: " + tier;
 
   // Set onclick for new game button
   // This will attach click event the button only once,
@@ -59,6 +74,7 @@ function gameOver(isVictory) {
 
   // Hide life bar in case of loss
   if (!isVictory) {
+    const lifeContainer = document.getElementById("life-container");
     lifeContainer.style.display = "none";
   }
 }
