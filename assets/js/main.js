@@ -6,6 +6,9 @@ import {
   disableAllAlphabetButtons,
 } from "./alphabet.js";
 import { getScoreTier } from "./scrore.js";
+import { newAnimation } from "./animate.js";
+
+newAnimation();
 
 const maxLifes = 6;
 const maxTime = 60;
