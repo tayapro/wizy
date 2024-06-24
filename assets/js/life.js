@@ -7,6 +7,9 @@ export function setLifes(num) {
   for (let i = 0; i < num; i++) {
     const newDiv = document.createElement("div");
     newDiv.className = "life";
+    newDiv.style.backgroundImage = `url(./assets/images/summer-elements/${i}.webp)`;
+    newDiv.style.backgroundSize = "contain";
+    newDiv.style.backgroundRepeat = "no-repeat";
     container.appendChild(newDiv);
   }
 }

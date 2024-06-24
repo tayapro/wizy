@@ -8,10 +8,10 @@ import {
 import { getScoreTier } from "./scrore.js";
 import { newAnimation } from "./animate.js";
 
-newAnimation();
+// newAnimation();
 
-const maxLifes = 6;
-const maxTime = 60;
+const maxLifes = 10;
+const maxTime = 120;
 let complexity;
 let lifeCounter;
 let startGameTime;
@@ -39,7 +39,7 @@ function newGame() {
   );
   gameOutcomeContainer.style.display = "none";
   const lifeContainer = document.getElementById("life-container");
-  lifeContainer.style.display = "flex";
+  lifeContainer.style.display = "grid";
 }
 
 function gameOver(isVictory) {

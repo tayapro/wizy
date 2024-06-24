@@ -7,19 +7,31 @@
 }
 
 #life-container {
-  background-color: rgba(0, 255, 255, 0.383);
+  /* display: flex; */
+  /* width: fit-content; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   padding: 1rem;
   margin-bottom: 0.5rem;
-  display: flex;
-  width: fit-content;
 }
 
 .life {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgb(0, 8, 255);
-  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+
+  /* Square shape */
+  background: linear-gradient(145deg, #cacccf, #ffffff);
+  border-radius: 15%;
+  box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff;
+
+  /* Circle shape*/
+  /* background: linear-gradient(145deg, #cacccf, #ffffff);
+  border-radius: 100%;
+  box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff; */
 }
 
 #letter-container {
