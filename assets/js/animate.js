@@ -18,19 +18,33 @@ export function newAnimation() {
   //   });
 }
 
-// elementId must have CSS transition property, overwise the transitionend
+// (1) element must have CSS "transition" property, overwise the transitionend
 // event will never happen
-export function animate(elementId, animationName, cb) {
-  console.log("Flipping....");
-  const animateDiv = document.getElementById(elementId);
-  animateDiv.classList.add(animationName);
-  animateDiv.addEventListener("transitionend", function transitionEnd() {
-    console.log("flipBack...");
-    animateDiv.removeEventListener("transitionend", transitionEnd);
+// (2) animationName CSS class must have "transform" property
+export function animate(element, animationName, middleCallBack, endCallBack) {
+  element.classList.add(animationName);
+
+  element.addEventListener("transitionend", function transitionEnd(e) {
+    // Make sure we only call this only once per transition
+    // And use transform property for it
+    // We need this because transitionend event is called for every transiting preperty
+    if (e.propertyName !== "transform") return;
+
+    // This flag is true when the first transition ends
+    // And false when the second transition ends
+    // We consider the moment when the first transition ends
+    // as the middle of the animation
+    const isInTheMiddle = element.classList.contains(animationName);
+    if (!isInTheMiddle) {
+      element.removeEventListener("transitionend", transitionEnd);
+    }
 
     // Callback function in the middle of animation
-    if (cb) cb(animateDiv);
+    if (middleCallBack && isInTheMiddle) middleCallBack(element);
 
-    animateDiv.classList.remove(animationName);
+    // Callback function in the end of animation
+    if (endCallBack && !isInTheMiddle) endCallBack(element);
+
+    element.classList.remove(animationName);
   });
 }

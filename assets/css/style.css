@@ -26,7 +26,8 @@
   /* Square shape */
   background: linear-gradient(145deg, #cacccf, #ffffff);
   border-radius: 15%;
-  box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff;
+  box-shadow: 9.91px 9.91px 15px #d9dade,
+    -9.91px -9.91px 15px rgba(255, 255, 255, 0.638);
 
   /* Circle shape*/
   /* background: linear-gradient(145deg, #cacccf, #ffffff);
@@ -84,9 +85,11 @@
   gap: 20px;
 }
 
-#test-animation {
+.transition-in-out {
   /* transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6); */
   transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+  /* transition: transform 2.3s cubic-bezier(0.87, 0, 0.13, 1),
+    opacity 2.3s cubic-bezier(0.87, 0, 0.13, 1); */
 }
 
 .flip {

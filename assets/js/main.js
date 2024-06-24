@@ -1,4 +1,4 @@
-import { setLifes, removeLife } from "./life.js";
+import { setLifes, removeLife, getLifeCount } from "./life.js";
 import { newWord, testLetter, drawWord, isWordSolved } from "./word.js";
 import {
   newAlphabet,
@@ -6,14 +6,10 @@ import {
   disableAllAlphabetButtons,
 } from "./alphabet.js";
 import { getScoreTier } from "./scrore.js";
-import { newAnimation } from "./animate.js";
-
-// newAnimation();
 
 const maxLifes = 10;
 const maxTime = 120;
 let complexity;
-let lifeCounter;
 let startGameTime;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -25,14 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
  * Initialization new game
  */
 function newGame() {
-  complexity = 2;
-  lifeCounter = maxLifes;
+  complexity = 0;
   startGameTime = Date.now();
 
-  setLifes(lifeCounter);
+  setLifes(maxLifes);
   newWord(complexity);
   newAlphabet(onClickLetter);
-  // console.log(pickRandomWord(["HELLO", "GOODBUY"]));
 
   const gameOutcomeContainer = document.getElementById(
     "game-outcome-container"
@@ -54,22 +48,23 @@ function gameOver(isVictory) {
   const message = document.getElementById("game-outcome");
   if (isVictory) {
     message.innerHTML = "Congrats!";
+    // Set score
+    const totalTime = (Date.now() - startGameTime) / 1000;
+    const tier = getScoreTier(
+      maxLifes - getLifeCount(),
+      maxLifes,
+      totalTime,
+      maxTime,
+      1
+    );
+    console.log("Tier = ", tier);
+    const score = document.getElementById("game-score");
+    score.innerHTML = "Stars: " + tier;
   } else {
     message.innerHTML = "Ooops, try again...";
+    const score = document.getElementById("game-score");
+    score.innerHTML = "";
   }
-
-  // Set score
-  const totalTime = (Date.now() - startGameTime) / 1000;
-  const tier = getScoreTier(
-    maxLifes - lifeCounter,
-    maxLifes,
-    totalTime,
-    maxTime,
-    1
-  );
-  console.log("Tier = ", tier);
-  const score = document.getElementById("game-score");
-  score.innerHTML = "Stars: " + tier;
 
   // Set onclick for new game button
   // This will attach click event the button only once,
@@ -78,10 +73,10 @@ function gameOver(isVictory) {
   newGameButton.addEventListener("click", newGame);
 
   // Hide life bar in case of loss
-  if (!isVictory) {
-    const lifeContainer = document.getElementById("life-container");
-    lifeContainer.style.display = "none";
-  }
+  // if (!isVictory) {
+  //   const lifeContainer = document.getElementById("life-container");
+  //   lifeContainer.style.display = "none";
+  // }
 }
 
 /**
@@ -93,20 +88,18 @@ function onClickLetter(event) {
   disableAlphabetButton(letter);
 
   if (!testLetter(letter)) {
-    lifeCounter -= 1;
-    removeLife();
+    removeLife(() => {
+      disableAllAlphabetButtons();
+      gameOver(false);
+      console.log("game over");
+    });
   }
 
-  drawWord();
-
-  console.log(`lifeCounter = ${lifeCounter}`);
-  if (lifeCounter === 0) {
-    disableAllAlphabetButtons();
-    gameOver(false);
-    console.log("game over");
-  } else if (isWordSolved()) {
+  if (isWordSolved()) {
     disableAllAlphabetButtons();
     gameOver(true);
     console.log("victory");
   }
+
+  drawWord();
 }
