@@ -47,7 +47,7 @@ export function removeLife(onGameOver) {
         element.style.width = "100px";
         element.style.height = "100px";
         element.style.backgroundImage = "none";
-        element.style.backgroundColor = "pink";
+        element.style.backgroundColor = "#418c9f";
       },
       // End animation callback
       () => {
