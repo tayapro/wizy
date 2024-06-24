@@ -1,23 +1,13 @@
-export function newAnimation() {
-  const trigger = document.getElementById("button-animation");
-  trigger.addEventListener("click", () => {
-    animate("test-animation", "swirle", (element) => {
-      element.innerHTML = "";
-      element.style.width = "100px";
-      element.style.height = "100px";
-      element.style.backgroundColor = "pink";
-    });
-  });
-  //   animate.addEventListener("click", () => {
-  //     flip("test-animation", () => {
-  //       console.log("callback hell");
-  //       const animateImg = document.getElementById("img-animate");
-  //       animateImg.src = "assets/images/dog.png";
-  //       animateImg.style.backgroundColor = "grey";
-  //     });
-  //   });
-}
-
+// Animation consists of two transitions:
+// first - initial state to middle, which is triggered by assigning animationName CSS class
+// second - middle stage to initial state, which is triggered by removing animationName CSS class
+//
+// In the middle of animation i.e. when the first transit finishes, it calls middleCallBack,
+// where DOM element's properties can be changed, as background and etc
+//
+// In the end of animation i.e. when the second transit finishes, it calls endCallBack
+//
+// Assumptions:
 // (1) element must have CSS "transition" property, overwise the transitionend
 // event will never happen
 // (2) animationName CSS class must have "transform" property
