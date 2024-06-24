@@ -7,8 +7,6 @@
 }
 
 #life-container {
-  /* display: flex; */
-  /* width: fit-content; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -55,8 +53,121 @@
   background-color: rgba(236, 177, 237, 0.383);
   padding: 1rem;
   margin-bottom: 0.5rem;
-  display: flex;
-  width: 100%;
+  /* display: flex;
+  width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas:
+    "alphabet-btnA alphabet-btnB alphabet-btnC alphabet-btnD alphabet-btnE alphabet-btnF alphabet-btnG alphabet-btnH alphabet-btnI alphabet-btnJ"
+    "alphabet-btnK alphabet-btnL alphabet-btnM alphabet-btnN alphabet-btnO alphabet-btnP alphabet-btnQ alphabet-btnR alphabet-btnS alphabet-btnT"
+    ". . alphabet-btnU alphabet-btnV alphabet-btnW alphabet-btnX alphabet-btnY alphabet-btnZ . .";
+}
+
+#btn-A {
+  grid-area: alphabet-btnA;
+}
+
+#btn-B {
+  grid-area: alphabet-btnB;
+}
+
+#btn-C {
+  grid-area: alphabet-btnC;
+}
+
+#btn-D {
+  grid-area: alphabet-btnD;
+}
+
+#btn-E {
+  grid-area: alphabet-btnE;
+}
+
+#btn-F {
+  grid-area: alphabet-btnF;
+}
+
+#btn-G {
+  grid-area: alphabet-btnG;
+}
+
+#btn-H {
+  grid-area: alphabet-btnH;
+}
+
+#btn-I {
+  grid-area: alphabet-btnI;
+}
+
+#btn-J {
+  grid-area: alphabet-btnJ;
+}
+
+#btn-K {
+  grid-area: alphabet-btnK;
+}
+
+#btn-L {
+  grid-area: alphabet-btnL;
+}
+
+#btn-M {
+  grid-area: alphabet-btnM;
+}
+
+#btn-N {
+  grid-area: alphabet-btnN;
+}
+
+#btn-O {
+  grid-area: alphabet-btnO;
+}
+
+#btn-P {
+  grid-area: alphabet-btnP;
+}
+
+#btn-Q {
+  grid-area: alphabet-btnQ;
+}
+
+#btn-R {
+  grid-area: alphabet-btnR;
+}
+
+#btn-S {
+  grid-area: alphabet-btnS;
+}
+
+#btn-T {
+  grid-area: alphabet-btnT;
+}
+
+#btn-U {
+  grid-area: alphabet-btnU;
+}
+
+#btn-V {
+  grid-area: alphabet-btnV;
+}
+
+#btn-W {
+  grid-area: alphabet-btnW;
+}
+
+#btn-X {
+  grid-area: alphabet-btnX;
+}
+
+#btn-Y {
+  grid-area: alphabet-btnY;
+}
+
+#btn-Z {
+  grid-area: alphabet-btnZ;
 }
 
 .alphabet-button {
