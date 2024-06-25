@@ -29,6 +29,8 @@ export function newAlphabet(onClickLetter) {
 export function disableAlphabetButton(letter) {
   const id = `btn-${letter}`;
   const button = document.getElementById(id);
+  button.style.color = "#50a3c0";
+  button.style.transform = "none";
   button.disabled = true;
 }
 

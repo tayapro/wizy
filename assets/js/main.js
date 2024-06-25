@@ -44,7 +44,6 @@ function gameOver(isVictory) {
   gameOutcomeContainer.style.display = "unset";
 
   // Set outcome message
-  //TODO: game-outcome
   const message = document.getElementById("game-outcome");
   if (isVictory) {
     message.innerHTML = "Congrats!";
@@ -71,12 +70,6 @@ function gameOver(isVictory) {
   // regardless the fact it is called multiple times
   const newGameButton = document.getElementById("btn-new-game");
   newGameButton.addEventListener("click", newGame);
-
-  // Hide life bar in case of loss
-  // if (!isVictory) {
-  //   const lifeContainer = document.getElementById("life-container");
-  //   lifeContainer.style.display = "none";
-  // }
 }
 
 /**

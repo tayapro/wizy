@@ -35,7 +35,8 @@
   /* Square shape */
   background: linear-gradient(145deg, #ffffff, #c1c3c6);
   border-radius: 15%;
-  box-shadow: 5px 5px 8px #3c798f, -5px -5px 8px #2e6072;
+  box-shadow: 5px 5px 8px #346d82, -5px -5px 8px #42849c;
+  /* box-shadow: 5px 5px 8px rgb(80, 163, 192), -5px -5px 8px rgb(96, 195, 230); */
 
   /* Circle shape*/
   /* background: linear-gradient(145deg, #cacccf, #ffffff);
@@ -184,7 +185,8 @@
 }
 
 .alphabet-button {
-  all: unset;
+  border: none;
+  background-color: #58b3d3;
   width: 40px;
   height: 40px;
   margin: 5px;
@@ -192,7 +194,8 @@
   color: #d6f1fa;
   font-weight: 800;
   border-radius: 15%;
-  box-shadow: 9.91px 9.91px 15px #50a3c0, -9.91px -9.91px 15px #60c3e6;
+  box-shadow: 9.91px 9.91px 15px rgb(80, 163, 192),
+    -9.91px -9.91px 15px rgb(96, 195, 230);
 }
 
 .alphabet-button:active {
