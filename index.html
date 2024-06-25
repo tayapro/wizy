@@ -5,16 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/main.js" defer></script>
-    <title>Document</title>
+    <title>WIZY</title>
+    <meta
+      name="description"
+      content="Embark on an exciting adventure with WIZY Hangman game, the ultimate word-guessing game 
+              with common topics.
+              Perfect for all ages, our game combines the classic Hangman experience with the thrill 
+              of collecting vacation essentials."
+    />
+    <meta
+      name="keywords"
+      content="wizy, hangman, game, vacation, fun, Ireland"
+    />
   </head>
   <body>
-    <p>LANDING PAGE</p>
     <!-- Header section with logo WIZY and links to *Start new game*, *Rules*, *Champions table* pages -->
     <!-- Main section with background image, tagline like *Hey, do you want to play a game?* and form to register  -->
-    <!-- Footer (?) -->
 
-    <a href="rules.html">START</a>
+    <!-- Header -->
+    <header>
+      <a href="index.html">
+        <div id="logo">
+          <!-- <img src="assets/images/logo.webp" alt="Hepy logo"> -->
+          <h2>WIZY</h2>
+        </div>
+      </a>
+      <input type="checkbox" id="resp-menu" name="resp-menu" />
+      <label for="resp-menu" class="resp-menu-label">
+        <i class="fa-solid fa-bars" id="resp-menu-icon"></i>
+      </label>
+      <nav id="menu-list">
+        <ul id="menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="rules.html">Game rules</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="screen-container"></div>
+    <!-- Main content -->
+    <main>
+      <!-- Welcome section with slogan-->
+      <section id="welcome-section-sm">
+        <div class="slogan">
+          <h2>READY FOR VACATION?</h2>
+          <p>Lets play and see where you going</p>
+          <a class="rules-button" href="rules.html">PLAY</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Font Awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/32c1244c27.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

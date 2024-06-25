@@ -8,6 +8,7 @@ function setAlphabetButtons() {
     const newButton = document.createElement("button");
     newButton.setAttribute("class", "alphabet-button");
     newButton.setAttribute("id", `btn-${letter}`);
+    newButton.setAttribute("grid-area", `alphabet-btn${letter}`);
     newButton.innerHTML = letter;
     container.appendChild(newButton);
   }
