@@ -38,18 +38,42 @@
     <script type="module" src="assets/js/main.js" defer></script>
   </head>
   <body>
-    <div id="main-game-container">
-      <div id="life-container"></div>
-      <div id="letter-container"></div>
-      <div id="alphabet-container"></div>
+    <!-- Header -->
+    <header>
+      <a href="index.html">
+        <div id="logo">
+          <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
+          <h2>WIZY</h2>
+        </div>
+      </a>
+      <input type="checkbox" id="resp-menu" name="resp-menu" />
+      <label for="resp-menu" class="resp-menu-label">
+        <i class="fa-solid fa-bars" id="resp-menu-icon"></i>
+      </label>
+      <nav id="menu-list">
+        <ul id="menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="rules.html">Game rules</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div id="game-outcome-container">
-        <p id="game-outcome"></p>
-        <p id="game-score"></p>
-        <button id="btn-new-game">New game</button>
+    <!-- Main content -->
+    <main>
+      <div id="main-game-container">
+        <div id="life-container"></div>
+        <div id="letter-container"></div>
+        <div id="alphabet-container"></div>
+
+        <div id="game-outcome-container">
+          <p id="game-outcome"></p>
+          <p id="game-score"></p>
+          <button id="btn-new-game">New game</button>
+        </div>
+
+        <span id="alert-message"></span>
       </div>
-
-      <span id="alert-message"></span>
-    </div>
+    </main>
   </body>
 </html>
