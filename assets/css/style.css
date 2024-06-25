@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap");
 
 * {
   padding: 0;
@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* font-family: "Varela Round", sans-serif; */
 }
 
 header {
@@ -21,29 +20,22 @@ header {
   justify-content: space-between;
   width: 100%;
   z-index: 100;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(59, 59, 59);
   background-color: rgba(251, 251, 251, 0.38);
   padding: 1rem 1.5rem;
   border-bottom: 1px solid rgba(57, 57, 57, 0.2);
 }
 
 #logo {
-  color: #ffffff;
-  text-transform: uppercase;
-  background: #2a9d8f;
-  background: linear-gradient(to right, #2a9d8f 0%, #e9c46a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #25525d;
   display: flex;
   align-items: flex-end;
   position: relative;
 }
 
 #logo > h2 {
-  font-size: 2.5rem;
+  font-size: 300%;
   line-height: 1;
-  padding: 0;
 }
 
 #logo > img {
@@ -54,7 +46,7 @@ header {
 }
 
 #resp-menu-icon {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(59, 59, 59);
 }
 
 header a,
@@ -76,11 +68,11 @@ header a,
 
 #menu a:hover {
   cursor: pointer;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(59, 59, 59, 0.9);
 }
 
 .active {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid rgba(59, 59, 59, 0.9);
 }
 
 #menu-list {
@@ -89,8 +81,8 @@ header a,
   width: 100%;
   top: 100%;
   left: 0%;
-  color: rgba(255, 255, 255, 0.9);
-  background-color: #3b3b3b;
+  color: rgb(59, 59, 59);
+  /* background-color: #3b3b3b; */
   border-bottom: 1px solid rgba(57, 57, 57, 0.2);
 }
 
@@ -99,7 +91,8 @@ header a,
   height: 100dvh;
   justify-content: flex-end;
   padding-right: 1.5rem;
-  background-color: #3b3b3b7d;
+  /* background-color: rgba(59, 59, 59, 0.2); */
+  background-color: (251, 251, 251, 0.2);
 }
 
 #resp-menu {
@@ -384,4 +377,26 @@ main {
 .swirle {
   transform: rotate(90deg) scale(0);
   opacity: 0;
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+  /* Header */
+  #menu-list {
+    border: none;
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 0.8rem;
+    margin: auto 0;
+  }
+
+  #menu {
+    display: flex;
+  }
+
+  .resp-menu-label {
+    display: none;
+  }
 }
