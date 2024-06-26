@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js" defer></script>
     <title>WIZY</title>
     <meta
       name="description"
@@ -36,21 +38,62 @@
     />
   </head>
   <body>
-    <p>QUIZ RULES PAGE</p>
-    <!-- 10 incorrect guesses in hangman game -->
-    <span>
-      - Start the Game: Choose an online Hangman game and start a new round. The
-      game will randomly select a word for you to guess, and you'll start with
-      10 donuts. - Guess a Letter: Click or type a letter you think might be in
-      the word. If your guess is correct, the game will reveal the letter in the
-      blanks. - Lose a Donut for Wrong Guesses: If your guess is wrong, one
-      donut disappears. Keep guessing letters! - Track Your Progress: Continue
-      guessing letters to fill in the word. Each incorrect guess removes another
-      donut. Win or Lose: If you guess the word before all 11 donuts disappear,
-      you win! If all the donuts are gone before you guess the word, you lose.
-      Try again and don't lose your donuts!
-    </span>
+    <!-- Header -->
+    <header>
+      <a href="index.html">
+        <div id="logo">
+          <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
+          <h2>WIZY</h2>
+        </div>
+      </a>
+      <input type="checkbox" id="responsive-menu" name="responsive-menu" />
+      <label for="responsive-menu" class="responsive-menu-label">
+        <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
+      </label>
+      <nav id="menu-list">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rules.html" class="active">Game rules</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <a href="game.html">START</a>
+    <!-- Main content -->
+    <main>
+      <div id="main-rules-container">
+        <h2>GAME RULES</h2>
+        <div id="rules-container">
+          <ul id="rules-list">
+            <li>
+              In this game, a word will be chosen for you to guess randomly, and
+              you'll begin with 10 vacation items.
+            </li>
+            <li>
+              Click on a letter that you think might be in the word. If your
+              guess is correct, the game will reveal the letter in the blanks.
+              If not, you will lose one vacation item.
+            </li>
+            <li>
+              Continue guessing letters to fill in the word. Each incorrect
+              guess removes another item.
+            </li>
+          </ul>
+          <p class="rules-call">
+            Win or Lose: If you can guess the word before you lose all 10
+            vacation items, then you win! If all the items are gone before you
+            guess the word, then you lose.
+          </p>
+          <p class="rules-call">Try again and don't lose your vacation!</p>
+        </div>
+
+        <a class="start-game-button" href="game.html">Let's play!</a>
+      </div>
+    </main>
+    <!-- Font Awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/32c1244c27.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
