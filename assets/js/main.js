@@ -5,7 +5,7 @@ import {
   disableAlphabetButton,
   disableAllAlphabetButtons,
 } from "./alphabet.js";
-import { getScoreTier } from "./scrore.js";
+import { getScoreTier } from "./score.js";
 
 const maxLifes = 10;
 const maxTime = 120;

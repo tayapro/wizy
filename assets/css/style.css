@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap");
 
+:root {
+  --primary-color: rgb(55, 161, 150);
+  --primary-color-8: rgba(55, 161, 150, 0.8);
+  --secondary-color: rgb(251, 251, 251);
+  --secondary-color-2: rgba(251, 251, 251, 0.2);
+  --secondary-color-4: rgba(251, 251, 251, 0.4);
+  --secondary-color-6: rgba(251, 251, 251, 0.6);
+  --font-family: "Varela Round", sans-serif;
+  --text-color: rgba(59, 59, 59, 0.9);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Varela Round", sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
@@ -24,8 +35,8 @@ header {
   justify-content: space-between;
   width: 100%;
   z-index: 100;
-  color: rgb(59, 59, 59);
-  background-color: rgba(251, 251, 251, 0.38);
+  color: var(--text-color);
+  background-color: var(--secondary-color-4);
   padding: 1rem 1.5rem;
   border-bottom: 1px solid rgba(57, 57, 57, 0.2);
 }
@@ -50,7 +61,7 @@ header {
 }
 
 #resp-menu-icon {
-  color: rgb(59, 59, 59);
+  color: var(--text-color);
 }
 
 header a,
@@ -72,11 +83,11 @@ header a,
 
 #menu a:hover {
   cursor: pointer;
-  border-bottom: 2px solid rgba(59, 59, 59, 0.9);
+  border-bottom: 2px solid var(--text-color);
 }
 
 .active {
-  border-bottom: 2px solid rgba(59, 59, 59, 0.9);
+  border-bottom: 2px solid var(--text-color);
 }
 
 #menu-list {
@@ -85,8 +96,7 @@ header a,
   width: 100%;
   top: 100%;
   left: 0%;
-  color: rgb(59, 59, 59);
-  /* background-color: #3b3b3b; */
+  color: var(--text-color);
   border-bottom: 1px solid rgba(57, 57, 57, 0.2);
 }
 
@@ -95,8 +105,7 @@ header a,
   height: 100dvh;
   justify-content: flex-end;
   padding-right: 1.5rem;
-  /* background-color: rgba(59, 59, 59, 0.2); */
-  background-color: (251, 251, 251, 0.2);
+  background-color: var(--secondary-color-2);
 }
 
 #resp-menu {
@@ -115,7 +124,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  background-color: rgba(55, 161, 150);
+  background-color: var(--primary-color);
 }
 
 /* Landing page */
@@ -155,7 +164,7 @@ main {
   align-items: center;
   margin-top: 90px;
   overflow-y: hidden;
-  background-color: rgba(55, 161, 150, 0.8);
+  background-color: var(--primary-color-8);
 }
 
 #life-container {
@@ -180,7 +189,7 @@ main {
 }
 
 #letter-container {
-  background-color: rgba(251, 251, 251, 0.571);
+  background-color: var(--secondary-color-6);
   padding: 1rem;
   margin-bottom: 0.5rem;
   display: flex;
@@ -217,7 +226,7 @@ main {
 
 .alphabet-button {
   border: none;
-  background-color: rgba(55, 161, 150, 1);
+  background-color: var(--primary-color);
   width: 40px;
   height: 40px;
   margin: 5px;
