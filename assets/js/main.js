@@ -31,9 +31,7 @@ function newGame() {
   const gameOutcomeContainer = document.getElementById(
     "game-outcome-container"
   );
-  gameOutcomeContainer.style.display = "none";
-  const lifeContainer = document.getElementById("life-container");
-  lifeContainer.style.display = "grid";
+  gameOutcomeContainer.classList.add("hidden");
 }
 
 function gameOver(isVictory) {
@@ -41,7 +39,7 @@ function gameOver(isVictory) {
   const gameOutcomeContainer = document.getElementById(
     "game-outcome-container"
   );
-  gameOutcomeContainer.style.display = "unset";
+  gameOutcomeContainer.classList.remove("hidden");
 
   // Set outcome message
   const message = document.getElementById("game-outcome");

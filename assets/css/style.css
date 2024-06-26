@@ -13,6 +13,10 @@ body {
   min-height: 100vh;
 }
 
+.hidden {
+  display: none !important;
+}
+
 header {
   display: flex;
   position: fixed;
