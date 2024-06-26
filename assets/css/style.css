@@ -161,7 +161,7 @@ main {
 /* Rules page */
 #main-rules-container {
   position: relative;
-  background: url("../images/rules.webp") no-repeat center bottom / cover;
+  background: url("../images/rules2.webp") no-repeat center center / cover;
   height: 100dvh;
   width: 100%;
   padding-top: 50px;
@@ -180,7 +180,7 @@ main {
   max-width: 600px;
   margin: 0 5rem;
   padding: 1.5rem;
-  background-color: var(--secondary-color-2);
+  background-color: var(--secondary-color-4);
   border-radius: 40px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--secondary-color-4);
@@ -222,6 +222,19 @@ main {
 }
 
 /* Game page */
+.custom-header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
 #main-game-container {
   display: flex;
   flex-direction: column;
@@ -230,7 +243,7 @@ main {
   height: 100dvh;
   overflow-y: hidden;
   background-color: var(--primary-color-8);
-  background: url("../images/rules.webp") no-repeat center bottom / cover;
+  background: url("../images/rules2.webp") no-repeat center bottom / cover;
 }
 
 #life-container {
@@ -251,7 +264,7 @@ main {
   /* Square shape */
   background: linear-gradient(145deg, #ffffff, #c1c3c6);
   border-radius: 15%;
-  box-shadow: -5px -5px 8px rgba(41, 121, 113, 0.5);
+  box-shadow: -5px -5px 8px rgba(3, 83, 98, 0.5);
 }
 
 #letter-container {
@@ -290,19 +303,96 @@ main {
     ". . alphabet-btnU alphabet-btnV alphabet-btnW alphabet-btnX alphabet-btnY alphabet-btnZ . .";
 }
 
+#btn-A {
+  grid-area: alphabet-btnA;
+}
+#btn-B {
+  grid-area: alphabet-btnB;
+}
+#btn-C {
+  grid-area: alphabet-btnC;
+}
+#btn-D {
+  grid-area: alphabet-btnD;
+}
+#btn-E {
+  grid-area: alphabet-btnE;
+}
+#btn-F {
+  grid-area: alphabet-btnF;
+}
+#btn-G {
+  grid-area: alphabet-btnG;
+}
+#btn-H {
+  grid-area: alphabet-btnH;
+}
+#btn-I {
+  grid-area: alphabet-btnI;
+}
+#btn-J {
+  grid-area: alphabet-btnJ;
+}
+#btn-K {
+  grid-area: alphabet-btnK;
+}
+#btn-L {
+  grid-area: alphabet-btnL;
+}
+#btn-M {
+  grid-area: alphabet-btnM;
+}
+#btn-N {
+  grid-area: alphabet-btnN;
+}
+#btn-O {
+  grid-area: alphabet-btnO;
+}
+#btn-P {
+  grid-area: alphabet-btnP;
+}
+#btn-Q {
+  grid-area: alphabet-btnQ;
+}
+#btn-R {
+  grid-area: alphabet-btnR;
+}
+#btn-S {
+  grid-area: alphabet-btnS;
+}
+#btn-T {
+  grid-area: alphabet-btnT;
+}
+#btn-U {
+  grid-area: alphabet-btnU;
+}
+#btn-V {
+  grid-area: alphabet-btnV;
+}
+#btn-W {
+  grid-area: alphabet-btnW;
+}
+#btn-X {
+  grid-area: alphabet-btnX;
+}
+#btn-Y {
+  grid-area: alphabet-btnY;
+}
+#btn-Z {
+  grid-area: alphabet-btnZ;
+}
+
 .alphabet-button {
   border: none;
-  /* background-color: var(--primary-color); */
-  /* background-color: rgba(4, 81, 104, 0.8); */
   background-color: rgb(4, 109, 130);
   width: 40px;
   height: 40px;
   margin: 5px;
   text-align: center;
   color: #d6f1fa;
-  font-weight: 800;
+  font-size: large;
   border-radius: 15%;
-  box-shadow: -5px -5px 8px rgba(41, 121, 113, 0.5);
+  box-shadow: -5px -5px 8px rgba(3, 83, 98, 0.5);
 }
 
 .alphabet-button:active {
