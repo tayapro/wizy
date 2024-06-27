@@ -35,7 +35,7 @@
       href="assets/favicon/favicon-16x16.png"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="module" src="assets/js/main.js" defer></script>
+    <script type="module" src="assets/js/outcome.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -52,8 +52,8 @@
       </label>
       <nav id="menu-list">
         <ul id="menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="rules.html">Game rules</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rules.html">Rules</a></li>
           <li><a href="champions.html">Champions</a></li>
         </ul>
       </nav>
@@ -61,16 +61,17 @@
 
     <!-- Main content -->
     <main>
-      <!-- Welcome section with slogan-->
-      <section id="welcome-section-sm">
-        <!-- <div class="slogan">
-          <h2>READY FOR VACATION?</h2>
-          <p>Lets play and see where you going</p>
-          <a class="rules-button" href="rules.html">PLAY</a>
-        </div> -->
-      </section>
-    </main>
+      <div id="main-outcome-container">
+        <h2>OUTCOME PAGE</h2>
 
+        <div id="game-outcome-container">
+          <p id="game-outcome"></p>
+          <p id="game-score"></p>
+          <p id="game-tier"></p>
+          <!-- <button id="btn-new-game">New game</button> -->
+        </div>
+      </div>
+    </main>
     <!-- Font Awesome kit -->
     <script
       src="https://kit.fontawesome.com/32c1244c27.js"

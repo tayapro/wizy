@@ -1,6 +1,10 @@
 const oneStarCutoff = [0.4, 0.3, 0.2];
 const twoStarCutoff = [0.8, 0.7, 0.6];
 
+function clamp(value) {
+  return Math.min(Math.max(value, 0), 1);
+}
+
 /**
  * Calculate score based on parameters
  *
@@ -13,19 +17,14 @@ const twoStarCutoff = [0.8, 0.7, 0.6];
  * @param {*} maxTime
  * @returns
  */
-function calculateScore(totalMiskates, maxMistakes, totalTime, maxTime) {
+export function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
   const mistakesContribution = (totalMiskates * 100) / maxMistakes;
   const timeContribution = (totalTime * 100) / maxTime;
   const score = mistakesContribution + timeContribution;
-  const normalizedScore = clamp(1 - score / 200);
 
-  console.log(mistakesContribution, timeContribution);
+  const normalizedScore = Math.trunc(clamp(1 - score / 200) * 1000);
 
   return normalizedScore;
-}
-
-function clamp(value) {
-  return Math.min(Math.max(value, 0), 1);
 }
 
 export function getScoreTier(
@@ -35,8 +34,8 @@ export function getScoreTier(
   maxTime,
   complexity
 ) {
-  const score = calculateScore(totalMiskates, maxMistakes, totalTime, maxTime);
-  console.log("score = ", score);
+  const score = getScore(totalMiskates, maxMistakes, totalTime, maxTime);
+
   if (score < oneStarCutoff[complexity]) {
     return 1;
   } else if (score < twoStarCutoff[complexity]) {
