@@ -174,33 +174,63 @@ main {
 }
 
 #rules-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 600px;
-  margin: 0 5rem;
-  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: repeat(3, 70px);
+  grid-template-columns: 70px auto;
+  gap: 1rem 0.5rem;
+  grid-template-areas:
+    "vacation-items-img vacation-items-description"
+    "word-img word-description"
+    "win-img win-description";
+
   background-color: var(--secondary-color-4);
   border-radius: 40px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--secondary-color-4);
-
-  /* Align p elements*/
-  text-align: justify;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-#rules-list {
-  list-style-type: none;
-  text-align: justify;
+#rules-container img {
+  width: 70px;
+  height: auto;
 }
 
-#rules-list > li {
-  padding: 0.5rem 0;
+#vacation-items-description,
+#word-description,
+#win-description {
+  align-self: center;
+  font-size: 1.3rem;
 }
 
-.rules-call {
-  padding: 0.5rem 0;
+#vacation-items-img {
+  grid-area: vacation-items-img;
+}
+
+#vacation-items-description {
+  grid-area: vacation-items-description;
+}
+
+#word-img {
+  grid-area: word-img;
+}
+
+#word-description {
+  grid-area: word-description;
+  align-self: center;
+}
+
+#win-img {
+  grid-area: win-img;
+}
+
+#win-description {
+  grid-area: win-description;
+}
+
+#rule-interaction-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .start-game-button {

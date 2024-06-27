@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
   newGame();
 });
 
+function logSubmit(event) {
+  console.log(`Form Submitted! Timestamp: ${event.timeStamp}`);
+  event.preventDefault();
+}
+
+const form = document.getElementById("game-details-form");
+form.addEventListener("submit", logSubmit);
+
 /**
  * Initialization new game
  */

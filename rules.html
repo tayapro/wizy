@@ -64,30 +64,45 @@
       <div id="main-rules-container">
         <h2>GAME RULES</h2>
         <div id="rules-container">
-          <ul id="rules-list">
-            <li>
-              In this game, a word will be chosen for you to guess randomly, and
-              you'll begin with 10 vacation items.
-            </li>
-            <li>
-              Click on a letter that you think might be in the word. If your
-              guess is correct, the game will reveal the letter in the blanks.
-              If not, you will lose one vacation item.
-            </li>
-            <li>
-              Continue guessing letters to fill in the word. Each incorrect
-              guess removes another item.
-            </li>
-          </ul>
-          <p class="rules-call">
-            Win or Lose: If you can guess the word before you lose all 10
-            vacation items, then you win! If all the items are gone before you
-            guess the word, then you lose.
-          </p>
-          <p class="rules-call">Try again and don't lose your vacation!</p>
+          <div id="vacation-items-img">
+            <img src="./assets/images/vacation_items.webp" alt="ticket image" />
+          </div>
+          <div id="vacation-items-description">
+            <p>10 lives</p>
+          </div>
+          <div id="word-img">
+            <img src="./assets/images/word.webp" alt="word image" />
+          </div>
+          <div id="word-description">
+            <p>1 hidden word</p>
+          </div>
+          <div id="win-img">
+            <img src="./assets/images/win.webp" alt="win image" />
+          </div>
+          <div id="win-description">
+            <p>win or lose</p>
+          </div>
         </div>
 
-        <a class="start-game-button" href="game.html">Let's play!</a>
+        <div id="rule-interaction-container">
+          <div id="rule-form-container">
+            <form id="game-details-form">
+              <label>Your name</label><br />
+              <input type="text" id="user-name" name="user-name" required />
+              <br />
+              <label>Your level</label><br />
+              <select id="complexity-list" name="complexity-list">
+                <option value=""></option>
+                <option value="easy">Picnic in the Park</option>
+                <option value="medium">Campfire Tales</option>
+                <option value="hard">Sunny Beach</option>
+              </select>
+            </form>
+          </div>
+          <div id="start-game-container"></div>
+          <button type="submit" form="game-details-form">Let's play</button>
+          </div>
+        </div>
       </div>
     </main>
     <!-- Font Awesome kit -->
