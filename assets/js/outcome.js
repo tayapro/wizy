@@ -1,23 +1,28 @@
+// Does not need, should be called in showGameResults
 const results = getGameResults();
 
 showGameResults(results);
 
 function getGameResults() {
-  const outcomeData = localStorage.getItem("OutcomeData");
+  const { score, tier, isWin } = JSON.parse(
+    localStorage.getItem("OutcomeData")
+  );
 
   // clean the localstorage
   localStorage.clear();
 
-  const score = JSON.parse(outcomeData).score;
-  const tier = JSON.parse(outcomeData).tier;
-  const isWin = JSON.parse(outcomeData).isWin;
+  // const score = JSON.parse(outcomeData).score;
+  // const tier = JSON.parse(outcomeData).tier;
+  // const isWin = JSON.parse(outcomeData).isWin;
 
-  const result = { score, tier, isWin };
+  // const result = { score, tier, isWin };
 
-  return result;
+  return { score, tier, isWin };
 }
 
-function showGameResults(results) {
+export function setGameResults(outcome) {}
+
+function showGameResults(outcome) {
   const message = document.getElementById("game-outcome");
   if (results.isWin === true) {
     message.innerHTML = "Conrgats!";

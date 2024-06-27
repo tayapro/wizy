@@ -12,33 +12,65 @@ const maxTime = 120;
 let complexity;
 let startGameTime;
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   if (!document.documentURI.includes("game.html")) return;
   console.log("New game...");
   newGame();
 });
 
-function logSubmit(event) {
-  console.log(`Form Submitted! Timestamp: ${event.timeStamp}`);
+// When let's play button clicked on the landing page
+function onClickLetsPlay(event) {
+  console.log(`Form Submitted....`);
   event.preventDefault();
+  const data = new FormData(event.target);
+  console.log([...data.entries()]);
+  const jsonData = JSON.parse(JSON.stringify(Object.fromEntries(data)));
+  console.log(jsonData);
+  const userName = jsonData["user-name"];
+  console.log(userName);
+
+  window.location.replace("game.html");
 }
 
+// id - btn-lets-play
 const form = document.getElementById("game-details-form");
-form.addEventListener("submit", logSubmit);
+form.addEventListener("submit", onClickLetsPlay);
 
 /**
  * Initialization new game
  */
 function newGame() {
+  console.log("starting new game");
   complexity = 0;
   startGameTime = Date.now();
 
   setLifes(maxLifes);
   newWord(complexity);
-  newAlphabet(onClickLetter);
+  //newAlphabet(onClickLetter);
+  newAlphabet((event) => {
+    const letter = event.target.innerHTML;
+    disableAlphabetButton(letter);
+
+    if (!testLetter(letter)) {
+      removeLife(() => {
+        disableAllAlphabetButtons();
+        gameOver(false);
+        console.log("game over");
+      });
+    }
+
+    if (isWordSolved()) {
+      disableAllAlphabetButtons();
+      gameOver(true);
+      console.log("victory");
+    }
+
+    drawWord();
+  });
 }
 
 function gameOver(isVictory) {
+  // rename outData to outcome
   let outData = { score: "", tier: "", isWin: "" };
   // localStorage.setItem("OutcomeData", JSON.stringify(outData));
   // console.log("localStore before game:", localStorage);
@@ -69,6 +101,9 @@ function gameOver(isVictory) {
     outData.isWin = false;
   }
 
+  // export setGameResults(outcome) from outcomes.js
+  // don't JSON.stringify here, pass raw outData
+  //
   // Save outData object to "OutcomeData" local storage
   localStorage.setItem("OutcomeData", JSON.stringify(outData));
 
@@ -78,25 +113,27 @@ function gameOver(isVictory) {
 
 /**
  * Main game logic
+ *
+ * When a letter button clicked in game board
  * @param event
  */
-function onClickLetter(event) {
-  const letter = event.target.innerHTML;
-  disableAlphabetButton(letter);
+// function onClickLetter(event) {
+//   const letter = event.target.innerHTML;
+//   disableAlphabetButton(letter);
 
-  if (!testLetter(letter)) {
-    removeLife(() => {
-      disableAllAlphabetButtons();
-      gameOver(false);
-      console.log("game over");
-    });
-  }
+//   if (!testLetter(letter)) {
+//     removeLife(() => {
+//       disableAllAlphabetButtons();
+//       gameOver(false);
+//       console.log("game over");
+//     });
+//   }
 
-  if (isWordSolved()) {
-    disableAllAlphabetButtons();
-    gameOver(true);
-    console.log("victory");
-  }
+//   if (isWordSolved()) {
+//     disableAllAlphabetButtons();
+//     gameOver(true);
+//     console.log("victory");
+//   }
 
-  drawWord();
-}
+//   drawWord();
+// }

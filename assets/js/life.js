@@ -1,4 +1,4 @@
-import { animate } from "./animate.js";
+import { animate } from "./lib/animate.js";
 
 let lifeIndexArray = new Set();
 
