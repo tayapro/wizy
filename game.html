@@ -39,13 +39,24 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="custom-header">
+    <header>
       <a href="index.html">
         <div id="logo">
           <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
           <h2>WIZY</h2>
         </div>
       </a>
+      <input type="checkbox" id="responsive-menu" name="responsive-menu" />
+      <label for="responsive-menu" class="responsive-menu-label">
+        <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
+      </label>
+      <nav id="menu-list">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rules.html" class="active">Game rules</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Main content -->

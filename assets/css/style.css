@@ -38,24 +38,26 @@ header {
   z-index: 100;
   color: var(--text-color);
   background-color: var(--secondary-color-4);
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-bottom: 1px solid rgba(57, 57, 57, 0.2);
 }
 
 #logo {
   color: #25525d;
   display: flex;
-  align-items: flex-end;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
 }
 
 #logo > h2 {
-  font-size: 300%;
+  font-size: 250%;
   line-height: 1;
 }
 
 #logo > img {
-  width: 50px;
+  width: 40px;
   height: auto;
   object-fit: cover;
   display: block;
@@ -221,18 +223,6 @@ main {
 }
 
 /* Game page */
-.custom-header {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 100;
-  color: var(--text-color);
-  background-color: rgba(255, 255, 255, 0);
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0);
-}
 
 #main-game-container {
   display: flex;
@@ -406,6 +396,7 @@ main {
   font-size: large;
   border-radius: 15%;
   box-shadow: -5px -5px 8px rgba(3, 83, 98, 0.5);
+  place-self: center;
 }
 
 .alphabet-button:active {
@@ -484,6 +475,13 @@ main {
     margin: 0.2rem;
   }
 
+  .letter {
+    width: 50px;
+    height: 50px;
+    font-size: xx-large;
+    margin: 0.5rem;
+  }
+
   #alphabet-container {
     grid-template-columns: repeat(8, 50px);
     grid-template-rows: repeat(4, 50px);
@@ -498,19 +496,37 @@ main {
   .alphabet-button {
     width: 50px;
     height: 50px;
-    place-self: center;
-  }
-
-  .letter {
-    width: 50px;
-    height: 50px;
-    font-size: xx-large;
-    margin: 0.5rem;
   }
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+  /*Game page */
+  #life-container {
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(2, 100px);
+  }
+
+  .life {
+    width: 100px;
+    height: 100px;
+  }
+
+  .letter {
+    width: 70px;
+    height: 70px;
+  }
+
+  #alphabet-container {
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(4, 70px);
+  }
+
+  .alphabet-button {
+    width: 70px;
+    height: 70px;
+    font-size: x-large;
+  }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
