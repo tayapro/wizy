@@ -7,11 +7,6 @@ import {
 } from "./alphabet.js";
 import { getScore, getScoreTier } from "./score.js";
 
-// const outData = { score: "5555", tier: "3", message: "You are win" };
-let outData = { score: "", tier: "", message: "" };
-localStorage.setItem("OutcomeData", JSON.stringify(outData));
-console.log("localStore before game:", localStorage);
-
 const maxLifes = 10;
 const maxTime = 120;
 let complexity;
@@ -33,26 +28,13 @@ function newGame() {
   setLifes(maxLifes);
   newWord(complexity);
   newAlphabet(onClickLetter);
-
-  // const gameOutcomeContainer = document.getElementById(
-  //   "game-outcome-container"
-  // );
-
-  // gameOutcomeContainer.classList.add("hidden");
 }
 
 function gameOver(isVictory) {
-  // // Show game outcome dialog
-  // const gameOutcomeContainer = document.getElementById(
-  //   "game-outcome-container"
-  // );
-  // // gameOutcomeContainer.classList.remove("hidden");
-
-  // // Set outcome message
-  // // const message = document.getElementById("game-outcome");
+  let outData = { score: "", tier: "", isWin: "" };
+  // localStorage.setItem("OutcomeData", JSON.stringify(outData));
+  // console.log("localStore before game:", localStorage);
   if (isVictory) {
-    // message.innerHTML = "Congrats!";
-    // Set score
     const totalTime = (Date.now() - startGameTime) / 1000;
     const tier = getScoreTier(
       maxLifes - getLifeCount(),
@@ -70,29 +52,19 @@ function gameOver(isVictory) {
     );
     console.log("Tier = ", tier);
     console.log("Score = ", score);
-    // const score = document.getElementById("game-score");
-    // score.innerHTML = "Stars: " + tier;
 
     outData.score = score;
     outData.tier = tier;
-    outData.message = "Congrats!";
+    outData.isWin = true;
     console.log(outData);
-    localStorage.setItem("OutcomeData", JSON.stringify(outData));
-    console.log("localStore after game:", localStorage);
   } else {
-    outData.message = "Ooops, try again...";
-    // message.innerHTML = "Ooops, try again...";
-    // const score = document.getElementById("game-score");
-    // score.innerHTML = "";
+    outData.isWin = false;
   }
 
-  // Set onclick for new game button
-  // This will attach click event the button only once,
-  // regardless the fact it is called multiple times
-  // const newGameButton = document.getElementById("btn-new-game");
-  // newGameButton.addEventListener("click", newGame);
+  // Save outData object to "OutcomeData" local storage
+  localStorage.setItem("OutcomeData", JSON.stringify(outData));
 
-  // Redirect to game results page
+  // Redirect to the game results page
   window.location.replace("outcome.html");
 }
 
