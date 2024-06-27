@@ -252,12 +252,12 @@ main {
 
 #life-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(2, 50px);
+  gap: 0.5rem;
   padding: 1rem;
   margin-bottom: 0.5rem;
+  justify-content: center;
 }
 
 .life {
@@ -291,7 +291,7 @@ main {
   height: 40px;
   border-radius: 15%;
   border: 3px solid #2e6072aa;
-  margin: 0.3rem;
+  margin: 0.1rem;
   background-color: whitesmoke;
   display: flex;
   justify-content: center;
@@ -303,16 +303,16 @@ main {
   padding: 1rem;
   margin-bottom: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(5, 40px);
+  gap: 0.5rem;
   grid-template-areas:
     "alphabet-btnA alphabet-btnB alphabet-btnC alphabet-btnD alphabet-btnE alphabet-btnF"
     "alphabet-btnG alphabet-btnH alphabet-btnI alphabet-btnJ alphabet-btnK alphabet-btnL"
     "alphabet-btnM alphabet-btnN alphabet-btnO alphabet-btnP alphabet-btnQ alphabet-btnR"
     "alphabet-btnS alphabet-btnT alphabet-btnU alphabet-btnV alphabet-btnW alphabet-btnX"
     ". . alphabet-btnY alphabet-btnZ . .";
+  justify-content: center;
 }
 
 #btn-A {
@@ -471,4 +471,51 @@ main {
   }
 
   /* Game page */
+  #life-container {
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(2, 80px);
+    gap: 1rem;
+  }
+
+  .life {
+    justify-self: center;
+    width: 80px;
+    height: 80px;
+    margin: 0.2rem;
+  }
+
+  #alphabet-container {
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(4, 50px);
+    gap: 1rem;
+    grid-template-areas:
+      "alphabet-btnA alphabet-btnB alphabet-btnC alphabet-btnD alphabet-btnE alphabet-btnF alphabet-btnG alphabet-btnH"
+      "alphabet-btnI alphabet-btnJ alphabet-btnK alphabet-btnL alphabet-btnM alphabet-btnN alphabet-btnO alphabet-btnP"
+      "alphabet-btnQ alphabet-btnR alphabet-btnS alphabet-btnT alphabet-btnU alphabet-btnV alphabet-btnW alphabet-btnX"
+      ". . . alphabet-btnY alphabet-btnZ . . .";
+  }
+
+  .alphabet-button {
+    width: 50px;
+    height: 50px;
+    place-self: center;
+  }
+
+  .letter {
+    width: 50px;
+    height: 50px;
+    font-size: xx-large;
+    margin: 0.5rem;
+  }
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
 }
