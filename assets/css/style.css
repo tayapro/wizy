@@ -223,7 +223,6 @@ main {
 }
 
 /* Game page */
-
 #main-game-container {
   display: flex;
   flex-direction: column;
@@ -270,7 +269,6 @@ main {
 #letter-container {
   background-color: var(--secondary-color-2);
   padding: 1rem;
-  margin-bottom: 0.5rem;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -503,13 +501,13 @@ main {
 @media screen and (min-width: 768px) {
   /*Game page */
   #life-container {
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(5, 90px);
+    grid-template-rows: repeat(2, 90px);
   }
 
   .life {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   .letter {
@@ -518,20 +516,61 @@ main {
   }
 
   #alphabet-container {
-    grid-template-columns: repeat(8, 70px);
-    grid-template-rows: repeat(4, 70px);
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(4, 60px);
   }
 
   .alphabet-button {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     font-size: x-large;
   }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-}
+  /* Header */
+  #logo {
+    gap: 0.5rem;
+  }
 
-@media screen and (min-width: 1200px) {
+  #logo > h2 {
+    font-size: 300%;
+  }
+
+  #logo > img {
+    width: 60px;
+  }
+
+  /*Game page */
+  #life-container {
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 2rem;
+  }
+
+  .life {
+    width: 100px;
+    height: 100px;
+  }
+
+  .letter {
+    width: 90px;
+    height: 90px;
+  }
+
+  #alphabet-container {
+    grid-template-columns: repeat(10, 70px);
+    grid-template-rows: repeat(3, 70px);
+    grid-template-areas:
+      "alphabet-btnA alphabet-btnB alphabet-btnC alphabet-btnD alphabet-btnE alphabet-btnF alphabet-btnG alphabet-btnH alphabet-btnI alphabet-btnJ"
+      "alphabet-btnK alphabet-btnL alphabet-btnM alphabet-btnN alphabet-btnO alphabet-btnP alphabet-btnQ alphabet-btnR alphabet-btnS alphabet-btnT"
+      ". . alphabet-btnU alphabet-btnV alphabet-btnW alphabet-btnX alphabet-btnY alphabet-btnZ . .";
+  }
+
+  .alphabet-button {
+    width: 70px;
+    height: 70px;
+    font-size: xx-large;
+  }
 }

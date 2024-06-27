@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Initialization new game
  */
 function newGame() {
-  complexity = 1;
+  complexity = 2;
   startGameTime = Date.now();
 
   setLifes(maxLifes);
