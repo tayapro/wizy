@@ -69,8 +69,9 @@ function getUser() {
 function setUserIcon() {
   const name = getUser().username;
   console.log("From setUserIcon: ", name);
+  const firstUsernameLetter = name.charAt(0).toUpperCase();
   const username = document.getElementById("user-icon");
-  username.innerHTML = name;
+  username.innerHTML = firstUsernameLetter;
 }
 
 // id - btn-lets-play
