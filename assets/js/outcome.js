@@ -1,5 +1,5 @@
 // Does not need, should be called in showGameResults
-const results = getGameResults();
+// const results = getGameResults();
 
 showGameResults(results);
 
@@ -11,18 +11,14 @@ function getGameResults() {
   // clean the localstorage
   localStorage.clear();
 
-  // const score = JSON.parse(outcomeData).score;
-  // const tier = JSON.parse(outcomeData).tier;
-  // const isWin = JSON.parse(outcomeData).isWin;
-
-  // const result = { score, tier, isWin };
-
   return { score, tier, isWin };
 }
 
 export function setGameResults(outcome) {}
 
 function showGameResults(outcome) {
+  const results = getGameResults();
+
   const message = document.getElementById("game-outcome");
   if (results.isWin === true) {
     message.innerHTML = "Conrgats!";

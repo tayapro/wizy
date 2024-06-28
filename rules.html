@@ -46,17 +46,22 @@
           <h2>WIZY</h2>
         </div>
       </a>
-      <input type="checkbox" id="responsive-menu" name="responsive-menu" />
-      <label for="responsive-menu" class="responsive-menu-label">
-        <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
-      </label>
-      <nav id="menu-list">
-        <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rules.html" class="active">New game</a></li>
-          <li><a href="champions.html">Champions</a></li>
-        </ul>
-      </nav>
+      <div id="menu-user-icon">
+        <input type="checkbox" id="responsive-menu" name="responsive-menu" />
+        <label for="responsive-menu" class="responsive-menu-label">
+          <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
+        </label>
+        <nav id="menu-list">
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html" class="active">New game</a></li>
+            <li><a href="champions.html">Champions</a></li>
+          </ul>
+        </nav>
+        <div id="user-icon-container">
+          <p id="user-icon"></p>
+        </div>
+      </div>
     </header>
 
     <!-- Main content -->
@@ -86,10 +91,10 @@
 
         <div id="rule-interaction-container">
           <div id="rule-form-container">
-            <form id="game-details-form">
-              <label>Your name</label><br />
+            <form id="game-level-form">
+              <!-- <label>Your name</label><br />
               <input type="text" id="user-name" name="user-name" required />
-              <br />
+              <br /> -->
               <label>Your level</label><br />
               <select id="complexity-list" name="complexity-list">
                 <option value=""></option>
@@ -99,8 +104,8 @@
               </select>
             </form>
           </div>
-          <div id="start-game-container"></div>
-          <button type="submit" form="game-details-form">Let's play</button>
+          <div id="start-game-container">
+            <button type="submit" form="game-level-form">Let's play</button>
           </div>
         </div>
       </div>

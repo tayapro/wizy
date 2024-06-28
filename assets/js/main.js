@@ -12,10 +12,18 @@ const maxTime = 120;
 let complexity;
 let startGameTime;
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (!document.documentURI.includes("game.html")) return;
-  console.log("New game...");
-  newGame();
+document.addEventListener("DOMContentLoaded", (event) => {
+  if (document.documentURI.includes("game.html")) {
+    console.log("New game...");
+    newGame();
+  } else if (document.documentURI.includes("index.html")) {
+    const usernameForm = document.getElementById("username-form");
+    usernameForm.addEventListener("submit", setUser);
+  } else if (document.documentURI.includes("rules.html")) {
+    setUserIcon();
+  } else {
+    return;
+  }
 });
 
 // When let's play button clicked on the landing page
@@ -32,9 +40,42 @@ function onClickLetsPlay(event) {
   window.location.replace("game.html");
 }
 
+function setUser(event) {
+  console.log(`Username Form Submitted....`);
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+  console.log([...data.entries()]);
+  const jsonData = JSON.parse(JSON.stringify(Object.fromEntries(data)));
+  console.log(jsonData);
+  const usermame = jsonData["username"];
+  console.log(usermame);
+
+  localStorage.setItem("UserData", JSON.stringify({ username: usermame }));
+
+  window.location.replace("rules.html");
+}
+
+function getUser() {
+  const username = JSON.parse(localStorage.getItem("UserData"));
+
+  console.log("from getUser:", username);
+  // clean the localstorage
+  // localStorage.clear();
+
+  return username;
+}
+
+function setUserIcon() {
+  const name = getUser().username;
+  console.log("From setUserIcon: ", name);
+  const username = document.getElementById("user-icon");
+  username.innerHTML = name;
+}
+
 // id - btn-lets-play
-const form = document.getElementById("game-details-form");
-form.addEventListener("submit", onClickLetsPlay);
+// const levelForm = document.getElementById("game-level-form");
+// levelForm.addEventListener("submit", onClickLetsPlay);
 
 /**
  * Initialization new game
@@ -72,8 +113,6 @@ function newGame() {
 function gameOver(isVictory) {
   // rename outData to outcome
   let outData = { score: "", tier: "", isWin: "" };
-  // localStorage.setItem("OutcomeData", JSON.stringify(outData));
-  // console.log("localStore before game:", localStorage);
   if (isVictory) {
     const totalTime = (Date.now() - startGameTime) / 1000;
     const tier = getScoreTier(
