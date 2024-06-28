@@ -9,6 +9,7 @@
   --secondary-color-6: rgba(251, 251, 251, 0.6);
   --font-family: "Varela Round", sans-serif;
   --text-color: rgba(59, 59, 59, 0.9);
+  --placeholder-color: rgba(231, 111, 81, 0.6);
 }
 
 * {
@@ -17,6 +18,35 @@
   box-sizing: border-box;
   font-family: var(--font-family);
   color: var(--text-color);
+}
+
+/* Styles for ::placeholder in different browsers*/
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--placeholder-color);
+  font-size: 110%;
+  letter-spacing: 1px;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--placeholder-color);
+  font-size: 110%;
+  letter-spacing: 1px;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--placeholder-color);
+  font-size: 110%;
+  letter-spacing: 1px;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--placeholder-color);
+  font-size: 110%;
+  letter-spacing: 1px;
 }
 
 body {
@@ -141,7 +171,7 @@ header a,
   text-align: center;
   vertical-align: middle;
   line-height: 35px;
-  color: #ffffff;
+  color: var(--secondary-color);
 }
 
 main {
@@ -164,7 +194,7 @@ main {
   right: 0px;
   width: 100%;
   background-color: var(--secondary-color-6);
-  color: white;
+  color: var(--secondary-color);
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -178,6 +208,40 @@ main {
   font-size: 120%;
   padding-bottom: 1rem;
   width: 80%;
+}
+
+#username-form label {
+  font-size: 1.2rem;
+}
+
+#username-form {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+#username-form input {
+  border-radius: 15px;
+  border: 2px solid var(--text-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+#bth-username-form {
+  border-radius: 15px;
+  background-color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+}
+
+#bth-username-form:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 /* Rules page */
