@@ -6,6 +6,7 @@ import {
   disableAllAlphabetButtons,
 } from "./alphabet.js";
 import { getScore, getScoreTier } from "./score.js";
+import { setGameOutcome, newGameOutcome } from "./outcome.js";
 
 const maxLifes = 10;
 const maxTime = 120;
@@ -13,34 +14,45 @@ let complexity;
 let startGameTime;
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  if (document.documentURI.includes("game.html")) {
-    console.log("New game...");
-    newGame();
-  } else if (document.documentURI.includes("index.html")) {
-    const usernameForm = document.getElementById("username-form");
-    usernameForm.addEventListener("submit", setUser);
+  console.log(document.documentURI);
+  if (
+    document.documentURI.includes("index.html") ||
+    document.documentURI.endsWith("/")
+  ) {
+    onLandingPageLoad();
   } else if (document.documentURI.includes("rules.html")) {
-    setUserIcon();
+    onRulesPageLoad();
+  } else if (document.documentURI.includes("game.html")) {
+    onGamePageLoad();
+  } else if (document.documentURI.includes("outcome.html")) {
+    onOutcomePageLoad();
   } else {
     return;
   }
 });
 
-// When let's play button clicked on the landing page
-function onClickLetsPlay(event) {
-  console.log(`Form Submitted....`);
-  event.preventDefault();
-  const data = new FormData(event.target);
-  console.log([...data.entries()]);
-  const jsonData = JSON.parse(JSON.stringify(Object.fromEntries(data)));
-  console.log(jsonData);
-  const userName = jsonData["user-name"];
-  console.log(userName);
-
-  window.location.replace("game.html");
+function onLandingPageLoad() {
+  const usernameForm = document.getElementById("username-form");
+  usernameForm.addEventListener("submit", onClickLetsPlay);
 }
 
-function setUser(event) {
+function onRulesPageLoad() {
+  const levelForm = document.getElementById("game-level-form");
+  levelForm.addEventListener("submit", onClickStartGame);
+  setUserIcon();
+}
+
+function onGamePageLoad() {
+  console.log("New game...");
+  setUserIcon();
+  newGame();
+}
+
+function onOutcomePageLoad() {
+  newGameOutcome();
+}
+
+function onClickLetsPlay(event) {
   console.log(`Username Form Submitted....`);
   event.preventDefault();
 
@@ -51,39 +63,54 @@ function setUser(event) {
   const usermame = jsonData["username"];
   console.log(usermame);
 
-  localStorage.setItem("UserData", JSON.stringify({ username: usermame }));
+  localStorage.setItem("Username", usermame);
 
   window.location.replace("rules.html");
 }
 
 function getUser() {
-  const username = JSON.parse(localStorage.getItem("UserData"));
-
-  console.log("from getUser:", username);
-  // clean the localstorage
-  // localStorage.clear();
+  const username = localStorage.getItem("Username");
 
   return username;
 }
 
 function setUserIcon() {
-  const name = getUser().username;
+  const name = getUser();
   console.log("From setUserIcon: ", name);
   const firstUsernameLetter = name.charAt(0).toUpperCase();
   const username = document.getElementById("user-icon");
   username.innerHTML = firstUsernameLetter;
 }
 
-// id - btn-lets-play
-// const levelForm = document.getElementById("game-level-form");
-// levelForm.addEventListener("submit", onClickLetsPlay);
+function onClickStartGame(event) {
+  console.log(`Complexity Form Submitted....`);
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+  console.log([...data.entries()]);
+  const jsonData = JSON.parse(JSON.stringify(Object.fromEntries(data)));
+  console.log(jsonData);
+  const complexity = jsonData.complexity;
+  console.log(complexity);
+
+  localStorage.setItem("Complexity", complexity);
+
+  window.location.replace("game.html");
+}
+
+function getComplexity() {
+  const complexity = localStorage.getItem("Complexity");
+  console.log("From getComplexity: ", complexity);
+
+  return complexity;
+}
 
 /**
  * Initialization new game
  */
 function newGame() {
   console.log("starting new game");
-  complexity = 0;
+  complexity = getComplexity();
   startGameTime = Date.now();
 
   setLifes(maxLifes);
@@ -112,8 +139,7 @@ function newGame() {
 }
 
 function gameOver(isVictory) {
-  // rename outData to outcome
-  let outData = { score: "", tier: "", isWin: "" };
+  let outcome = { score: "", tier: "", isWin: "" };
   if (isVictory) {
     const totalTime = (Date.now() - startGameTime) / 1000;
     const tier = getScoreTier(
@@ -133,19 +159,15 @@ function gameOver(isVictory) {
     console.log("Tier = ", tier);
     console.log("Score = ", score);
 
-    outData.score = score;
-    outData.tier = tier;
-    outData.isWin = true;
-    console.log(outData);
+    outcome.score = score;
+    outcome.tier = tier;
+    outcome.isWin = true;
+    console.log(outcome);
   } else {
-    outData.isWin = false;
+    outcome.isWin = false;
   }
 
-  // export setGameResults(outcome) from outcomes.js
-  // don't JSON.stringify here, pass raw outData
-  //
-  // Save outData object to "OutcomeData" local storage
-  localStorage.setItem("OutcomeData", JSON.stringify(outData));
+  setGameOutcome(outcome);
 
   // Redirect to the game results page
   window.location.replace("outcome.html");

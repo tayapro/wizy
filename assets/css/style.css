@@ -218,30 +218,28 @@ main {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 1rem;
+  border: 2px solid var(--secondary-color-2);
 }
 
 #username-form input {
-  border-radius: 15px;
-  border: 2px solid var(--text-color);
   font-size: 1rem;
-  box-sizing: border-box;
   padding: 1rem;
+  border-radius: 10px 0 0 10px;
+  background-color: var(--secondary-color);
 }
 
 #bth-username-form {
-  border-radius: 15px;
-  background-color: var(--text-color);
-  border: 1px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: none;
   letter-spacing: 1px;
   font-size: 1.2rem;
   padding: 1rem 3rem;
+  background-color: var(--text-color);
+  border-radius: 0 10px 10px 0;
+  color: var(--secondary-color);
 }
 
 #bth-username-form:hover {
   cursor: pointer;
-  transform: scale(1.05);
 }
 
 /* Rules page */
@@ -313,27 +311,35 @@ main {
   grid-area: win-description;
 }
 
-#rule-interaction-container {
+#game-level-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid var(--secondary-color-2);
 }
 
-.start-game-button {
+#complexity-list {
+  outline: 0;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid var(--secondary-color-2);
+  background-color: var(--secondary-color);
+}
+
+#btn-game-level-form {
+  background-color: var(--text-color);
+  border: none;
+  border-radius: 0 10px 10px 0;
   color: var(--secondary-color);
-  letter-spacing: 1px;
-  font-size: x-large;
-  padding: 1rem 3rem;
-  width: fit-content;
-  text-align: center;
-  text-decoration: none;
-
-  background-color: rgb(4, 109, 130);
-  border-radius: 20px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgb(4, 126, 146);
+  padding: 0 1rem;
 }
 
-.start-game-button:hover {
+#complexity-list:hover,
+#complexity-list:focus,
+#btn-game-level-form:hover {
   cursor: pointer;
 }
 
@@ -568,7 +574,6 @@ main {
 }
 
 /* Outcome page */
-
 #main-outcome-container {
   position: relative;
   background: url("../images/rules.webp") no-repeat center center / cover;

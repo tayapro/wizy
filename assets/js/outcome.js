@@ -1,42 +1,28 @@
-// Does not need, should be called in showGameResults
-// const results = getGameResults();
-
-showGameResults(results);
-
-function getGameResults() {
-  const { score, tier, isWin } = JSON.parse(
-    localStorage.getItem("OutcomeData")
-  );
-
-  // clean the localstorage
-  localStorage.clear();
+function getGameOutcome() {
+  const { score, tier, isWin } = JSON.parse(localStorage.getItem("Outcome"));
 
   return { score, tier, isWin };
 }
 
-export function setGameResults(outcome) {}
+export function setGameOutcome(outcome) {
+  localStorage.setItem("Outcome", JSON.stringify(outcome));
+}
 
-function showGameResults(outcome) {
-  const results = getGameResults();
+export function newGameOutcome() {
+  const outcome = getGameOutcome();
 
   const message = document.getElementById("game-outcome");
-  if (results.isWin === true) {
+  if (outcome.isWin === true) {
     message.innerHTML = "Conrgats!";
 
     const tier = document.getElementById("game-tier");
     tier.classList.remove("hidden");
-    tier.innerHTML = "Tier: " + results.tier;
+    tier.innerHTML = "Tier: " + outcome.tier;
 
     const score = document.getElementById("game-score");
     score.classList.remove("hidden");
-    score.innerHTML = "Stars: " + results.score;
+    score.innerHTML = "Stars: " + outcome.score;
   } else {
     message.innerHTML = "Ooops... try again";
   }
-
-  // Set onclick for new game button
-  // This will attach click event the button only once,
-  // regardless the fact it is called multiple times
-  // const newGameButton = document.getElementById("btn-new-game");
-  // newGameButton.addEventListener("click", newGame);
 }

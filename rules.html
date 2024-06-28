@@ -88,25 +88,16 @@
           </div>
         </div>
 
-        <div id="rule-interaction-container">
-          <div id="rule-form-container">
-            <form id="game-level-form">
-              <!-- <label>Your name</label><br />
-              <input type="text" id="user-name" name="user-name" required />
-              <br /> -->
-              <label>Your level</label><br />
-              <select id="complexity-list" name="complexity-list">
-                <option value=""></option>
-                <option value="easy">Picnic in the Park</option>
-                <option value="medium">Campfire Tales</option>
-                <option value="hard">Sunny Beach</option>
-              </select>
-            </form>
-          </div>
-          <div id="start-game-container">
-            <button type="submit" form="game-level-form">Let's play</button>
-          </div>
-        </div>
+        <form id="game-level-form">
+          <select id="complexity-list" name="complexity" required>
+            <option value="">Select your level</option>
+            <option value="0">Picnic in the Park</option>
+            <option value="1">Campfire Tales</option>
+            <option value="2">Sunny Beach</option>
+          </select>
+
+          <button type="submit" id="btn-game-level-form">Start</button>
+        </form>
       </div>
     </main>
     <!-- Font Awesome kit -->
