@@ -38,8 +38,41 @@
     <script type="module" src="assets/js/main.js" defer></script>
   </head>
   <body>
-    <p>SCORE PAGE</p>
+    <!-- Header -->
+    <header>
+      <a href="index.html">
+        <div id="logo">
+          <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
+          <h2>WIZY</h2>
+        </div>
+      </a>
+      <div id="menu-user-icon">
+        <input type="checkbox" id="responsive-menu" name="responsive-menu" />
+        <label for="responsive-menu" class="responsive-menu-label">
+          <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
+        </label>
+        <nav id="menu-list">
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="champions.html" class="active">Champions</a></li>
+          </ul>
+        </nav>
+        <div id="user-icon-container">
+          <p id="user-icon"></p>
+        </div>
+      </div>
+    </header>
 
-    <a href="game.html">START</a>
+    <main>
+      <div id="main-champions-container">
+        <p>Champions page</p>
+      </div>
+    </main>
+
+    <!-- Font Awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/32c1244c27.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

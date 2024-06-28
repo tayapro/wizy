@@ -470,6 +470,20 @@ main {
   gap: 20px;
 }
 
+/* Champions page */
+#main-champions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+  height: 100dvh;
+  overflow-y: hidden;
+  background-color: var(--primary-color-8);
+  background: url("../images/rules.webp") no-repeat center bottom / cover;
+}
+
+/* Amination styles */
 .transition-in-out {
   transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
 }
