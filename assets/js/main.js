@@ -2,6 +2,7 @@ import { onLandingPageLoad } from "./pages/landing-page.js";
 import { onRulesPageLoad } from "./pages/rules-page.js";
 import { onGamePageLoad } from "./pages/game-page.js";
 import { onOutcomePageLoad } from "./pages/outcome-page.js";
+import { onChampionsPageLoad } from "./pages/champions-page.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   // console.log(document.documentURI);
@@ -16,6 +17,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     onGamePageLoad();
   } else if (document.documentURI.includes("outcome.html")) {
     onOutcomePageLoad();
+  } else if (document.documentURI.includes("champions.html")) {
+    onChampionsPageLoad();
   } else {
     return;
   }

@@ -6,6 +6,10 @@ export function setUserIcon() {
   username.innerHTML = firstUsernameLetter;
 }
 
+export function setUser(username) {
+  localStorage.setItem("Username", username);
+}
+
 function getUser() {
   const username = localStorage.getItem("Username");
 

@@ -1,4 +1,8 @@
+import { setUser } from "../components/user.js";
+import { setChampions } from "../components/champions.js";
+
 export function onLandingPageLoad() {
+  setChampions();
   const usernameForm = document.getElementById("username-form");
   usernameForm.addEventListener("submit", onClickLetsPlay);
 }
@@ -14,7 +18,7 @@ function onClickLetsPlay(event) {
   const usermame = jsonData["username"];
   console.log(usermame);
 
-  localStorage.setItem("Username", usermame);
+  setUser(usermame);
 
   window.location.replace("rules.html");
 }

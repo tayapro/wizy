@@ -1,4 +1,4 @@
-function getGameOutcome() {
+export function getGameOutcome() {
   const { score, tier, isWin } = JSON.parse(localStorage.getItem("Outcome"));
 
   return { score, tier, isWin };
