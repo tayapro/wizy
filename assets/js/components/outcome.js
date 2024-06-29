@@ -17,11 +17,11 @@ export function newGameOutcome() {
 
     const tier = document.getElementById("game-tier");
     tier.classList.remove("hidden");
-    tier.innerHTML = "Tier: " + outcome.tier;
+    tier.innerHTML = "Stars: " + outcome.tier;
 
     const score = document.getElementById("game-score");
     score.classList.remove("hidden");
-    score.innerHTML = "Stars: " + outcome.score;
+    score.innerHTML = "Score: " + outcome.score;
   } else {
     message.innerHTML = "Ooops... try again";
   }

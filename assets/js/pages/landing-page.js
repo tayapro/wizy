@@ -1,8 +1,8 @@
 import { setUser } from "../components/user.js";
-import { setChampions } from "../components/champions.js";
+import { setDefaultChampions } from "../components/champions.js";
 
 export function onLandingPageLoad() {
-  setChampions();
+  setDefaultChampions();
   const usernameForm = document.getElementById("username-form");
   usernameForm.addEventListener("submit", onClickLetsPlay);
 }

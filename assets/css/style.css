@@ -225,7 +225,6 @@ main {
   font-size: 1rem;
   padding: 1rem;
   border-radius: 10px 0 0 10px;
-  /* background-color: var(--secondary-color); */
   height: 100%;
 }
 
@@ -592,6 +591,31 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Champions page */
+#champions-list-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-areas:
+    "champion-place-1 champion-name-1 champion-score-1"
+    "champion-place-2 champion-name-2 champion-score-2"
+    "champion-place-3 champion-name-3 champion-score-3"
+    "champion-place-4 champion-name-4 champion-score-4"
+    "champion-place-5 champion-name-5 champion-score-5"
+    "champion-place-6 champion-name-6 champion-score-6"
+    "champion-place-7 champion-name-7 champion-score-7"
+    "champion-place-8 champion-name-8 champion-score-8"
+    "champion-place-9 champion-name-9 champion-score-9"
+    "champion-place-10 champion-name-10 champion-score-10";
+}
+
+.champion {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
 }
 
 /* Media query: large or landscape phones (576px and up) */
