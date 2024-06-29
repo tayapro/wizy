@@ -1,22 +1,12 @@
 import { getGameOutcome, newGameOutcome } from "../components/outcome.js";
-import { getChampions, setChampions } from "../components/champions.js";
+import { recordUserScore } from "../components/champions.js";
+import { getUser } from "../components/user.js";
 
 export function onOutcomePageLoad() {
-  const { score } = getGameOutcome();
-  const username = localStorage.getItem("Username");
+  const { score, timeStamp } = getGameOutcome();
+  const username = getUser();
 
-  checkOutcome(username, score);
+  const place = recordUserScore(username, score, timeStamp);
 
-  newGameOutcome();
-}
-
-function checkOutcome(username, outcome) {
-  let champions = getChampions();
-
-  const applicant = { name: username, score: outcome };
-  champions.push(applicant);
-  champions.sort((a, b) => b.score - a.score);
-
-  const newChampions = champions.slice(0, 5);
-  setChampions(newChampions);
+  newGameOutcome(place);
 }

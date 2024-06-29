@@ -6,7 +6,6 @@ export function setDefaultChampions() {
     { name: "Grace", score: 680 },
     { name: "Jack", score: 797 },
   ];
-  console.log("setting default champions", champions);
   const current = localStorage.getItem("Champions");
   if (!current) {
     localStorage.setItem("Champions", JSON.stringify(champions));
@@ -19,7 +18,33 @@ export function getChampions() {
   return JSON.parse(champions);
 }
 
-export function setChampions(champions) {
-  localStorage.removeItem("Champions");
+function setChampions(champions) {
   localStorage.setItem("Champions", JSON.stringify(champions));
+}
+
+function turnIndexIntoPlace(index) {
+  if (index === -1) return -1;
+
+  return index + 1;
+}
+
+export function recordUserScore(username, score, timeStamp) {
+  let champions = getChampions();
+
+  const existIndex = champions.findIndex(
+    (c) => c.name === username && c.score === score && c.timeStamp === timeStamp
+  );
+  if (existIndex !== -1) return turnIndexIntoPlace(existIndex);
+
+  const applicant = { name: username, score };
+  champions.push(applicant);
+  champions.sort((a, b) => b.score - a.score);
+
+  const newChampions = champions.slice(0, 5);
+  setChampions(newChampions);
+
+  const i = newChampions.findIndex(
+    (c) => c.name === username && c.score === score && c.timeStamp === timeStamp
+  );
+  return turnIndexIntoPlace(i);
 }

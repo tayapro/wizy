@@ -10,8 +10,7 @@ export function setUser(username) {
   localStorage.setItem("Username", username);
 }
 
-function getUser() {
-  // TODO: add condition to check if username exists
+export function getUser() {
   const username = localStorage.getItem("Username");
   return username;
 }

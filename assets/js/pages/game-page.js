@@ -66,7 +66,7 @@ function newGame() {
 }
 
 function gameOver(isVictory) {
-  let outcome = { score: "", tier: "", isWin: "" };
+  let outcome = { score: "", tier: "", isWin: "", timeStamp: Date.now() };
   if (isVictory) {
     const totalTime = (Date.now() - startGameTime) / 1000;
     const tier = getScoreTier(
