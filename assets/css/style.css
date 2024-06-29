@@ -225,7 +225,8 @@ main {
   font-size: 1rem;
   padding: 1rem;
   border-radius: 10px 0 0 10px;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
+  height: 100%;
 }
 
 #bth-username-form {
@@ -379,7 +380,7 @@ main {
   /* Square shape */
   background: linear-gradient(145deg, #ffffff, #c1c3c6);
   border-radius: 15%;
-  box-shadow: -5px -5px 8px rgba(3, 83, 98, 0.5);
+  box-shadow: 5px 5px 0px rgba(3, 83, 98, 0.3);
 }
 
 .hidden-life:empty {
@@ -514,7 +515,7 @@ main {
   color: #d6f1fa;
   font-size: large;
   border-radius: 15%;
-  box-shadow: -5px -5px 8px rgba(3, 83, 98, 0.5);
+  box-shadow: 5px 5px 0px rgba(3, 83, 98, 0.3);
   place-self: center;
 }
 
