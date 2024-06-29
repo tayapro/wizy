@@ -4,10 +4,10 @@ import { setDefaultChampions } from "../components/champions.js";
 export function onLandingPageLoad() {
   setDefaultChampions();
   const usernameForm = document.getElementById("username-form");
-  usernameForm.addEventListener("submit", onClickLetsPlay);
+  usernameForm.addEventListener("submit", onClickPlay);
 }
 
-function onClickLetsPlay(event) {
+function onClickPlay(event) {
   console.log(`Username Form Submitted....`);
   event.preventDefault();
 

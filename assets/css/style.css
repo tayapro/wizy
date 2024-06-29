@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap");
 
 :root {
   --primary-color: rgb(55, 161, 150);
@@ -79,11 +79,21 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+
+  text-transform: uppercase;
+  background: linear-gradient(to right, #d03b3e 0%, #f27858 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
 
 #logo > h2 {
   font-size: 250%;
   line-height: 1;
+  font-family: "Rubik", sans-serif;
 }
 
 #logo > img {
@@ -596,26 +606,38 @@ main {
 /* Champions page */
 #champions-list-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 4fr;
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "champion-place-1 champion-name-1 champion-score-1"
     "champion-place-2 champion-name-2 champion-score-2"
     "champion-place-3 champion-name-3 champion-score-3"
     "champion-place-4 champion-name-4 champion-score-4"
-    "champion-place-5 champion-name-5 champion-score-5"
-    "champion-place-6 champion-name-6 champion-score-6"
-    "champion-place-7 champion-name-7 champion-score-7"
-    "champion-place-8 champion-name-8 champion-score-8"
-    "champion-place-9 champion-name-9 champion-score-9"
-    "champion-place-10 champion-name-10 champion-score-10";
+    "champion-place-5 champion-name-5 champion-score-5";
+  margin: 1rem;
+  font-size: 1.5rem;
 }
 
-.champion {
-  background-color: rgb(255, 255, 255);
+.champion-place,
+.champion-name,
+.champion-score {
   padding: 1rem;
-  margin: 1rem;
-  display: flex;
+  margin-bottom: 0.5rem;
+  background-color: antiquewhite;
+}
+
+.champion-place {
+  /* justify-self: left; */
+  border-radius: 10px 0 0 10px;
+}
+
+.champion-name {
+  place-self: stretch;
+}
+
+.champion-score {
+  place-self: stretch;
+  border-radius: 0 10px 10px 0;
 }
 
 /* Media query: large or landscape phones (576px and up) */
