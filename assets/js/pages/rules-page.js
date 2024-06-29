@@ -7,15 +7,10 @@ export function onRulesPageLoad() {
 }
 
 function onClickStartGame(event) {
-  console.log(`Complexity Form Submitted....`);
   event.preventDefault();
 
   const data = new FormData(event.target);
-  console.log([...data.entries()]);
-  const jsonData = JSON.parse(JSON.stringify(Object.fromEntries(data)));
-  console.log(jsonData);
-  const complexity = jsonData.complexity;
-  console.log(complexity);
+  const { complexity } = JSON.parse(JSON.stringify(Object.fromEntries(data)));
 
   localStorage.setItem("Complexity", complexity);
 

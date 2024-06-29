@@ -42,7 +42,6 @@ function newGame() {
 
   setLifes(maxLifes);
   newWord(complexity);
-  //newAlphabet(onClickLetter);
   newAlphabet((event) => {
     const letter = event.target.innerHTML;
     disableAlphabetButton(letter);
@@ -69,14 +68,7 @@ function gameOver(isVictory) {
   let outcome = { score: "", tier: "", isWin: "", timeStamp: Date.now() };
   if (isVictory) {
     const totalTime = (Date.now() - startGameTime) / 1000;
-    const tier = getScoreTier(
-      maxLifes - getLifeCount(),
-      maxLifes,
-      totalTime,
-      maxTime,
-      complexity
-    );
-    const score = getScore(
+    const { score, tier } = getScoreTier(
       maxLifes - getLifeCount(),
       maxLifes,
       totalTime,

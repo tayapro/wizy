@@ -8,7 +8,6 @@ export function onLandingPageLoad() {
 }
 
 function onClickPlay(event) {
-  console.log(`Username Form Submitted....`);
   event.preventDefault();
 
   const data = new FormData(event.target);

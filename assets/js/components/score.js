@@ -35,11 +35,12 @@ export function getScoreTier(
   complexity
 ) {
   const score = getScore(totalMiskates, maxMistakes, totalTime, maxTime);
+  let tier = 3;
 
   if (score < oneStarCutoff[complexity]) {
-    return 1;
+    tier = 1;
   } else if (score < twoStarCutoff[complexity]) {
-    return 2;
+    tier = 2;
   }
-  return 3;
+  return { score, tier };
 }
