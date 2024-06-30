@@ -44,7 +44,6 @@ export function removeLife(onGameOver) {
       // Middle animation callback
       (element) => {
         element.innerHTML = "";
-        // element.classList.add("hidden-life");
         element.style.backgroundImage = "none";
         element.style.backgroundColor = "#418c9f";
       },

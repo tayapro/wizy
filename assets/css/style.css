@@ -8,8 +8,10 @@
   --secondary-color-4: rgba(251, 251, 251, 0.4);
   --secondary-color-6: rgba(251, 251, 251, 0.6);
   --font-family: "Varela Round", sans-serif;
-  --text-color: rgba(59, 59, 59, 0.902);
+  --text-color: rgba(59, 59, 59, 0.9);
+  --border-bottom: rgba(57, 57, 57, 0.2);
   --placeholder-color: rgba(231, 111, 81, 0.6);
+  --shadow-color: rgba(3, 83, 98, 0.3);
 }
 
 * {
@@ -69,11 +71,10 @@ header {
   color: var(--text-color);
   background-color: var(--secondary-color-4);
   padding: 0.5rem 1.5rem;
-  border-bottom: 1px solid rgba(57, 57, 57, 0.2);
+  border-bottom: 1px solid var(--border-bottom);
 }
 
 #logo {
-  color: #25525d;
   display: flex;
   position: relative;
   align-items: center;
@@ -85,9 +86,6 @@ header {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: flex;
-  align-items: flex-end;
-  position: relative;
 }
 
 #logo > h2 {
@@ -136,11 +134,11 @@ header a,
 #menu-list {
   display: none;
   position: absolute;
-  width: 100%;
+  width: 100dvw;
   top: 100%;
   left: 0%;
   color: var(--text-color);
-  border-bottom: 1px solid rgba(57, 57, 57, 0.2);
+  border-bottom: 1px solid var(--border-bottom);
 }
 
 #responsive-menu:checked ~ #menu-list {
@@ -193,16 +191,17 @@ main {
 /* Landing page */
 #welcome-section-sm {
   position: relative;
-  background: url("../images/pineapple3.webp") no-repeat center bottom / cover;
+  background: url("../images/pineapple.webp") no-repeat center bottom / cover;
   height: 100dvh;
-  width: 100%;
+  width: 100dvw;
+  overflow: hidden;
 }
 
 .slogan {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 100%;
+  width: 100dvw;
   background-color: var(--secondary-color-6);
   color: var(--secondary-color);
   padding: 2rem 1rem;
@@ -235,14 +234,13 @@ main {
   font-size: 1rem;
   padding: 1rem;
   border-radius: 10px 0 0 10px;
-  height: 100%;
 }
 
 #bth-username-form {
   border: none;
   letter-spacing: 1px;
   font-size: 1.2rem;
-  padding: 1rem 3rem;
+  padding: 1rem;
   background-color: var(--text-color);
   border-radius: 0 10px 10px 0;
   color: var(--secondary-color);
@@ -252,18 +250,25 @@ main {
   cursor: pointer;
 }
 
-/* Rules page */
-#main-rules-container {
-  position: relative;
-  background: url("../images/rules.webp") no-repeat center center / cover;
-  height: 100dvh;
-  width: 100%;
-  padding-top: 50px;
+#main-rules-container,
+#main-game-container,
+#main-outcome-container,
+#main-champions-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+  background: url("../images/main_background.webp") no-repeat center center /
+    cover;
+  padding-top: 50px;
+}
+
+/* Rules page */
+#main-rules-container {
+  gap: 1rem;
 }
 
 #rules-container {
@@ -355,15 +360,7 @@ main {
 
 /* Game page */
 #main-game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding-top: 90px;
-  height: 100dvh;
-  overflow-y: hidden;
-  background-color: var(--primary-color-8);
-  background: url("../images/rules.webp") no-repeat center bottom / cover;
 }
 
 #game-card {
@@ -389,7 +386,7 @@ main {
   /* Square shape */
   background: linear-gradient(145deg, #ffffff, #c1c3c6);
   border-radius: 15%;
-  box-shadow: 5px 5px 0px rgba(3, 83, 98, 0.3);
+  box-shadow: 5px 5px 0px var(--shadow-color);
 }
 
 .hidden-life:empty {
@@ -524,7 +521,7 @@ main {
   color: #d6f1fa;
   font-size: large;
   border-radius: 15%;
-  box-shadow: 5px 5px 0px rgba(3, 83, 98, 0.3);
+  box-shadow: 5px 5px 0px var(--shadow-color);
   place-self: center;
 }
 
@@ -532,74 +529,19 @@ main {
   transform: translateY(5px);
 }
 
+/* Outcome page */
+#main-outcome-container {
+  gap: 1rem;
+}
+
 #game-outcome-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgba(128, 255, 0, 0.568);
   padding: 1rem;
   text-align: center;
-}
-
-.screen-container {
-  display: flex;
-  justify-content: center;
-  height: 100dvh;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Champions page */
-#main-champions-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 90px;
-  height: 100dvh;
-  overflow-y: hidden;
-  background-color: var(--primary-color-8);
-  background: url("../images/rules.webp") no-repeat center bottom / cover;
-}
-
-/* Amination styles */
-.transition-in-out {
-  transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
-}
-
-.flip {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.swipe {
-  transform: translate(-50px, 0px);
-  opacity: 0;
-}
-
-.swirle {
-  transform: rotate(90deg) scale(0);
-  opacity: 0;
-}
-
-/* Outcome page */
-#main-outcome-container {
-  position: relative;
-  background: url("../images/rules.webp") no-repeat center center / cover;
-  height: 100dvh;
-  width: 100%;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-#game-outcome-container {
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
@@ -627,8 +569,21 @@ main {
 }
 
 .champion-place {
-  /* justify-self: left; */
   border-radius: 10px 0 0 10px;
+}
+
+.champion-place-circle {
+  width: 35px;
+  height: 35px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  justify-items: center;
+  align-content: center;
+  display: grid;
+}
+
+.champion-place-text {
+  color: var(--secondary-color);
 }
 
 .champion-name {
@@ -638,6 +593,26 @@ main {
 .champion-score {
   place-self: stretch;
   border-radius: 0 10px 10px 0;
+}
+
+/* Amination styles */
+.transition-in-out {
+  transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.flip {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.swipe {
+  transform: translate(-50px, 0px);
+  opacity: 0;
+}
+
+.swirle {
+  transform: rotate(90deg) scale(0);
+  opacity: 0;
 }
 
 /* Media query: large or landscape phones (576px and up) */
@@ -659,6 +634,11 @@ main {
 
   .responsive-menu-label {
     display: none;
+  }
+
+  /* Landing page */
+  #bth-username-form {
+    padding: 1rem 3rem;
   }
 
   /* Game page */

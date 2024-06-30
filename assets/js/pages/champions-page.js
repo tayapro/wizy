@@ -8,12 +8,21 @@ export function onChampionsPageLoad() {
 function newChampions(champions) {
   const container = document.getElementById("champions-list-container");
   for (let i = 0; i < champions.length; i++) {
+    // Div for champion's place circle
+    const championPlaceCircleDiv = document.createElement("div");
+    championPlaceCircleDiv.setAttribute("class", "champion-place-circle");
+    const championPlaceCircleText = document.createElement("p");
+    championPlaceCircleText.setAttribute("class", "champion-place-text");
+    championPlaceCircleText.innerHTML = i + 1;
+    championPlaceCircleDiv.appendChild(championPlaceCircleText);
+
     // Div for champion's place
     const championPlaceDiv = document.createElement("div");
     championPlaceDiv.setAttribute("class", "champion-place");
     championPlaceDiv.setAttribute("id", `champion-place-${i + 1}`);
     championPlaceDiv.setAttribute("grid-area", `champion-place-${i + 1}`);
-    championPlaceDiv.innerHTML = `${i + 1}.`;
+
+    championPlaceDiv.appendChild(championPlaceCircleDiv);
 
     // Div for champion's name
     const championNameDiv = document.createElement("div");
