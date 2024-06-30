@@ -49,7 +49,6 @@ function amimateStarsBar(outcome) {
 
   // Callback function for middle animation
   const flipStar = (element) => {
-    console.log(element);
     if (count > 0) element.style.backgroundColor = "pink";
     count--;
   };

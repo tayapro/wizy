@@ -1,10 +1,10 @@
 export function setDefaultChampions() {
   const champions = [
-    { name: "Alice", score: 905 },
-    { name: "David", score: 850 },
-    { name: "Frank", score: 778 },
-    { name: "Grace", score: 680 },
-    { name: "Jack", score: 797 },
+    { name: "Alice", score: 505 },
+    { name: "David", score: 450 },
+    { name: "Frank", score: 478 },
+    { name: "Grace", score: 580 },
+    { name: "Jack", score: 637 },
   ];
   const current = localStorage.getItem("Champions");
   if (!current) {

@@ -230,10 +230,14 @@ main {
   border: 2px solid var(--secondary-color-2);
 }
 
-#username-form input {
+#username-input {
   font-size: 1rem;
   padding: 1rem;
   border-radius: 10px 0 0 10px;
+}
+
+#username-input:focus {
+  outline: none;
 }
 
 #bth-username-form {
@@ -575,8 +579,9 @@ main {
 .champion-name,
 .champion-score {
   padding: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   background-color: antiquewhite;
+  box-shadow: 5px 5px 0px var(--shadow-color);
 }
 
 .champion-place {
