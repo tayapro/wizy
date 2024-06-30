@@ -1,3 +1,5 @@
+import { animate } from "../lib/animate.js";
+
 export function getGameOutcome() {
   const { score, tier, isWin } = JSON.parse(localStorage.getItem("Outcome"));
 
@@ -14,6 +16,8 @@ export function newGameOutcome(place) {
   const message = document.getElementById("game-outcome");
   if (outcome.isWin === true) {
     message.innerHTML = "Conrgats!";
+
+    setTimeout(() => amimateStarsBar(outcome), 300);
 
     console.log("Place: ", place);
     if (place !== -1) {
@@ -32,4 +36,29 @@ export function newGameOutcome(place) {
   } else {
     message.innerHTML = "Ooops... try again";
   }
+}
+
+function amimateStarsBar(outcome) {
+  const stars = [
+    document.getElementById("star-1"),
+    document.getElementById("star-2"),
+    document.getElementById("star-3"),
+  ];
+
+  let count = outcome.tier;
+
+  // Callback function for middle animation
+  const flipStar = (element) => {
+    console.log(element);
+    if (count > 0) element.style.backgroundColor = "pink";
+    count--;
+  };
+
+  // Kick off the animation
+  // The next star starts animating when the previous animation ends
+  animate(stars[0], "flip", flipStar, () => {
+    animate(stars[1], "swipe", flipStar, () => {
+      animate(stars[2], "swirle", flipStar);
+    });
+  });
 }

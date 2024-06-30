@@ -96,7 +96,7 @@ header {
 
 #logo > img {
   width: 40px;
-  height: auto;
+  height: 40px;
   object-fit: cover;
   display: block;
 }
@@ -545,6 +545,17 @@ main {
   gap: 10px;
 }
 
+#stars-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.stars {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+}
+
 /* Champions page */
 #champions-list-container {
   display: grid;
@@ -593,6 +604,11 @@ main {
 .champion-score {
   place-self: stretch;
   border-radius: 0 10px 10px 0;
+}
+
+#main-champions-container img {
+  width: 200px;
+  height: 200px;
 }
 
 /* Amination styles */
