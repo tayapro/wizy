@@ -15,7 +15,7 @@ export function newGameOutcome(place) {
 
   const message = document.getElementById("game-outcome");
   if (outcome.isWin === true) {
-    message.innerHTML = "Conrgats!";
+    message.innerHTML = "Congrats!";
 
     setTimeout(() => amimateStarsBar(outcome), 300);
 
@@ -23,12 +23,12 @@ export function newGameOutcome(place) {
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
-      championsMessage.innerHTML = `Your place on the champions' board: ${place}`;
+      championsMessage.innerHTML = `Your place "${place}" on the champions' board`;
     }
 
-    const tier = document.getElementById("game-tier");
-    tier.classList.remove("hidden");
-    tier.innerHTML = "Stars: " + outcome.tier;
+    // const tier = document.getElementById("game-tier");
+    // tier.classList.remove("hidden");
+    // tier.innerHTML = "Stars: " + outcome.tier;
 
     const score = document.getElementById("game-score");
     score.classList.remove("hidden");
@@ -41,6 +41,7 @@ export function newGameOutcome(place) {
 function amimateStarsBar(outcome) {
   const starsBar = document.getElementById("stars-bar");
   starsBar.classList.remove("hidden");
+
   const stars = [
     document.getElementById("star-1"),
     document.getElementById("star-2"),
