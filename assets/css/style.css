@@ -536,7 +536,47 @@ main {
 
 /* Outcome page */
 #main-outcome-container {
-  gap: 1rem;
+  padding-top: 6rem;
+}
+
+#game-outcome-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--antiquewhite-color);
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--shadow-color);
+}
+
+#game-outcome-container {
+  display: flex;
+  width: 300px;
+  background-color: var(--antiquewhite-color);
+  margin-top: -210px;
+  padding: 260px 15px 10px;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #3b3b3b;
+}
+
+#game-outcome-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(255, 255, 255, 0);
+  background-color: #f27858;
+  z-index: 100;
+  box-shadow: 5px 5px 0px var(--shadow-color);
+}
+
+#game-outcome-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #stars-bar {
@@ -553,40 +593,38 @@ main {
 }
 
 .star-off {
-  background-image: url("../images/star_empty.webp");
+  background-image: url("../images/star_off.webp");
 }
 
 .star-on {
   background-image: url("../images/star_orange.webp");
 }
 
-#game-outcome-container {
-  display: flex;
-  align-items: center;
-  background-color: var(--antiquewhite-color);
-  padding: 1rem;
-  gap: 10px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 0px var(--shadow-color);
-}
-
 #game-outcome-results-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 #game-outcome-results-container > p {
   font-size: large;
 }
 
-#game-outcome-image-container {
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-  background-image: url("../images/watermelon2.webp");
+#start-new-game-button {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  background-color: var(--text-color);
+  border-radius: 10px;
+  color: var(--secondary-color);
+}
+
+#start-new-game-button:hover {
+  transform: translateY(2px);
 }
 
 /* Champions page */
@@ -726,6 +764,11 @@ main {
   .alphabet-button {
     width: 50px;
     height: 50px;
+  }
+
+  /* Outcome page */
+  #game-outcome-container {
+    border-radius: 10px;
   }
 }
 

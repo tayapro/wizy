@@ -15,7 +15,7 @@ export function newGameOutcome(place) {
 
   const message = document.getElementById("game-outcome");
   if (outcome.isWin === true) {
-    message.innerHTML = "Congrats!";
+    message.innerHTML = "Congratulations!";
 
     setTimeout(() => amimateStarsBar(outcome), 300);
 
@@ -23,16 +23,12 @@ export function newGameOutcome(place) {
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
-      championsMessage.innerHTML = `Your place "${place}" on the champions' board`;
+      championsMessage.innerHTML = `You are in <span style="color:#d03b3e;font-size: 120%;">${place}</span> place <br> on the champions' board`;
     }
-
-    // const tier = document.getElementById("game-tier");
-    // tier.classList.remove("hidden");
-    // tier.innerHTML = "Stars: " + outcome.tier;
 
     const score = document.getElementById("game-score");
     score.classList.remove("hidden");
-    score.innerHTML = "Score: " + outcome.score;
+    score.innerHTML = `Your score:  <span style="color:#d03b3e;font-size: 120%;">${outcome.score}</span>`;
   } else {
     message.innerHTML = "Ooops... try again";
   }
