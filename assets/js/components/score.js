@@ -1,5 +1,10 @@
-const oneStarCutoff = [0.4, 0.3, 0.2];
-const twoStarCutoff = [0.8, 0.7, 0.6];
+// TODO: use the same cut off points for each complexity
+// and multiply the score itself based on complexity ie
+// complexity 2 - x 1
+// compexity 1 - x 0.8
+// compelxity 0 - x 0.6
+const oneStarCutoff = [400, 300, 200];
+const twoStarCutoff = [800, 700, 600];
 
 function clamp(value) {
   return Math.min(Math.max(value, 0), 1);

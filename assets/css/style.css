@@ -593,11 +593,11 @@ main {
 }
 
 .star-off {
-  background-image: url("../images/star_off.webp");
+  background-image: url("../images/star999.webp");
 }
 
 .star-on {
-  background-image: url("../images/star_orange.webp");
+  background-image: url("../images/star3.webp");
 }
 
 #game-outcome-results-container {

@@ -15,7 +15,7 @@ import { setGameOutcome } from "../components/outcome.js";
 import { setUserIcon } from "../components/user.js";
 
 const maxLifes = 10;
-const maxTime = 120;
+const maxTime = 60;
 let startGameTime;
 let complexity;
 
@@ -65,7 +65,7 @@ function newGame() {
 }
 
 function gameOver(isVictory) {
-  let outcome = { score: "", tier: "", isWin: "", timeStamp: Date.now() };
+  let outcome = { score: 0, tier: 0, isWin: false, timeStamp: Date.now() };
   if (isVictory) {
     const totalTime = (Date.now() - startGameTime) / 1000;
     const { score, tier } = getScoreTier(
@@ -75,15 +75,11 @@ function gameOver(isVictory) {
       maxTime,
       complexity
     );
-    console.log("Tier = ", tier);
-    console.log("Score = ", score);
 
     outcome.score = score;
     outcome.tier = tier;
     outcome.isWin = true;
     console.log(outcome);
-  } else {
-    outcome.isWin = false;
   }
 
   setGameOutcome(outcome);
