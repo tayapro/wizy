@@ -23,7 +23,7 @@ export function newGameOutcome(place) {
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
-      championsMessage.innerHTML = `You are in ${place} place among the champions`;
+      championsMessage.innerHTML = `Your place on the champions' board: ${place}`;
     }
 
     const tier = document.getElementById("game-tier");
@@ -39,6 +39,8 @@ export function newGameOutcome(place) {
 }
 
 function amimateStarsBar(outcome) {
+  const starsBar = document.getElementById("stars-bar");
+  starsBar.classList.remove("hidden");
   const stars = [
     document.getElementById("star-1"),
     document.getElementById("star-2"),
@@ -49,14 +51,17 @@ function amimateStarsBar(outcome) {
 
   // Callback function for middle animation
   const flipStar = (element) => {
-    if (count > 0) element.style.backgroundColor = "pink";
+    if (count > 0) {
+      element.classList.remove("star-off");
+      element.classList.add("star-on");
+    }
     count--;
   };
 
   // Kick off the animation
   // The next star starts animating when the previous animation ends
-  animate(stars[0], "flip", flipStar, () => {
-    animate(stars[1], "swipe", flipStar, () => {
+  animate(stars[0], "swirle", flipStar, () => {
+    animate(stars[1], "swirle", flipStar, () => {
       animate(stars[2], "swirle", flipStar);
     });
   });
