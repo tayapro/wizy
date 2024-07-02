@@ -268,7 +268,7 @@ main {
   overflow: hidden;
   background: url("../images/main_background.webp") no-repeat center center /
     cover;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 /* Rules page */
@@ -364,13 +364,6 @@ main {
 }
 
 /* Game page */
-#main-game-container {
-  padding-top: 90px;
-}
-
-#game-card {
-  width: 100%;
-}
 
 #life-container {
   display: grid;
@@ -569,7 +562,7 @@ main {
   overflow: hidden;
   border: 10px solid rgba(255, 255, 255, 0);
   background-color: #f27858;
-  z-index: 100;
+  z-index: 99;
   box-shadow: 5px 5px 0px var(--shadow-color);
 }
 
