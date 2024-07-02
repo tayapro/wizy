@@ -233,8 +233,9 @@ main {
 }
 
 #username-input {
-  padding: 1rem;
   border-radius: 10px 0 0 10px;
+  padding: 1rem;
+  font-size: 100%;
 }
 
 #username-input:focus {
@@ -354,6 +355,7 @@ main {
   border-radius: 0 10px 10px 0;
   color: var(--secondary-color);
   padding: 0 1rem;
+  font-size: 110%;
 }
 
 #complexity-list:hover,
@@ -669,7 +671,7 @@ main {
   align-content: center;
   width: 35px;
   height: 35px;
-  background-color: var(--text-color);
+  background-color: var(--text-color-7);
   border-radius: 50%;
 }
 
@@ -678,9 +680,14 @@ main {
 }
 
 .champion-place,
-.champion-name,
 .champion-score {
   align-self: center;
+  color: var(--text-color-7);
+}
+
+.champion-name {
+  align-self: center;
+  color: var(--moruga-color);
 }
 
 /* Amination styles */
