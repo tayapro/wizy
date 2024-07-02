@@ -8,8 +8,11 @@
   --secondary-color-4: rgba(251, 251, 251, 0.4);
   --secondary-color-6: rgba(251, 251, 251, 0.6);
   --antiquewhite-color: rgb(250, 235, 215);
+  --moruga-color: rgb(208, 59, 62);
+  --coral-rose-color: rgb(242, 120, 88);
   --font-family: "Varela Round", sans-serif;
   --text-color: rgba(59, 59, 59, 0.9);
+  --text-color-7: rgba(59, 59, 59, 0.7);
   --border-bottom: rgba(57, 57, 57, 0.2);
   --placeholder-color: rgba(231, 111, 81, 0.6);
   --shadow-color: rgba(3, 83, 98, 0.3);
@@ -83,7 +86,11 @@ header {
   gap: 0.3rem;
 
   text-transform: uppercase;
-  background: linear-gradient(to right, #d03b3e 0%, #f27858 100%);
+  background: linear-gradient(
+    to right,
+    var(--moruga-color) 0%,
+    var(--coral-rose-color) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,7 +121,6 @@ header a,
 }
 
 #menu {
-  font-size: 100%;
   list-style-type: none;
   text-align: end;
 }
@@ -155,7 +161,7 @@ header a,
 }
 
 .responsive-menu-label {
-  font-size: 2rem;
+  font-size: 200%;
 }
 
 .responsive-menu-label:hover {
@@ -176,7 +182,7 @@ header a,
 }
 
 #user-icon {
-  font-size: x-large;
+  font-size: 150%;
   text-align: center;
   vertical-align: middle;
   line-height: 35px;
@@ -220,19 +226,13 @@ main {
   width: 80%;
 }
 
-#username-form label {
-  font-size: 1.2rem;
-}
-
 #username-form {
   display: flex;
   justify-content: left;
   align-items: center;
-  border: 2px solid var(--secondary-color-2);
 }
 
 #username-input {
-  font-size: 1rem;
   padding: 1rem;
   border-radius: 10px 0 0 10px;
 }
@@ -244,7 +244,7 @@ main {
 #bth-username-form {
   border: none;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 120%;
   padding: 1rem;
   background-color: var(--text-color);
   border-radius: 0 10px 10px 0;
@@ -268,7 +268,7 @@ main {
   overflow: hidden;
   background: url("../images/main_background.webp") no-repeat center center /
     cover;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
 /* Rules page */
@@ -303,7 +303,7 @@ main {
 #word-description,
 #win-description {
   align-self: center;
-  font-size: 1.3rem;
+  font-size: 130%;
 }
 
 #vacation-items-img {
@@ -336,13 +336,12 @@ main {
   flex-direction: row;
   justify-content: center;
   border-radius: 10px;
-  border: 2px solid var(--secondary-color-2);
 }
 
 #complexity-list {
   outline: 0;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 110%;
   padding: 1rem;
   border-radius: 10px 0 0 10px;
   border: 1px solid var(--secondary-color-2);
@@ -364,7 +363,6 @@ main {
 }
 
 /* Game page */
-
 #life-container {
   display: grid;
   grid-template-columns: repeat(5, 50px);
@@ -410,7 +408,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: x-large;
+  font-size: 200%;
 }
 
 #alphabet-container {
@@ -517,7 +515,7 @@ main {
   margin: 5px;
   text-align: center;
   color: #d6f1fa;
-  font-size: large;
+  font-size: 150%;
   border-radius: 15%;
   box-shadow: 5px 5px 0px var(--shadow-color);
   place-self: center;
@@ -528,10 +526,6 @@ main {
 }
 
 /* Outcome page */
-#main-outcome-container {
-  padding-top: 6rem;
-}
-
 #game-outcome-container {
   display: flex;
   flex-direction: column;
@@ -541,7 +535,7 @@ main {
   width: 300px;
   background-color: var(--antiquewhite-color);
   margin-top: -210px;
-  padding: 260px 15px 10px;
+  padding: 260px 0px 0px;
   gap: 0.5rem;
   color: var(--text-color);
 }
@@ -555,7 +549,7 @@ main {
   border-radius: 50%;
   overflow: hidden;
   border: 10px solid rgba(255, 255, 255, 0);
-  background-color: #f27858;
+  background-color: var(--coral-rose-color);
   z-index: 99;
   box-shadow: 5px 5px 0px var(--shadow-color);
 }
@@ -592,18 +586,24 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
-#game-outcome-results-container > p {
-  font-size: large;
+#game-outcome-message {
+  color: var(--text-color-7);
+  font-style: italic;
+}
+
+#game-champion-message > span,
+#game-score > span {
+  color: var(--moruga-color);
 }
 
 #start-new-game-button {
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 120%;
   padding: 1rem 3rem;
   background-color: var(--text-color);
   border-radius: 10px;
@@ -615,6 +615,10 @@ main {
 }
 
 /* Champions page */
+#main-champions-container {
+  padding-top: 20px;
+}
+
 #champions-container {
   display: flex;
   flex-direction: column;
@@ -638,7 +642,7 @@ main {
     "champion-place-4 champion-name-4 champion-score-4"
     "champion-place-5 champion-name-5 champion-score-5";
   margin-bottom: 3rem;
-  font-size: 1.2rem;
+  font-size: 120%;
   gap: 1rem;
 }
 
@@ -726,6 +730,10 @@ main {
   }
 
   /* Game page */
+  #main-game-container {
+    padding-bottom: 30px;
+  }
+
   #life-container {
     grid-template-columns: repeat(5, 80px);
     grid-template-rows: repeat(2, 80px);
@@ -742,7 +750,7 @@ main {
   .letter {
     width: 50px;
     height: 50px;
-    font-size: xx-large;
+    font-size: 250%;
     margin: 0.5rem;
   }
 
@@ -770,7 +778,7 @@ main {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-  /*Game page */
+  /* Game page */
   #life-container {
     grid-template-columns: repeat(5, 90px);
     grid-template-rows: repeat(2, 90px);
@@ -794,7 +802,7 @@ main {
   .alphabet-button {
     width: 60px;
     height: 60px;
-    font-size: x-large;
+    font-size: 200%;
   }
 }
 
@@ -813,7 +821,7 @@ main {
     width: 50px;
   }
 
-  /*Game page */
+  /* Game page */
   #life-container {
     grid-template-columns: repeat(5, 100px);
     grid-template-rows: repeat(2, 100px);
@@ -842,6 +850,6 @@ main {
   .alphabet-button {
     width: 70px;
     height: 70px;
-    font-size: xx-large;
+    font-size: 250%;
   }
 }

@@ -23,12 +23,30 @@ export function newGameOutcome(place) {
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
-      championsMessage.innerHTML = `You are in <span style="color:#d03b3e;font-size: 120%;">${place}</span> place <br> on the champions' board`;
+      championsMessage.innerHTML = `You hold a <span>${place}</span> place <br> on the champions' board`;
+    }
+
+    const parkImg = document.getElementById("outcome-park-image");
+    const ruralImg = document.getElementById("outcome-rural-image");
+    const beachImg = document.getElementById("outcome-beach-image");
+    const outcomeMessage = document.getElementById("game-outcome-message");
+    if (outcome.tier > 0) outcomeMessage.classList.remove("hidden");
+
+    if (outcome.tier === 1) {
+      parkImg.classList.remove("hidden");
+      outcomeMessage.innerHTML = "Grab your bike and <br>go to a park.";
+    } else if (outcome.tier == 2) {
+      ruralImg.classList.remove("hidden");
+      outcomeMessage.innerHTML =
+        "Pack your backpack and <br>visit your granny.";
+    } else if (outcome.tier === 3) {
+      beachImg.classList.remove("hidden");
+      outcomeMessage.innerHTML = "Sounds like <br>someone is going to Hawai.";
     }
 
     const score = document.getElementById("game-score");
     score.classList.remove("hidden");
-    score.innerHTML = `Your score:  <span style="color:#d03b3e;font-size: 120%;">${outcome.score}</span>`;
+    score.innerHTML = `Your score:  <span>${outcome.score}</span>`;
   } else {
     message.innerHTML = "Ooops... try again";
   }

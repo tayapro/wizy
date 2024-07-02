@@ -5,7 +5,6 @@ import { onOutcomePageLoad } from "./pages/outcome-page.js";
 import { onChampionsPageLoad } from "./pages/champions-page.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  // console.log(document.documentURI);
   if (
     document.documentURI.includes("index.html") ||
     document.documentURI.endsWith("/")
