@@ -578,19 +578,19 @@ main {
 }
 
 .stars {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
 }
 
 .star-off {
-  background-image: url("../images/star999.webp");
+  background-image: url("../images/star_off.webp");
 }
 
 .star-on {
-  background-image: url("../images/star3.webp");
+  background-image: url("../images/star_on.webp");
 }
 
 #game-outcome-results-container {
