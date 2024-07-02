@@ -615,6 +615,18 @@ main {
 }
 
 /* Champions page */
+#champions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--shadow-color);
+  width: 300px;
+  background-color: var(--antiquewhite-color);
+  gap: 1.5rem;
+}
+
 #champions-list-container {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -625,23 +637,22 @@ main {
     "champion-place-3 champion-name-3 champion-score-3"
     "champion-place-4 champion-name-4 champion-score-4"
     "champion-place-5 champion-name-5 champion-score-5";
-  margin: 1rem;
-  font-size: 1.5rem;
-
-  border-radius: 10px;
-  box-shadow: 5px 5px 0px var(--shadow-color);
-  width: 300px;
-  background-color: var(--antiquewhite-color);
-  margin-top: -210px;
-  padding: 260px 15px 10px;
-  gap: 0.5rem;
-  color: var(--text-color);
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  gap: 1rem;
 }
 
-#main-champions-container img {
+#champions-list-container > h2 {
+  margin: 1rem;
+}
+
+#champions-image-container {
+  padding-top: 50px;
+}
+
+#champions-image-container > img {
   width: 150px;
   height: 131px;
-  z-index: 98;
 }
 
 .champion-place {
@@ -649,26 +660,23 @@ main {
 }
 
 .champion-place-circle {
+  display: grid;
+  justify-items: center;
+  align-content: center;
   width: 35px;
   height: 35px;
   background-color: var(--text-color);
   border-radius: 50%;
-  justify-items: center;
-  align-content: center;
-  display: grid;
 }
 
 .champion-place-text {
   color: var(--secondary-color);
 }
 
-.champion-name {
-  place-self: stretch;
-}
-
+.champion-place,
+.champion-name,
 .champion-score {
-  place-self: stretch;
-  border-radius: 0 10px 10px 0;
+  align-self: center;
 }
 
 /* Amination styles */
