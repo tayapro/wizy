@@ -23,7 +23,7 @@ export function newGameOutcome(place) {
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
-      championsMessage.innerHTML = `You hold a <span>${place}</span> place <br> on the champions' board`;
+      championsMessage.innerHTML = `You hold a <span>${place}</span> place <br> on the <a href="champions.html">champions' board</a>`;
     }
 
     const parkImg = document.getElementById("outcome-park-image");
