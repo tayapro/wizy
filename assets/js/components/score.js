@@ -22,7 +22,7 @@ function clamp(value) {
  * @param {*} maxTime
  * @returns
  */
-export function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
+function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
   const mistakesContribution = (totalMiskates * 100) / maxMistakes;
   const timeContribution = (totalTime * 100) / maxTime;
   const score = mistakesContribution + timeContribution;

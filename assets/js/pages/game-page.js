@@ -10,7 +10,7 @@ import {
   disableAlphabetButton,
   disableAllAlphabetButtons,
 } from "../components/alphabet.js";
-import { getScore, getScoreTier } from "../components/score.js";
+import { getScoreTier } from "../components/score.js";
 import { setGameOutcome } from "../components/outcome.js";
 import { setUserIcon } from "../components/user.js";
 
