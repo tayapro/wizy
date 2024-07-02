@@ -97,7 +97,7 @@ header {
 
 #logo > img {
   width: 40px;
-  height: 40px;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -814,7 +814,7 @@ main {
   }
 
   #logo > img {
-    width: 60px;
+    width: 50px;
   }
 
   /*Game page */
