@@ -9,6 +9,7 @@
   --secondary-color-4: rgba(251, 251, 251, 0.4);
   --secondary-color-6: rgba(251, 251, 251, 0.6);
   --antiquewhite-color: rgb(250, 235, 215);
+  --antiquewhite-color-8: rgb(250, 235, 215, 0.8);
   --moruga-color: rgb(208, 59, 62);
   --coral-rose-color: rgb(242, 120, 88);
   --text-color: rgba(59, 59, 59, 0.9);
@@ -277,6 +278,10 @@ main {
   gap: 1rem;
 }
 
+#main-rules-container > h2 {
+  border-bottom: 2px solid var(--text-color);
+}
+
 #rules-container {
   display: flex;
   flex-direction: column;
@@ -290,6 +295,25 @@ main {
   background-color: var(--antiquewhite-color);
 }
 
+.rules-img {
+  width: 100px;
+  height: 100px;
+  background-color: var(--text-color-7);
+  border-radius: 50%;
+}
+
+.rules-icon-big {
+  position: relative;
+  left: 25%;
+  top: 25%;
+  font-size: 300%;
+  color: var(--antiquewhite-color);
+}
+
+#word-icon-big {
+  left: 20%;
+}
+
 #rules-container p {
   text-align: justify;
   letter-spacing: 1px;
@@ -301,12 +325,16 @@ main {
   gap: 1rem;
 }
 
+.rules-left-board {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  border-right: 2px solid var(--border-bottom);
+}
+
 .vertical-text {
   writing-mode: vertical-rl;
   transform: scale(-1);
-  text-align: center;
-  padding-left: 1rem;
-  border-left: 2px solid var(--border-bottom);
 }
 
 #game-level-form {
@@ -375,7 +403,8 @@ main {
 }
 
 #letter-container {
-  background-color: var(--secondary-color-2);
+  /* background-color: var(--secondary-color-2); */
+  background-color: var(--antiquewhite-color-8);
   padding: 1rem;
   display: flex;
   width: 100%;
@@ -588,7 +617,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 #outcome-complexity-list {
@@ -732,6 +761,11 @@ main {
   /* Landing page */
   #bth-username-form {
     padding: 1rem 3rem;
+  }
+
+  /* Rules page */
+  #rules-container {
+    width: 600px;
   }
 
   /* Game page */
