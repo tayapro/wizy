@@ -867,9 +867,19 @@ main {
   #main-outcome-container {
     flex-direction: row;
   }
-
   #game-outcome-container {
+    align-items: flex-end;
     width: 600px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  #stars-bar {
+    padding: 3rem 5rem 1rem 3rem;
+  }
+
+  #game-outcome-results-container {
+    padding: 0 3rem 3rem 3rem;
   }
 }
 
