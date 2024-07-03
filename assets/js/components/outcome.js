@@ -14,6 +14,9 @@ export function newGameOutcome(place) {
   const outcome = getGameOutcome();
 
   const message = document.getElementById("game-outcome");
+  const outcomeMessage = document.getElementById("game-outcome-message");
+  outcomeMessage.classList.remove("hidden");
+
   if (outcome.isWin === true) {
     message.innerHTML = "Congratulations!";
 
@@ -30,7 +33,6 @@ export function newGameOutcome(place) {
     const ruralImg = document.getElementById("outcome-rural-image");
     const beachImg = document.getElementById("outcome-beach-image");
     const outcomeMessage = document.getElementById("game-outcome-message");
-    if (outcome.tier > 0) outcomeMessage.classList.remove("hidden");
 
     if (outcome.tier === 1) {
       parkImg.classList.remove("hidden");
@@ -48,7 +50,10 @@ export function newGameOutcome(place) {
     score.classList.remove("hidden");
     score.innerHTML = `Your score:  <span>${outcome.score}</span>`;
   } else {
+    const girlImg = document.getElementById("outcome-girl-image");
     message.innerHTML = "Ooops... try again";
+    girlImg.classList.remove("hidden");
+    outcomeMessage.innerHTML = "You're getting close, try again!";
   }
 }
 

@@ -8,3 +8,10 @@ export function onComplexitySubmit(event) {
 
   window.location.replace("game.html");
 }
+
+export function getComplexity() {
+  const complexity = localStorage.getItem("Complexity");
+  console.log("From getComplexity: ", complexity);
+
+  return complexity;
+}

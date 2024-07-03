@@ -872,6 +872,8 @@ main {
     width: 600px;
     margin-top: 0px;
     padding: 0px;
+    margin-left: -300px;
+    padding-left: 250px;
   }
 
   #stars-bar {
@@ -880,6 +882,13 @@ main {
 
   #game-outcome-results-container {
     padding: 0 3rem 3rem 3rem;
+  }
+
+  #game-outcome-image-container {
+    width: 250px;
+    height: 285px;
+    border-radius: 1rem;
+    margin-top: 1rem;
   }
 }
 

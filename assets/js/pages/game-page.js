@@ -13,6 +13,7 @@ import {
 import { getScoreTier } from "../components/score.js";
 import { setGameOutcome } from "../components/outcome.js";
 import { setUserIcon } from "../components/user.js";
+import { getComplexity } from "../components/complexity.js";
 
 const maxLifes = 10;
 const maxTime = 60;
@@ -23,13 +24,6 @@ export function onGamePageLoad() {
   console.log("New game...");
   setUserIcon();
   newGame();
-}
-
-function getComplexity() {
-  const complexity = localStorage.getItem("Complexity");
-  console.log("From getComplexity: ", complexity);
-
-  return complexity;
 }
 
 /**
