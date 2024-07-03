@@ -94,7 +94,19 @@
             </div>
             <p class="hidden" id="game-champion-message"></p>
             <p class="hidden" id="game-score"></p>
-            <a id="start-new-game-button" href="game.html">New game</a>
+            <!-- <a id="start-new-game-button" href="game.html">New game</a> -->
+            <form id="outcome-game-level-form">
+              <select id="outcome-complexity-list" name="complexity" required>
+                <option value="">Select your level</option>
+                <option value="0">Picnic in the Park</option>
+                <option value="1">Campfire Tales</option>
+                <option value="2">Sunny Beach</option>
+              </select>
+
+              <button type="submit" id="btn-outcome-game-level-form">
+                Start
+              </button>
+            </form>
           </div>
         </div>
       </div>

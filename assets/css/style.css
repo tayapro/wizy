@@ -602,17 +602,34 @@ main {
   color: var(--moruga-color);
 }
 
-#start-new-game-button {
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-size: 120%;
-  padding: 1rem 3rem;
-  background-color: var(--text-color);
-  border-radius: 10px;
-  color: var(--secondary-color);
+#outcome-game-level-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-radius: 10px; */
+  gap: 1rem;
 }
 
-#start-new-game-button:hover {
+#outcome-complexity-list {
+  outline: 0;
+  color: var(--text-color);
+  font-size: 110%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color-2);
+  background-color: var(--secondary-color);
+}
+
+#btn-outcome-game-level-form {
+  background-color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  padding: 1rem;
+  font-size: 110%;
+}
+
+#btn-outcome-game-level-form:hover {
   transform: translateY(2px);
 }
 
