@@ -48,7 +48,7 @@
       </a>
       <div id="menu-user-icon">
         <input type="checkbox" id="responsive-menu" name="responsive-menu" />
-        <label for="responsive-menu" class="responsive-menu-label">
+        <label for="responsive-menu-icon" class="responsive-menu-label">
           <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
         </label>
         <nav id="menu-list">
@@ -67,24 +67,41 @@
     <main>
       <div id="main-rules-container">
         <h2>GAME RULES</h2>
+
         <div id="rules-container">
-          <div id="vacation-items-img">
-            <img src="./assets/images/vacation_items.webp" alt="ticket image" />
+          <div id="rules-vacation-items" class="rules-row">
+            <div id="rules-vacation-items-left-board" class="vertical-text">
+              <h2>TEN</h2>
+            </div>
+            <div id="rules-vacation-items-right-board">
+              <h2>
+                <i class="fa-solid fa-suitcase rules-icons"></i> Ten tries
+              </h2>
+              <!-- <p>More tries less score.</p> -->
+              <p>The more tries you take, the lower your score will be.</p>
+            </div>
           </div>
-          <div id="vacation-items-description">
-            <p>10 lives</p>
+          <div id="rules-hidden-word" class="rules-row">
+            <div id="rules-hidden-word-left-board" class="vertical-text">
+              <h2>ONE</h2>
+            </div>
+            <div id="rules-hidden-word-right-board">
+              <h2><i class="fa-brands fa-letterboxd"></i> One word</h2>
+              <p>Solve the word puzzle.</p>
+            </div>
           </div>
-          <div id="word-img">
-            <img src="./assets/images/word.webp" alt="word image" />
-          </div>
-          <div id="word-description">
-            <p>1 hidden word</p>
-          </div>
-          <div id="win-img">
-            <img src="./assets/images/win.webp" alt="win image" />
-          </div>
-          <div id="win-description">
-            <p>win or lose</p>
+          <div id="rules-win" class="rules-row">
+            <div id="rules-win-left-board" class="vertical-text">
+              <h2>WIN</h2>
+            </div>
+            <div id="rules-win-right-board">
+              <h2><i class="fa-solid fa-trophy"></i> Win</h2>
+              <!-- <p>Aim for a high score and join the champions' leaderboard!</p> -->
+              <p>
+                Go for a high score and become part of the champions'
+                leaderboard!
+              </p>
+            </div>
           </div>
         </div>
 
