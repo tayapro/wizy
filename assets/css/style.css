@@ -314,6 +314,12 @@ main {
   left: 20%;
 }
 
+.rules-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 #rules-container p {
   text-align: justify;
   letter-spacing: 1px;
@@ -328,7 +334,7 @@ main {
 .rules-left-board {
   display: flex;
   align-items: center;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
   border-right: 2px solid var(--border-bottom);
 }
 
@@ -766,6 +772,19 @@ main {
   /* Rules page */
   #rules-container {
     width: 600px;
+  }
+
+  .rules-img {
+    display: flex;
+  }
+
+  .rules-icons-sm,
+  .vertical-text {
+    display: none;
+  }
+
+  .rules-left-board {
+    padding-right: 1rem;
   }
 
   /* Game page */
