@@ -17,35 +17,44 @@ function newChampions(champions) {
     championPlaceCircleDiv.appendChild(championPlaceCircleText);
 
     // Div for champion's place
-    const championPlaceDiv = document.createElement("div");
-    championPlaceDiv.setAttribute("class", "champion-place");
-    championPlaceDiv.setAttribute("id", `champion-place-${i + 1}`);
-    championPlaceDiv.setAttribute("grid-area", `champion-place-${i + 1}`);
-
+    const championPlaceDiv = createDiv(
+      `champion-place-${champions[i + 1]}`,
+      "",
+      "champion-place"
+    );
     championPlaceDiv.appendChild(championPlaceCircleDiv);
 
     // Div for champion's name
-    const championNameDiv = document.createElement("div");
-    championNameDiv.setAttribute("class", "champion-name");
-    championNameDiv.setAttribute("id", `champion-name-${champions[i + 1]}`);
-    championNameDiv.setAttribute(
-      "grid-area",
-      `champion-name-${champions[i + 1]}`
+    const championNameDiv = createDiv(
+      `champion-name-${champions[i + 1]}`,
+      champions[i].name,
+      "champion-name"
     );
-    championNameDiv.innerHTML = champions[i].name;
 
     // Div for champion's score
-    const championScoreDiv = document.createElement("div");
-    championScoreDiv.setAttribute("class", "champion-score");
-    championScoreDiv.setAttribute("id", `champion-score-${champions[i + 1]}`);
-    championScoreDiv.setAttribute(
-      "grid-area",
-      `champion-score-${champions[i + 1]}`
+    const championScoreDiv = createDiv(
+      `champion-score-${champions[i + 1]}`,
+      champions[i].score,
+      "champion-score"
     );
-    championScoreDiv.innerHTML = champions[i].score;
 
     container.appendChild(championPlaceDiv);
     container.appendChild(championNameDiv);
     container.appendChild(championScoreDiv);
   }
+}
+
+function createDiv(id, text, ...classList) {
+  const div = document.createElement("div");
+  div.setAttribute("id", id);
+  div.setAttribute("grid-area", id);
+
+  // for miltiple classes
+  for (const c of classList) {
+    div.classList.add(c);
+  }
+
+  div.innerHTML = text;
+
+  return div;
 }

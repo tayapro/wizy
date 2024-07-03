@@ -1,9 +1,4 @@
-export function SetNewGameLevel(elementId) {
-  const levelForm = document.getElementById(elementId);
-  levelForm.addEventListener("submit", onClickStartGame);
-}
-
-function onClickStartGame(event) {
+export function onComplexitySubmit(event) {
   event.preventDefault();
 
   const data = new FormData(event.target);

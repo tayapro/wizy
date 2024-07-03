@@ -862,6 +862,15 @@ main {
     height: 60px;
     font-size: 200%;
   }
+
+  /* Outcome page */
+  #main-outcome-container {
+    flex-direction: row;
+  }
+
+  #game-outcome-container {
+    width: 600px;
+  }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
