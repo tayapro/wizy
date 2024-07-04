@@ -723,8 +723,9 @@ main {
   color: var(--moruga-color);
 }
 
-/* 404 page */
-#main-not-found-container {
+/* Common styles for 404 & 500 pages */
+#main-not-found-container,
+#main-server-error-container {
   position: relative;
   background: url("../images/watermelon.webp") no-repeat bottom right / cover;
   height: 100dvh;
@@ -732,7 +733,8 @@ main {
   overflow: hidden;
 }
 
-#not-found-greeting {
+#not-found-greeting,
+#server-error-greeting {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -745,32 +747,33 @@ main {
   gap: 5px;
 }
 
-#nf1 {
+#nf1,
+#se1 {
   display: flex;
   align-items: baseline;
   gap: 10px;
   font-size: 120%;
 }
 
-#nf1 a {
+#nf1 a,
+#se1 a {
   text-decoration: none;
 }
 
-#nf1 a:hover {
+#nf1 a:hover,
+#se1 a:hover {
   transform: scale(1.05);
 }
 
-#nf1 h2 {
-  font-size: 200%;
+/* 404 page */
+#main-not-found-container,
+#main-server-error-container {
+  background: url("../images/watermelon.webp") no-repeat bottom right / cover;
 }
 
-#nf1-logo {
-  justify-content: center;
-}
-
-#not-found-greeting span {
-  background-color: #e9c46a;
-  display: flex;
+/* 500 page */
+#main-server-error-container {
+  background: url("../images/500.webp") no-repeat bottom right / cover;
 }
 
 /* Amination styles */
