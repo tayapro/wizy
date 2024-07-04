@@ -723,6 +723,56 @@ main {
   color: var(--moruga-color);
 }
 
+/* 404 page */
+#main-not-found-container {
+  position: relative;
+  background: url("../images/watermelon.webp") no-repeat bottom right / cover;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+#not-found-greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  color: var(--text-color);
+  background-color: var(--secondary-color-4);
+  margin-top: 5rem;
+  padding: 2rem 1.5rem;
+  gap: 5px;
+}
+
+#nf1 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 120%;
+}
+
+#nf1 a {
+  text-decoration: none;
+}
+
+#nf1 a:hover {
+  transform: scale(1.05);
+}
+
+#nf1 h2 {
+  font-size: 200%;
+}
+
+#nf1-logo {
+  justify-content: center;
+}
+
+#not-found-greeting span {
+  background-color: #e9c46a;
+  display: flex;
+}
+
 /* Amination styles */
 .transition-in-out {
   transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);

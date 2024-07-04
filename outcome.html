@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/main.js" defer></script>
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -100,7 +101,7 @@
             </div>
             <p class="hidden" id="game-champion-message"></p>
             <p class="hidden" id="game-score"></p>
-            <form id="outcome-game-level-form">
+            <form id="outcome-game-level-form" target="_self">
               <select id="outcome-complexity-list" name="complexity" required>
                 <option value="">Select your level</option>
                 <option value="0">Picnic in the Park</option>
@@ -116,6 +117,7 @@
         </div>
       </div>
     </main>
+
     <!-- Font Awesome kit -->
     <script
       src="https://kit.fontawesome.com/32c1244c27.js"

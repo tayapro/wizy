@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/main.js" defer></script>
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -83,8 +84,6 @@
                 </div>
                 <h2>Ten attempts</h2>
               </div>
-
-              <!-- <p>More tries less score.</p> -->
               <p>The more tries you take, the lower your score will be.</p>
             </div>
           </div>
@@ -122,7 +121,6 @@
                 </div>
                 <h2>Win</h2>
               </div>
-              <!-- <p>Aim for a high score and join the champions' leaderboard!</p> -->
               <p>
                 Go for a high score and become part of the champions'
                 leaderboard!
@@ -131,7 +129,7 @@
           </div>
         </div>
 
-        <form id="game-level-form">
+        <form id="game-level-form" target="_self">
           <select id="complexity-list" name="complexity" required>
             <option value="">Select your level</option>
             <option value="0">Picnic in the Park</option>
@@ -143,6 +141,7 @@
         </form>
       </div>
     </main>
+
     <!-- Font Awesome kit -->
     <script
       src="https://kit.fontawesome.com/32c1244c27.js"
