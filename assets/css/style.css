@@ -610,7 +610,7 @@ main {
 }
 
 #game-outcome-message {
-  color: var(--text-color-7);
+  color: var(--text-color);
   font-style: italic;
 }
 
