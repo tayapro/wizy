@@ -2,6 +2,14 @@ import { animate } from "../lib/animate.js";
 
 export function getGameOutcome() {
   const { score, tier, isWin } = JSON.parse(localStorage.getItem("Outcome"));
+  // console.log({ score, tier, isWin });
+  // if (
+  //   (isWin === true && (score || tier)) ||
+  //   (isWin === false && (!score || !tier)) ||
+  //   isWin !== true ||
+  //   isWin !== false
+  // )
+  //   throw new Error("Outcome not completed");
 
   return { score, tier, isWin };
 }

@@ -4,21 +4,23 @@ import { onGamePageLoad } from "./pages/game-page.js";
 import { onOutcomePageLoad } from "./pages/outcome-page.js";
 import { onChampionsPageLoad } from "./pages/champions-page.js";
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  if (
-    document.documentURI.includes("index.html") ||
-    document.documentURI.endsWith("/")
-  ) {
-    onLandingPageLoad();
-  } else if (document.documentURI.includes("rules.html")) {
-    onRulesPageLoad();
-  } else if (document.documentURI.includes("game.html")) {
-    onGamePageLoad();
-  } else if (document.documentURI.includes("outcome.html")) {
-    onOutcomePageLoad();
-  } else if (document.documentURI.includes("champions.html")) {
-    onChampionsPageLoad();
-  } else {
-    return;
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    if (
+      document.documentURI.includes("index.html") ||
+      document.documentURI.endsWith("/")
+    ) {
+      onLandingPageLoad();
+    } else if (document.documentURI.includes("rules.html")) {
+      onRulesPageLoad();
+    } else if (document.documentURI.includes("game.html")) {
+      onGamePageLoad();
+    } else if (document.documentURI.includes("outcome.html")) {
+      onOutcomePageLoad();
+    } else if (document.documentURI.includes("champions.html")) {
+      onChampionsPageLoad();
+    }
+  } catch {
+    window.location.replace("500.html");
   }
 });

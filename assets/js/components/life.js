@@ -12,7 +12,6 @@ function getRandomLifeIndex() {
 
 // setLifes(maxLifes)
 export function setLifes(num) {
-  console.log("setLifes:", num);
   randomAnimation = animations[Math.floor(Math.random() * animations.length)];
 
   const container = document.getElementById("life-container");

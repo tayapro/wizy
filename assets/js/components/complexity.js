@@ -3,6 +3,7 @@ export function onComplexitySubmit(event) {
 
   const data = new FormData(event.target);
   const { complexity } = JSON.parse(JSON.stringify(Object.fromEntries(data)));
+  if (!complexity) throw new Error("Complexity not submitted");
 
   localStorage.setItem("Complexity", complexity);
 
@@ -11,7 +12,7 @@ export function onComplexitySubmit(event) {
 
 export function getComplexity() {
   const complexity = localStorage.getItem("Complexity");
-  console.log("From getComplexity: ", complexity);
+  if (!complexity) throw new Error("Complexity not found");
 
   return complexity;
 }

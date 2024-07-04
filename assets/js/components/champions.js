@@ -14,6 +14,7 @@ export function setDefaultChampions() {
 
 export function getChampions() {
   const champions = localStorage.getItem("Champions");
+  if (!champions) throw new Error("Champions not found");
 
   return JSON.parse(champions);
 }
