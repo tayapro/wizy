@@ -17,7 +17,7 @@ export function onLandingPageLoad() {
 /**
  * Event Listener handler function
  *
- * @param {object} event
+ * @param {Event} event - the form submission event
  */
 function onClickPlay(event) {
   event.preventDefault();
@@ -30,6 +30,6 @@ function onClickPlay(event) {
   // Set username to localStorage
   setUser(usermame);
 
-  // Redirect to `rules.html` page
+  // Redirect to the `rules.html` page
   window.location.replace("rules.html");
 }

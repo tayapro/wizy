@@ -16,8 +16,8 @@ function clamp(value) {
  * It calculates the score in range from 0 to 1 inclusive.
  * The higher value means better player performance.
  *
- * @param {*} totalMiskates
- * @param {*} maxMistakes
+ * @param {Number} totalMiskates
+ * @param {Number} maxMistakes
  * @param {*} totalTime
  * @param {*} maxTime
  * @returns

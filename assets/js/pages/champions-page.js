@@ -11,7 +11,7 @@ export function onChampionsPageLoad() {
 /**
  * Create DOM structure for champions
  *
- * @param {array} champions - list of champions
+ * @param {Array} champions - list of champions
  */
 function newChampions(champions) {
   // parent DIV element
@@ -58,9 +58,9 @@ function newChampions(champions) {
 /**
  * Create DIV element and bind it to grid area
  *
- * @param {string} id - id property
- * @param {string} text - text for innerHTML property
- * @param  {...string} classList - class / list classes
+ * @param {String} id - id property
+ * @param {String} text - text for innerHTML property
+ * @param  {...String} classList - class / list classes
  *
  * @returns DIV DOM element
  */

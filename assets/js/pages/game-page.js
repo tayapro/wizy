@@ -1,4 +1,4 @@
-import { setLifes, removeLife, getLifeCount } from "../components/life.js";
+import { setLives, removeLife, getLifeCount } from "../components/life.js";
 import {
   newWord,
   testLetter,
@@ -15,10 +15,10 @@ import { setGameOutcome } from "../components/outcome.js";
 import { setUserIcon } from "../components/user.js";
 import { getComplexity } from "../components/complexity.js";
 
-const maxLifes = 10; // Set the maximum number of lives.
+const maxLives = 10; // Set the maximum number of lives
 const maxTime = 60; // Set the maximum time in seconds
-let startGameTime; // Get new game start time
-let complexity; // Get game complexity level
+let startGameTime; // New game start time variable
+let complexity; // Game complexity level variable
 
 /**
  * Handle game.html page loading
@@ -40,7 +40,7 @@ function newGame() {
   // Set start time for the game
   startGameTime = Date.now();
   // Set number of lifes
-  setLifes(maxLifes);
+  setLives(maxLives);
   // Get random word from the array
   newWord(complexity);
 
@@ -51,13 +51,13 @@ function newGame() {
     // Check letter for correctness
     if (!testLetter(letter)) {
       removeLife(() => {
-        // Loss scenario
+        // Loss game scenario
         disableAllAlphabetButtons();
         gameOver(false);
       });
     }
 
-    // Win scenario
+    // Win game scenario
     if (isWordSolved()) {
       disableAllAlphabetButtons();
       gameOver(true);
@@ -70,7 +70,7 @@ function newGame() {
 /**
  * Set and save game results to localStorage
  *
- * @param {boolean} isVictory - win or loss scenario
+ * @param {Boolean} isVictory - win or loss scenario
  */
 function gameOver(isVictory) {
   // Set default outcome values
@@ -82,8 +82,8 @@ function gameOver(isVictory) {
 
     // Get score & tier, using imported `getScoreTier` function
     const { score, tier } = getScoreTier(
-      maxLifes - getLifeCount(),
-      maxLifes,
+      maxLives - getLifeCount(),
+      maxLives,
       totalTime,
       maxTime,
       complexity
@@ -98,6 +98,6 @@ function gameOver(isVictory) {
   // Write outcome values to `Outcome` key in localStorage
   setGameOutcome(outcome);
 
-  // Redirect to the game results page
+  // Redirect to the game `outcome.html` results page
   window.location.replace("outcome.html");
 }

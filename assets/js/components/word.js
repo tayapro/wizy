@@ -1,3 +1,11 @@
+/**
+ * Three levels of difficulty with words of increasing complexity
+ * Each level is represented as an array of words
+ *
+ * Level 1 (index 0): Simple words (3-4 letters)
+ * Level 2 (index 1): Moderate words (5-6 letters)
+ * Level 3 (index 2): Challenging words (7-8 letters)
+ */
 const dictionary = [
   [
     "CAR",
@@ -130,13 +138,23 @@ const dictionary = [
   ],
 ];
 
-let theWord = "";
-let theMatchedLetters = new Set();
+let theWord = ""; // variable to store the word to be guessed
+let theMatchedLetters = new Set(); // `Set` constructor for variable to store matched letters guessed by the player
 
+/**
+ * Randomly pick a word from a given word list
+ *
+ * @param {Array} wordList - words array to choose from
+ * @returns {String} - a randomly selected word from the wordList
+ */
 function pickRandomWord(wordList) {
   return wordList[Math.floor(Math.random() * wordList.length)];
 }
 
+/**
+ * Generate a new word for the game based on complexity level
+ * @param {number} complexity - the complexity level
+ */
 export function newWord(complexity) {
   theWord = pickRandomWord(dictionary[complexity]);
   console.log(theWord);
@@ -144,6 +162,7 @@ export function newWord(complexity) {
   const container = document.getElementById("letter-container");
   container.innerHTML = "";
 
+  // create a letter container for each letter in the chosen word
   for (const i in theWord) {
     const newDiv = document.createElement("div");
     newDiv.className = "letter";
@@ -152,6 +171,12 @@ export function newWord(complexity) {
   }
 }
 
+/**
+ * Check if the letter matches any in the word
+ *
+ * @param {string} c - the letter to test
+ * @returns {boolean} - true if the letter matches, false otherwise
+ */
 export function testLetter(c) {
   if (theWord.search(c) === -1) {
     return false;
@@ -163,8 +188,7 @@ export function testLetter(c) {
 }
 
 /**
- * Draw the word
- *
+ * Draw the matched letters in the word on the screen
  */
 export function drawWord() {
   for (const i in theWord) {
@@ -175,6 +199,11 @@ export function drawWord() {
   }
 }
 
+/**
+ * Check if all letters in the word have been matched
+ *
+ * @returns {boolean} - true if the word is solved, false otherwise
+ */
 export function isWordSolved() {
   for (const letter of theWord) {
     if (!theMatchedLetters.has(letter)) {

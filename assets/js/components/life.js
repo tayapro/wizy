@@ -1,22 +1,33 @@
 import { animate } from "../lib/animate.js";
 
-let lifeIndexArray = new Set();
+let lifeIndexArray = new Set(); // `Set` constructor for variable to store life's indexes
 
-const animations = ["swirle", "flip", "swipe"];
-let randomAnimation = animations[0];
+const animations = ["swirle", "flip", "swipe"]; // array with animation CSS classes
+let randomAnimation = animations[0]; // Set initial CSS class for animation
 
+/**
+ * Retrieve a random index of used life
+ *
+ * @returns {number} - random index of used life
+ */
 function getRandomLifeIndex() {
   let items = Array.from(lifeIndexArray);
   return items[Math.floor(Math.random() * items.length)];
 }
 
-// setLifes(maxLifes)
-export function setLifes(num) {
+/**
+ * Create HTML elements for lives and randomly select an animation for them
+ *
+ * @param {number} num - number of lives
+ */
+export function setLives(num) {
   randomAnimation = animations[Math.floor(Math.random() * animations.length)];
 
+  // Clean up `life-container` container context
   const container = document.getElementById("life-container");
   container.innerHTML = "";
 
+  // Create div elements for each life and add them to the container
   lifeIndexArray = new Set();
   for (let i = 0; i < num; i++) {
     const newDiv = document.createElement("div");
@@ -31,6 +42,12 @@ export function setLifes(num) {
   }
 }
 
+/**
+ * Remove a randomly selected life from the display
+ * Calls the provided callback function on game over
+ *
+ * @param {function} onGameOver - callback function triggered when lives are exhausted
+ */
 export function removeLife(onGameOver) {
   const lifeIndex = getRandomLifeIndex();
   lifeIndexArray.delete(lifeIndex);
@@ -54,6 +71,11 @@ export function removeLife(onGameOver) {
   }
 }
 
+/**
+ * Get the current count of used lives
+ *
+ * @returns {number} - number of used lives
+ */
 export function getLifeCount() {
   return lifeIndexArray.size;
 }
