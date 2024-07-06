@@ -1,21 +1,69 @@
 import { animate } from "../lib/animate.js";
 
-export function getGameOutcome() {
-  const { score, tier, isWin } = JSON.parse(localStorage.getItem("Outcome"));
-  if (
-    (isWin === true && (!score || !tier)) ||
-    (isWin === false && (score || tier))
-  )
-    throw new Error("Outcome not completed");
+/**
+ * Validate the outcome object to ensure it contains valid data
+ *
+ * @param {Object} outcome - the outcome object to validate
+ *
+ * @throws an error if any parameter is invalid
+ */
+function validateOutcome(outcome) {
+  const { score, tier, isWin, timeStamp } = outcome;
 
-  return { score, tier, isWin };
+  // the score achieved
+  if (typeof score !== "number" || score < 0) {
+    throw new Error("Outcome is not valid: bad score");
+  }
+
+  // the tier level
+  if (typeof tier !== "number" || tier < 0) {
+    throw new Error("Outcome is not valid: bad tier");
+  }
+
+  // whether the outcome is a win or not
+  if (typeof isWin !== "boolean") {
+    throw new Error("Outcome is not valid: isWin not found");
+  }
+
+  // the timestamp of the outcome
+  if (typeof timeStamp !== "number" || timeStamp < 0) {
+    throw new Error("Outcome is not valid: bad timeStamp");
+  }
 }
 
+/**
+ * Get the game outcome from local storage and validates it
+ *
+ * @returns {Object} - the validated game outcome
+ * @throws an error if the outcome is not found or invalid
+ */
+export function getGameOutcome() {
+  const outcomeStr = localStorage.getItem("Outcome");
+  if (!outcomeStr) throw new Error("Outcome not found");
+
+  const outcome = JSON.parse(outcomeStr);
+  validateOutcome(outcome);
+
+  return outcome;
+}
+
+/**
+ * Store the given game outcome in local storage
+ * (the outcome is stringified before being saved)
+ *
+ * @param {Object} outcome - The game outcome to be stored.
+ */
 export function setGameOutcome(outcome) {
   localStorage.setItem("Outcome", JSON.stringify(outcome));
 }
 
+/**
+ * Handle the display and animation of the game outcome message based on the player's performance
+ *
+ * @param {number} place - the player's ranking place on the champions' board
+ */
 export function newGameOutcome(place) {
+  // Get the game outcome from local storage
   const outcome = getGameOutcome();
 
   const message = document.getElementById("game-outcome");
@@ -25,28 +73,28 @@ export function newGameOutcome(place) {
   if (outcome.isWin === true) {
     message.innerHTML = "Congratulations!";
 
+    // Animate stars bar with a delay
     setTimeout(() => amimateStarsBar(outcome), 300);
 
-    console.log("Place: ", place);
+    // Updates the champions' board if applicable
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
       championsMessage.innerHTML = `You hold a <span>${place}</span> place <br> on the <a href="champions.html">champions' board</a>`;
     }
 
-    const parkImg = document.getElementById("outcome-park-image");
-    const ruralImg = document.getElementById("outcome-rural-image");
-    const beachImg = document.getElementById("outcome-beach-image");
     const outcomeMessage = document.getElementById("game-outcome-message");
-
     if (outcome.tier === 1) {
+      const parkImg = document.getElementById("outcome-park-image");
       parkImg.classList.remove("hidden");
       outcomeMessage.innerHTML = "Grab your bike and <br>go to a park.";
     } else if (outcome.tier == 2) {
+      const ruralImg = document.getElementById("outcome-rural-image");
       ruralImg.classList.remove("hidden");
       outcomeMessage.innerHTML =
         "Pack your backpack and <br>visit your granny.";
     } else if (outcome.tier === 3) {
+      const beachImg = document.getElementById("outcome-beach-image");
       beachImg.classList.remove("hidden");
       outcomeMessage.innerHTML = "Sounds like <br>someone is going to Hawai.";
     }
@@ -62,6 +110,12 @@ export function newGameOutcome(place) {
   }
 }
 
+/**
+ * Animate the stars bar based on the game outcome
+ * Reveal the stars bar and animate the stars sequentially based on the player's tier
+ *
+ * @param {Object} outcome - the game outcome object containing the player's tier
+ */
 function amimateStarsBar(outcome) {
   const starsBar = document.getElementById("stars-bar");
   starsBar.classList.remove("hidden");

@@ -798,7 +798,7 @@ main {
 }
 
 /* Media query: large or landscape phones (576px and up) */
-@media screen and (min-width: 576px) and (orientation: portrait) {
+@media screen and (min-width: 576px) {
   /* Header */
   #menu-list {
     border: none;
@@ -884,7 +884,7 @@ main {
 }
 
 /* Media query: tablets and larger (768px and up) */
-@media screen and (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 768px) {
   /* Game page */
   #life-container {
     grid-template-columns: repeat(5, 90px);

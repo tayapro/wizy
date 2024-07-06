@@ -4,7 +4,7 @@ import { onGamePageLoad } from "./pages/game-page.js";
 import { onOutcomePageLoad } from "./pages/outcome-page.js";
 import { onChampionsPageLoad } from "./pages/champions-page.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   try {
     if (
       document.documentURI.includes("index.html") ||
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (document.documentURI.includes("champions.html")) {
       onChampionsPageLoad();
     }
+    // to catch an error, need to modify following line to `catch(e)` and add console.log(e) to block
   } catch {
     window.location.replace("500.html");
   }
