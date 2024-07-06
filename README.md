@@ -1,116 +1,439 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# HEPY Website
 
-Welcome Taisiia Simakova,
+![Website Mock Up](assets/images/readme/mockup.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Index – Table of Contents
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 14, 2024**
+- [Purpose](#purpose)
+- [UX Design](#ux-design)
+- [Features](#features)
+- [Design](#design)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
 
-## Gitpod Reminders
+# Purpose
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Our goals:
 
-`python3 -m http.server`
+The website is built using HTML, CSS and Javascript as a Portfolio Project#2 for the Code Institute's Full Stack Developer(e-Commerce) course.
 
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 14, 2024,** Temporarily remove Mongo until key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[The live WIZY website](https://tayapro.github.io/wizy/)
 
 ---
 
-Happy coding!
+# UX Design
+
+## User stories
+
+### As a **first time user**
+
+- I want to easily understand the primary objective of the website.
+
+### As a **returning** and a **frequent user**
+
+- I want to easily navigate the website.
+- I want to make sure I don't get lost on this website.
+
+# Features
+
+## Existing Features
+
+### F01 Navigation Bar
+
+Each page has a sticky navigation bar at the top that is fully responsive. It includes a logo linking to the Home page, as well as links to the Home, Champions pages. The navigation bar layout is consistent across all devices, making navigation simple and intuitive. The underline appears when you move the mouse over the menu links.
+
+<img src="assets/images/readme/menu_desktop.png" width="400">
+
+For mobile devices, it transforms into a compact "hamburger menu." This dropdown menu contains the same items, displayed in a column on a semitransparent background.
+
+<img src="assets/images/readme/menu_mobile.png" width="400">
+
+### F02 Home page - image and call to action
+
+### F03 Home page - tagline
+
+### F04 Home page - testimonials
+
+### F05 Home page - HEPY team message
+
+### F06 Footer
+
+### F07 Lifehacks page
+
+### F08 Subscribe page
+
+### F09 page 404
+
+## Future features
+
+> -
+
+# Design
+
+## Imagery
+
+## Colour Scheme
+
+## Typography
+
+For this project Rubik (logo) and Varela Round (body text) are used as fonts. <br>
+Rubik font is great for a game app logo because its bold, modern design makes it stand out.<br>
+Varela Round, with its friendly and rounded design, offers excellent readability and a warm,
+approachable feel, making it a great choice for game apps.
+
+## Wireframes
+
+### Main Page Wireframes
+
+<img src="assets/images/readme/landing_page.png" width="500" alt="home page wireframe">
+
+### Rules Wireframes
+
+<img src="assets/images/readme/rules_page.png" width="500" alt="rules page wireframe">
+
+### Game Wireframes
+
+<img src="assets/images/readme/game_page.png" width="500" alt="game page wireframe">
+
+### Outcome Wireframes
+
+<img src="assets/images/readme/outcome_page.png" width="500" alt="outcome page wireframe">
+
+### 404 page Wireframes
+
+<img src="assets/images/readme/404_page.png" width="500" alt="404 page wireframe">
+
+### 500 page Wireframes
+
+<img src="assets/images/readme/500_page.png" width="500" alt="500 page wireframe">
+
+# Technologies
+
+## Languages
+
+- HTML5
+- CSS
+- Javascript
+
+## Frameworks, Libraries & Apps
+
+| Name                                                      | Purpose                                                 |
+| :-------------------------------------------------------- | :------------------------------------------------------ |
+| Google Fonts                                              | Fonts                                                   |
+| Font Awesome                                              | Icons                                                   |
+| Favicon.cc                                                | Create website favicon                                  |
+| [Photopea](https://www.photopea.com/)                     | Work with images (resize, convert, etc)                 |
+| [GoDaddy](https://www.godaddy.com/)                       | Generate HEPY logo                                      |
+| [Pixelcut](https://create.pixelcut.ai/background-remover) | Remove image's background                               |
+| [Vmake.ai](https://vmake.ai/image-outpainting)            | Expand the image                                        |
+| [Imagecolorpicker](https://imagecolorpicker.com)          | Color picker                                            |
+| Balsamiq                                                  | Build interface website wireframes                      |
+| Git                                                       | Use for version control                                 |
+| GitHub                                                    | Store the source code and deploy and host the live site |
+| GitPod                                                    | Set up and run project code                             |
+| Google Chrome's Dev Tools                                 | Inspect elements, layouts, debug pages                  |
+| Google Chrome's Lighthouse                                | Check the performance, quality, and correctness of site |
+| Google Chrome's Screen Reader                             | Test screen-reader accessibility                        |
+| W3C HTML Markup Validator                                 | Validate HTML code                                      |
+| W3C Jigsaw CSS Validator                                  | Validate CSS code                                       |
+| JSHINT                                                    | Validate JS code                                        |
+
+# Testing
+
+## Features testing
+
+[Test results]() as Google sheets.
+
+Responsive layout has been check for all screen sizes, and focused on most popular, based on [screen-resolution-stats](https://gs.statcounter.com/screen-resolution-stats/all/worldwide/2023).
+
+## User stories testing
+
+This section shows connection between [Features](#features) and [UX design](#ux-design) sections.
+
+### As a first time user
+
+### As a returning/frequent user
+
+- I want to easily navigate the website.
+
+  > The user can locate the necessary pages by using the links in the navigation bar. \
+  > For more details, see [F01 Navigation bar](#f01-navigation-bar)
+
+- I want to feel welcomed on WIZY website.
+
+- I want to make sure I don't get lost on this website.
+
+  > In case of the user find themself on 404 page, they easily to find a link to HEPY home page. \
+  > For more details, see [#F09 page 404](#f09-page-404).
+
+## Validator testing
+
+### HTML Validator
+
+The W3C Markup Validation Service was employed to check the HTML of the website. <br>
+All pages passed without any errors or warnings.
+
+<details><summary>Home</summary>
+<img src="assets/images/readme/W3HTML_validation_landing.png" width="500px">
+</details>
+
+<details><summary>Rules</summary>
+<img src="assets/images/readme/W3HTML_validation_rules.png" width="500px">
+</details>
+
+<details><summary>Game</summary>
+<img src="assets/images/readme/W3HTML_validation_game.png" width="500px">
+</details>
+
+<details><summary>Outcome</summary>
+<img src="assets/images/readme/W3HTML_validation_outcome.png" width="500px">
+</details>
+
+<details><summary>Champions</summary>
+<img src="assets/images/readme/W3HTML_validation_champions.png" width="500px">
+</details>
+
+<details><summary>404 page</summary>
+<img src="assets/images/readme/W3HTML_validation_404page.png" width="500px">
+</details>
+
+### CSS Validator
+
+The W3C Jigsaw CSS Validation Service was employed to check the HTML of the website. <br>
+The CSS page passed without any errors or warnings.
+
+<details><summary>CSS</summary>
+<img src="assets/images/readme/W3C_validation.png" width="500px">
+</details>
+
+### JS Validator
+
+The JSHint Validation Service was employed to check the JS files. <br>
+The JS files passed without any errors.
+
+<details><summary>js/components/alphabet.js</summary>
+<img src="assets/images/readme/alphabet_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/champions.js</summary>
+<img src="assets/images/readme/champions_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/complexity.js</summary>
+<img src="assets/images/readme/complexity_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/life.js</summary>
+<img src="assets/images/readme/life_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/outcome.js</summary>
+<img src="assets/images/readme/outcome_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/score.js</summary>
+<img src="assets/images/readme/score_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/user.js</summary>
+<img src="assets/images/readme/user_validation.png" width="300px">
+</details>
+
+<details><summary>js/components/word.js</summary>
+<img src="assets/images/readme/word_validation.png" width="300px">
+</details>
+
+<details><summary>js/lib/animate.js</summary>
+<img src="assets/images/readme/animate_validation.png" width="300px">
+</details>
+
+<details><summary>js/pages/champions-page.js</summary>
+<img src="assets/images/readme/champions_page_validation.png" width="300px">
+</details>
+
+<details><summary>js/pages/game-page.js</summary>
+<img src="assets/images/readme/game_page_validation.png" width="300px">
+</details>
+
+<details><summary>js/pages/landing-page.js</summary>
+<img src="assets/images/readme/landing_page_validation.png" width="300px">
+</details>
+
+<details><summary>js/pages/outcome-page.js</summary>
+<img src="assets/images/readme/outcome_page_validation.png" width="300px">
+</details>
+
+<details><summary>js/pages/rules-page.js</summary>
+<img src="assets/images/readme/rules_page_validation.png" width="300px">
+</details>
+
+<details><summary>js/main.js</summary>
+<img src="assets/images/readme/main_validation.png" width="300px">
+</details>
+
+## Performance
+
+Google Lighthouse in Google Chrome Developer Tools was used to check the website performance.
+
+### Home
+
+<details><summary>Home desktop</summary>
+<img src="assets/images/readme/landing_desktop.png" width="500px">
+</details>
+
+![Landing desktop numbers](assets/images/readme/landing_desktop_numbers.png)
+
+<details><summary>Home mobile</summary>
+<img src="assets/images/readme/landing_mobile.png" width="500px">
+</details>
+
+![Landing mobile numbers](assets/images/readme/landing_mobile_numbers.png)
+
+### Rules
+
+<details><summary>Rules desktop</summary>
+<img src="assets/images/readme/rules_desktop.png" width="500px">
+</details>
+
+![Rules desktop numbers](assets/images/readme/rules_desktop_numbers.png)
+
+<details><summary>Rules mobile</summary>
+<img src="assets/images/readme/rules_mobile.png" width="500px">
+</details>
+
+![Rules mobile numbers](assets/images/readme/rules_mobile_numbers.png)
+
+### Game
+
+<details><summary>Game desktop</summary>
+<img src="assets/images/readme/game_desktop.png" width="500px">
+</details>
+
+![Game desktop numbers](assets/images/readme/game_desktop_numbers.png)
+
+<details><summary>Game mobile</summary>
+<img src="assets/images/readme/game_mobile.png" width="500px">
+</details>
+
+![Game mobile numbers](assets/images/readme/game_mobile_numbers.png)
+
+### Outcome
+
+<details><summary>Outcome desktop</summary>
+<img src="assets/images/readme/outcome_desktop.png" width="500px">
+</details>
+
+![Outcome desktop numbers](assets/images/readme/outcome_desktop_numbers.png)
+
+<details><summary>Outcome mobile</summary>
+<img src="assets/images/readme/outcome_mobile.png" width="500px">
+</details>
+
+![Outcome mobile numbers](assets/images/readme/outcome_mobile_numbers.png)
+
+### Champions
+
+<details><summary>Champions desktop</summary>
+<img src="assets/images/readme/champions_desktop.png" width="500px">
+</details>
+
+![Champions desktop numbers](assets/images/readme/champions_desktop_numbers.png)
+
+<details><summary>Champions mobile</summary>
+<img src="assets/images/readme/champions_mobile.png" width="500px">
+</details>
+
+![Champions mobile numbers](assets/images/readme/champions_mobile_numbers.png)
+
+### 404 page
+
+<details><summary>404 page desktop</summary>
+<img src="assets/images/readme/404page_desktop.png" width="500px">
+</details>
+
+![404 page desktop numbers](assets/images/readme/404page_desktop_numbers.png)
+
+<details><summary>404 page mobile</summary>
+<img src="assets/images/readme/404page_mobile.png" width="500px">
+</details>
+
+![404 page mobile numbers](assets/images/readme/404page_mobile_numbers.png)
+
+### 500 page
+
+<details><summary>500 page desktop</summary>
+<img src="assets/images/readme/500page_desktop.png" width="500px">
+</details>
+
+![500 page desktop numbers](assets/images/readme/500page_desktop_numbers.png)
+
+<details><summary>500 page mobile</summary>
+<img src="assets/images/readme/500page_mobile.png" width="500px">
+</details>
+
+![500 page mobile numbers](assets/images/readme/500page_mobile_numbers.png)
+
+## Device/Browser Compatibility
+
+Testing has been carried out on the following devices:
+
+1. Macbook Sanoma Version 14.4.1:
+
+   - Chrome Version 124.0.6367.61 (Official Build) (arm64)
+   - Firefox Version 126.0.1 (64-bit)
+   - Safari
+
+2. Samsung S20:
+
+   - Chrome Version 125.0.6422.165
+   - Samsung Internet Version 25.0.1.3
+
+3. iPad Air 5th generation:
+
+   - Safari
+   - Chrome
+
+4. Windows PC:
+   - Chrome Version 124.0.6367.61 (Official Build) (arm64)
+
+# Deployment
+
+## How to fork and deploy
+
+1. Fork GitHub [WIZY repository](https://github.com/tayapro/wizy).
+2. In the GitHub repository, navigate to the **Settings** tab and select **Pages** from the left-hand menu.
+3. In the source section drop-down menu, choose the **Main Branch** and click button **Save**.
+4. Once the **Save** is clicked, the page will automatically refresh and display a detailed ribbon to indicate successful deployment.
+5. Any changes pushed to the main branch will be reflected in the live project.
+
+## How to clone
+
+1. Visit the [WIZY repository](https://github.com/tayapro/wizy) on GitHub.
+2. Click the **Code** button on the right side of the screen, select **HTTPs**, and copy the provided link.
+3. Open a terminal and navigate to the directory where you want to clone the repository.
+4. On the command line, type `git clone`, paste the copied URL, and press the **Enter** key to begin the process.
+
+# Credits
+
+## Content
+
+- The hamburger menu for mobile devices and footer icons as ideas were taken from "Love running" lesson.
+- All other content was written by the developer.
+
+## Media
+
+## Code
+
+## Media
+
+- The fonts used were imported from [Google Fonts](https://fonts.google.com/)
+- The icons in the header, footer were taken from [Font Awesome](https://fontawesome.com/icons)
+
+# Acknowledgments
+
+I want to give a big thanks to my mentor, Ronan McClelland. He gave me awesome advice on how to plan and do this project. <br>
+Plus, he showed me useful stuff for coding and testing. <br>
+Thanks to the Slack Community for always being there to answer my questions, sometimes even before I asked them!
