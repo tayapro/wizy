@@ -1,129 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Embark on an exciting adventure with WIZY Hangman game, the ultimate word-guessing game 
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Embark on an exciting adventure with WIZY Hangman game, the ultimate word-guessing game 
               with common topics.
               Perfect for all ages, our game combines the classic Hangman experience with the thrill 
-              of collecting vacation essentials."
-    />
-    <meta
-      name="keywords"
-      content="wizy, hangman, game, vacation, fun, Ireland"
-    />
-    <title>WIZY</title>
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      type="image/png"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="module" src="assets/js/main.js" defer></script>
-  </head>
+              of collecting vacation essentials.">
+  <meta name="keywords" content="wizy, hangman, game, vacation, fun, Ireland">
+  <title>WIZY</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <a href="index.html">
-        <div id="logo">
-          <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
-          <h2>WIZY</h2>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <div id="logo">
+        <img src="assets/images/wizy_logo.webp" alt="Wizy logo">
+        <h2>WIZY</h2>
+      </div>
+    </a>
+    <input type="checkbox" id="responsive-menu" name="responsive-menu">
+    <label for="responsive-menu" class="responsive-menu-label">
+      <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
+    </label>
+    <nav id="menu-list">
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="champions.html">Champions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div id="main-outcome-container">
+      <div id="game-outcome-card-container">
+        <div id="game-outcome-image-container">
+          <img class="hidden" id="outcome-park-image" src="assets/images/park.webp" alt="park image">
+          <img class="hidden" id="outcome-rural-image" src="assets/images/rural.webp" alt="rural image">
+          <img class="hidden" id="outcome-beach-image" src="assets/images/beach.webp" alt="beach image">
+          <img class="hidden" id="outcome-girl-image" src="assets/images/girl.webp" alt="girl image">
         </div>
-      </a>
-      <input type="checkbox" id="responsive-menu" name="responsive-menu" />
-      <label for="responsive-menu" class="responsive-menu-label">
-        <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
-      </label>
-      <nav id="menu-list">
-        <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="champions.html">Champions</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Main content -->
-    <main>
-      <div id="main-outcome-container">
-        <div id="game-outcome-card-container">
-          <div id="game-outcome-image-container">
-            <img
-              class="hidden"
-              id="outcome-park-image"
-              src="assets/images/park.webp"
-              alt="park image"
-            />
-            <img
-              class="hidden"
-              id="outcome-rural-image"
-              src="assets/images/rural.webp"
-              alt="rural image"
-            />
-            <img
-              class="hidden"
-              id="outcome-beach-image"
-              src="assets/images/beach.webp"
-              alt="beach image"
-            />
-            <img
-              class="hidden"
-              id="outcome-girl-image"
-              src="assets/images/girl.webp"
-              alt="girl image"
-            />
+        <div id="game-outcome-container">
+          <div id="stars-bar" class="hidden">
+            <div id="star-1" class="stars transition-in-out star-off"></div>
+            <div id="star-2" class="stars transition-in-out star-off"></div>
+            <div id="star-3" class="stars transition-in-out star-off"></div>
           </div>
-          <div id="game-outcome-container">
-            <div id="stars-bar" class="hidden">
-              <div id="star-1" class="stars transition-in-out star-off"></div>
-              <div id="star-2" class="stars transition-in-out star-off"></div>
-              <div id="star-3" class="stars transition-in-out star-off"></div>
+          <div id="game-outcome-results-container">
+            <div>
+              <h2 id="game-outcome"></h2>
+              <p class="hidden" id="game-outcome-message"></p>
             </div>
-            <div id="game-outcome-results-container">
-              <div>
-                <h2 id="game-outcome"></h2>
-                <p class="hidden" id="game-outcome-message"></p>
-              </div>
-              <p class="hidden" id="game-champion-message"></p>
-              <p class="hidden" id="game-score"></p>
-              <form id="outcome-game-level-form" target="_self">
-                <select id="outcome-complexity-list" name="complexity" required>
-                  <option value="">Select your level</option>
-                  <option value="0">Picnic in the Park</option>
-                  <option value="1">Campfire Tales</option>
-                  <option value="2">Sunny Beach</option>
-                </select>
+            <p class="hidden" id="game-champion-message"></p>
+            <p class="hidden" id="game-score"></p>
+            <form id="outcome-game-level-form" target="_self">
+              <select id="outcome-complexity-list" name="complexity" required>
+                <option value="">Select your level</option>
+                <option value="0">Picnic in the Park</option>
+                <option value="1">Campfire Tales</option>
+                <option value="2">Sunny Beach</option>
+              </select>
 
-                <button type="submit" id="btn-outcome-game-level-form">
-                  Start
-                </button>
-              </form>
-            </div>
+              <button type="submit" id="btn-outcome-game-level-form">
+                Start
+              </button>
+            </form>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Font Awesome kit -->
-    <script
-      src="https://kit.fontawesome.com/32c1244c27.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/32c1244c27.js" crossorigin="anonymous"></script>
+
+  <!-- Javascript -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
 </html>

@@ -83,7 +83,6 @@ export function newGameOutcome(place) {
       championsMessage.innerHTML = `You hold a <span>${place}</span> place <br> on the <a href="champions.html">champions' board</a>`;
     }
 
-    const outcomeMessage = document.getElementById("game-outcome-message");
     if (outcome.tier === 1) {
       const parkImg = document.getElementById("outcome-park-image");
       parkImg.classList.remove("hidden");

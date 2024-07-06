@@ -1,151 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Embark on an exciting adventure with WIZY Hangman game, the ultimate word-guessing game 
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Embark on an exciting adventure with WIZY Hangman game, the ultimate word-guessing game 
               with common topics.
               Perfect for all ages, our game combines the classic Hangman experience with the thrill 
-              of collecting vacation essentials."
-    />
-    <meta
-      name="keywords"
-      content="wizy, hangman, game, vacation, fun, Ireland"
-    />
-    <title>WIZY</title>
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      type="image/png"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="module" src="assets/js/main.js" defer></script>
-  </head>
+              of collecting vacation essentials.">
+  <meta name="keywords" content="wizy, hangman, game, vacation, fun, Ireland">
+  <title>WIZY</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <a href="index.html">
-        <div id="logo">
-          <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
-          <h2>WIZY</h2>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <div id="logo">
+        <img src="assets/images/wizy_logo.webp" alt="Wizy logo" />
+        <h2>WIZY</h2>
+      </div>
+    </a>
+    <div id="menu-user-icon">
+      <input type="checkbox" id="responsive-menu" name="responsive-menu" />
+      <label for="responsive-menu" class="responsive-menu-label">
+        <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
+      </label>
+      <nav id="menu-list">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+      <div id="user-icon-container">
+        <p id="user-icon"></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div id="main-rules-container">
+      <h2>GAME RULES</h2>
+
+      <div id="rules-container">
+        <div id="rules-vacation-items" class="rules-row">
+          <div id="rules-vacation-items-left-board" class="rules-left-board">
+            <h2 class="vertical-text">TEN</h2>
+            <div id="rules-vacation-items-img" class="rules-img hidden">
+              <i class="fa-solid fa-suitcase rules-icon-big"></i>
+            </div>
+          </div>
+          <div id="rules-vacation-items-right-board">
+            <div class="rules-title">
+              <div class="rules-icons-sm">
+                <i class="fa-solid fa-suitcase"></i>
+              </div>
+              <h2>Ten attempts</h2>
+            </div>
+            <p>The more tries you take, the lower your score will be.</p>
+          </div>
         </div>
-      </a>
-      <div id="menu-user-icon">
-        <input type="checkbox" id="responsive-menu" name="responsive-menu" />
-        <label for="responsive-menu" class="responsive-menu-label">
-          <i class="fa-solid fa-bars" id="responsive-menu-icon"></i>
-        </label>
-        <nav id="menu-list">
-          <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="champions.html">Champions</a></li>
-          </ul>
-        </nav>
-        <div id="user-icon-container">
-          <p id="user-icon"></p>
+        <div id="rules-hidden-word" class="rules-row">
+          <div id="rules-hidden-word-left-board" class="rules-left-board">
+            <h2 class="vertical-text">ONE</h2>
+            <div id="rules-hidden-word-img" class="rules-img hidden">
+              <i class="fa-brands fa-letterboxd rules-icon-big" id="word-icon-big"></i>
+            </div>
+          </div>
+          <div id="rules-hidden-word-right-board">
+            <div class="rules-title">
+              <div class="rules-icons-sm">
+                <i class="fa-brands fa-letterboxd"></i>
+              </div>
+              <h2>One word</h2>
+            </div>
+            <p>Solve the word puzzle.</p>
+          </div>
+        </div>
+        <div id="rules-win" class="rules-row">
+          <div id="rules-win-left-board" class="rules-left-board">
+            <h2 class="vertical-text">WIN</h2>
+            <div id="rules-win-img" class="rules-img hidden">
+              <i class="fa-solid fa-trophy rules-icon-big"></i>
+            </div>
+          </div>
+          <div id="rules-win-right-board">
+            <div class="rules-title">
+              <div class="rules-icons-sm">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <h2>Win</h2>
+            </div>
+            <p>
+              Go for a high score and become part of the champions'
+              leaderboard!
+            </p>
+          </div>
         </div>
       </div>
-    </header>
 
-    <!-- Main content -->
-    <main>
-      <div id="main-rules-container">
-        <h2>GAME RULES</h2>
+      <form id="game-level-form" target="_self">
+        <select id="complexity-list" name="complexity" required>
+          <option value="">Select your level</option>
+          <option value="0">Picnic in the Park</option>
+          <option value="1">Campfire Tales</option>
+          <option value="2">Sunny Beach</option>
+        </select>
 
-        <div id="rules-container">
-          <div id="rules-vacation-items" class="rules-row">
-            <div id="rules-vacation-items-left-board" class="rules-left-board">
-              <h2 class="vertical-text">TEN</h2>
-              <div id="rules-vacation-items-img" class="rules-img hidden">
-                <i class="fa-solid fa-suitcase rules-icon-big"></i>
-              </div>
-            </div>
-            <div id="rules-vacation-items-right-board">
-              <div class="rules-title">
-                <div class="rules-icons-sm">
-                  <i class="fa-solid fa-suitcase"></i>
-                </div>
-                <h2>Ten attempts</h2>
-              </div>
-              <p>The more tries you take, the lower your score will be.</p>
-            </div>
-          </div>
-          <div id="rules-hidden-word" class="rules-row">
-            <div id="rules-hidden-word-left-board" class="rules-left-board">
-              <h2 class="vertical-text">ONE</h2>
-              <div id="rules-hidden-word-img" class="rules-img hidden">
-                <i
-                  class="fa-brands fa-letterboxd rules-icon-big"
-                  id="word-icon-big"
-                ></i>
-              </div>
-            </div>
-            <div id="rules-hidden-word-right-board">
-              <div class="rules-title">
-                <div class="rules-icons-sm">
-                  <i class="fa-brands fa-letterboxd"></i>
-                </div>
-                <h2>One word</h2>
-              </div>
-              <p>Solve the word puzzle.</p>
-            </div>
-          </div>
-          <div id="rules-win" class="rules-row">
-            <div id="rules-win-left-board" class="rules-left-board">
-              <h2 class="vertical-text">WIN</h2>
-              <div id="rules-win-img" class="rules-img hidden">
-                <i class="fa-solid fa-trophy rules-icon-big"></i>
-              </div>
-            </div>
-            <div id="rules-win-right-board">
-              <div class="rules-title">
-                <div class="rules-icons-sm">
-                  <i class="fa-solid fa-trophy"></i>
-                </div>
-                <h2>Win</h2>
-              </div>
-              <p>
-                Go for a high score and become part of the champions'
-                leaderboard!
-              </p>
-            </div>
-          </div>
-        </div>
+        <button type="submit" id="btn-game-level-form">Start</button>
+      </form>
+    </div>
+  </main>
 
-        <form id="game-level-form" target="_self">
-          <select id="complexity-list" name="complexity" required>
-            <option value="">Select your level</option>
-            <option value="0">Picnic in the Park</option>
-            <option value="1">Campfire Tales</option>
-            <option value="2">Sunny Beach</option>
-          </select>
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/32c1244c27.js" crossorigin="anonymous"></script>
 
-          <button type="submit" id="btn-game-level-form">Start</button>
-        </form>
-      </div>
-    </main>
+  <!-- Javascript -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
 
-    <!-- Font Awesome kit -->
-    <script
-      src="https://kit.fontawesome.com/32c1244c27.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
