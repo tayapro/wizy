@@ -1,4 +1,4 @@
-# HEPY Website
+# WIZY Website
 
 ![Website Mock Up](assets/images/readme/mockup.png)
 
