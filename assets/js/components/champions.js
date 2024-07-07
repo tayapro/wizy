@@ -4,11 +4,11 @@
 export function setDefaultChampions() {
   // Default list of champions with their names and scores
   const champions = [
-    { name: "Alice", score: 505 },
-    { name: "David", score: 450 },
-    { name: "Frank", score: 478 },
-    { name: "Grace", score: 580 },
-    { name: "Jack", score: 637 },
+    { name: "Alice", score: 505, timeStamp: Date.now() },
+    { name: "David", score: 450, timeStamp: Date.now() },
+    { name: "Frank", score: 478, timeStamp: Date.now() },
+    { name: "Grace", score: 580, timeStamp: Date.now() },
+    { name: "Jack", score: 637, timeStamp: Date.now() },
   ];
 
   // Check if there is any existing champion data in local storage
@@ -78,7 +78,7 @@ export function recordUserScore(username, score, timeStamp) {
   if (existIndex !== -1) return turnIndexIntoPlace(existIndex);
 
   // Add the new applicant to the champions list
-  const applicant = { name: username, score };
+  const applicant = { name: username, score, timeStamp };
   champions.push(applicant);
 
   // Sort champions by score in descending order
@@ -92,5 +92,6 @@ export function recordUserScore(username, score, timeStamp) {
   const i = newChampions.findIndex(
     (c) => c.name === username && c.score === score && c.timeStamp === timeStamp
   );
+
   return turnIndexIntoPlace(i);
 }
