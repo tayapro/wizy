@@ -1,4 +1,4 @@
-# WIZY Website
+# WIZY web application
 
 ![Website Mock Up](assets/images/readme/mockup.png)
 
