@@ -54,19 +54,42 @@ For mobile devices, it transforms into a compact "hamburger menu." This dropdown
 
 ### F02 Home page - image and call to action
 
-### F03 Home page - tagline
+### F03 Home page - input Form
 
-### F04 Home page - testimonials
+### F04 Rules page
 
-### F05 Home page - HEPY team message
+### F05 Rules page - select form
 
-### F06 Footer
+### F06 Game page
 
-### F07 Lifehacks page
+### F07 Game page - lives blocks
 
-### F08 Subscribe page
+### F08 Game page - alphabet buttons
 
-### F09 page 404
+### F09 Outcome page
+
+### F10 Outcome page - stars
+
+### F11 Outcome page - outcome result (image and text)
+
+### F12 Outcome page - select form
+
+### F13 Champions page
+
+### F14 page 404
+
+The design of 404 page is simple and cute.
+"LOOKS LIKE YOU ARE LOST Go back to WIZY"
+
+The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
+Hover the "WIZY" link has a hover effect, it slightly grows (5%).
+
+### F15 page 500
+
+"OOPS! SOMETHING WENT WRONG... Start from WIZY"
+
+The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
+Hover the "WIZY" link has a hover effect, it slightly grows (5%).
 
 ## Future features
 
