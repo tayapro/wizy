@@ -162,8 +162,8 @@ The WIZY project architecture is organized into three levels:
 
    In case of an error, the user will be redirected to the `500.html` page.
 
-   > [!NOTE]
-   > Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
+> [!NOTE]
+> Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
 
 2. **Pages Level**
 
@@ -179,7 +179,7 @@ The WIZY project architecture is organized into three levels:
 
 ## Main JS features
 
-- _Dispatcher event handler function_, where using the corresponding page onloading page js functions redirect to to the required HTML page based on the URL.
+- _Dispatcher event handler function_, where using the corresponding onloading page js functions redirect to to the required HTML page based on the URL.
 - The WIZY application utilizes `throw new Error` statement for error handling to gracefully manage unexpected conditions and provide informative feedback, contributing to a more reliable and user-friendly experience.
 - WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_.
   LocalStorage enables data to persist across page reloads and sessions. It offers a simple and efficient method for storing user preferences, game scores, or settings directly in the user's browser.
@@ -190,7 +190,7 @@ The WIZY project architecture is organized into three levels:
 
   - **Complexity** localStorage record has `{Complexity: NUMBER}` format, where `NUMBER` is a integer between 0 and 2.
     0 is easy level, 1 is middle complexity level, 2 is hard level.
-    The selected complexity level on `Rules` page is saved on localStorage and displayed on the game's outcome page. <br >
+    The selected complexity level on `Rules` page is saved on localStorage and displayed on the game's outcome page as current level for new game. <br >
     If the user wants to play a new game at the same level, they can do so, just click `Play` button.
     Alternatively, users can change the complexity and click the `Play` button to start a new game at the
     chosen level of complexity on the game's outcome page.
@@ -202,8 +202,8 @@ The WIZY project architecture is organized into three levels:
     page of the game multiple times, the champions page will
     not display any duplicates (the localStorage will also not contain duplicates).
 
-  > [NOTE!]
-  > There is no need to clean up localStorage before writing data because it will overwrite the `Username` and `Complexity` records. The `Champions` record will be updated based on a user's scores.
+> [!NOTE]
+> There is no need to clean up localStorage before writing data because it will overwrite the `Username` and `Complexity` records. The `Champions` record will be updated based on a user's scores.
 
 # Technologies
 
