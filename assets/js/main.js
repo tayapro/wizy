@@ -4,7 +4,7 @@ import { onGamePageLoad } from "./pages/game-page.js";
 import { onOutcomePageLoad } from "./pages/outcome-page.js";
 import { onChampionsPageLoad } from "./pages/champions-page.js";
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
   try {
     if (
       document.documentURI.includes("index.html") ||

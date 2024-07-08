@@ -8,7 +8,7 @@
 - [UX Design](#ux-design)
 - [Features](#features)
 - [Design](#design)
-- [Project Structure](#project-structure)
+- [Project Structure (JS)](#project-structure-js)
 - [Technologies](#technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -111,7 +111,7 @@ approachable feel, making it a great choice for game apps.
 
 <img src="assets/images/readme/500_page.png" width="500" alt="500 page wireframe">
 
-# Project Structure
+# Project Structure (JS)
 
 ## Architecture
 
@@ -134,17 +134,76 @@ approachable feel, making it a great choice for game apps.
 
 ### Project Architecture Overview
 
-The project architecture is organized into three levels:
+The WIZY project architecture is organized into three levels:
 
-<img src="./assets/images/readme/project_architecture.webp" alt="project architecture image" width="900">
+<img src="./assets/images/readme/architecture_project.webp" alt="project architecture image" width="900">
 
-1. **Main Level**: This level houses the main.js file, which serves as a router to dynamically load the content of all other pages.
+1. **Main Level**: This level consists of the main.js file, which serves as a router to dynamically load the content of all other pages.
 
-2. **Page Level**: This level comprises JavaScript files for individual pages, such as the landing page, rules page, and game page. Each file contains the specific content and functionality for its corresponding page.
+2. **Pages Level**: This level comprises JavaScript files for individual pages, such as the landing page, rules page, and game page. Each file contains the specific content and functionality for its corresponding page.
+   There are no horizontal dependencies at this levels. The pages js files depend only on components js files.
 
-3. **Component Level**: This level consists of component JavaScript files. These components act as building blocks that are utilized by the page-level JavaScript files to construct the overall page logic and functionality.
+3. **Components Level**: This level consists of component JavaScript files. These components act as building blocks that are utilized by the page-level JavaScript files to construct the overall page logic and functionality.
+   There are no horizontal dependencies at this level. The component js files depend only on library `animate.js` file.
+
+4. **Libraries**: This section contains project-wide libraries used as external dependencies, with the potential to be released as npm packages. It currently includes an animation library that provides animation capabilities for HTML elements.
 
 ## JavaScript Structure
+
+1. On the **Main Level**, there is a `main.js` file that imports all the pages JavaScript files such as:
+
+   - `champions-page.js`
+   - `game-page.js`
+   - `landing-page.js`
+   - `outcome-page.js`
+   - `rules-page.js`
+
+   Inside the `main.js` file, there is an handler function attached to the `DOMContentLoaded` event listener, which includes a `try...catch` statement to handle any internal errors.
+
+   In case of an error, the user will be redirected to the `500.html` page.
+
+   > [!NOTE]
+   > Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
+
+2. **Pages Level**
+
+   2.1. `champions-page.js` file is responsible for Champions page view with actual list of game leaders.
+   Sets the default list of champions if no champion data exists in local storage.
+
+3. **Component Level**
+
+**Library** `animate.js` file
+
+> [!NOTE]
+> The files have quite detailed comments for more in-depth information.
+
+## Main JS features
+
+- _Dispatcher event handler function_, where using the corresponding page onloading page js functions redirect to to the required HTML page based on the URL.
+- The WIZY application utilizes `throw new Error` statement for error handling to gracefully manage unexpected conditions and provide informative feedback, contributing to a more reliable and user-friendly experience.
+- WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_.
+  LocalStorage enables data to persist across page reloads and sessions. It offers a simple and efficient method for storing user preferences, game scores, or settings directly in the user's browser.
+
+  - **Username** localStorage record has `{Username: NAME}` format, where `NAME` is a string with 2 to 10 characters.
+    The username will be changed to a new one every time, then they fill the username and click `Play` button
+    on the landing WIZY page.
+
+  - **Complexity** localStorage record has `{Complexity: NUMBER}` format, where `NUMBER` is a integer between 0 and 2.
+    0 is easy level, 1 is middle complexity level, 2 is hard level.
+    The selected complexity level on `Rules` page is saved on localStorage and displayed on the game's outcome page. <br >
+    If the user wants to play a new game at the same level, they can do so, just click `Play` button.
+    Alternatively, users can change the complexity and click the `Play` button to start a new game at the
+    chosen level of complexity on the game's outcome page.
+
+  - **Champions** localStorage record has `Champions` as key and array of 5 objects with following structure:
+    `{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}` as value, where `USERNAME` is string, `SCORE_NUMBER` is total score number less 1000, `TIMESTAMP_NUMBER` - Unix epoch time.
+    The initial champions list is read and downloaded from the `champions` array in `champions.js` file. If a user achieves a score better than the minimum score in this list, they will be added to the champions list. The list will be updated
+    (contains the 5 best players). A user can have a few records in the list of champions. If a user refreshes the outcome
+    page of the game multiple times, the champions page will
+    not display any duplicates (the localStorage will also not contain duplicates).
+
+  > [NOTE!]
+  > There is no need to clean up localStorage before writing data because it will overwrite the `Username` and `Complexity` records. The `Champions` record will be updated based on a user's scores.
 
 # Technologies
 
