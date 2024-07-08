@@ -70,7 +70,11 @@ For mobile devices, it transforms into a compact "hamburger menu." This dropdown
 
 ## Future features
 
-> -
+> - Create a personal account to track user's progress.
+> - Leave game on pause.
+> - Log out, click on the icon with the first letter of your username in the header and accept it.
+> - Add the weight of the complexity level to the score calculation. For instance, easy level scores will be
+>   multiplied by 0.6, for medium level - by 0.8, and for hard level - no change.
 
 # Design
 
@@ -196,11 +200,10 @@ The WIZY project architecture is organized into three levels:
     chosen level of complexity on the game's outcome page.
 
   - **Champions** localStorage record has `Champions` as key and array of 5 objects with following structure:
-    `{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}` as value, where `USERNAME` is string, `SCORE_NUMBER` is total score number less 1000, `TIMESTAMP_NUMBER` - Unix epoch time.
+    `{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}` as value, where `USERNAME` is string, `SCORE_NUMBER` is total score number less 1000, `TIMESTAMP_NUMBER` - Unix epoch time. <br >
     The initial champions list is read and downloaded from the `champions` array in `champions.js` file. If a user achieves a score better than the minimum score in this list, they will be added to the champions list. The list will be updated
-    (contains the 5 best players). A user can have a few records in the list of champions. If a user refreshes the outcome
-    page of the game multiple times, the champions page will
-    not display any duplicates (the localStorage will also not contain duplicates).
+    (contains the 5 best players). A user can have a few records in the list of champions. <br >
+    If a user refreshes the outcome page of the game multiple times, the champions page will not display any duplicates (the localStorage will also not contain duplicates).
 
 > [!NOTE]
 > There is no need to clean up localStorage before writing data because it will overwrite the `Username` and `Complexity` records. The `Champions` record will be updated based on a user's scores.

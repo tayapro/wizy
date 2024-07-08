@@ -1,8 +1,3 @@
-// TODO: use the same cut off points for each complexity
-// and multiply the score itself based on complexity ie
-// complexity 2 - x 1
-// compexity 1 - x 0.8
-// compelxity 0 - x 0.6
 const oneStarCutoff = [400, 300, 200];
 const twoStarCutoff = [800, 700, 600];
 
