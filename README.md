@@ -8,6 +8,7 @@
 - [UX Design](#ux-design)
 - [Features](#features)
 - [Design](#design)
+- [Project Structure](#project-structure)
 - [Technologies](#technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -109,6 +110,41 @@ approachable feel, making it a great choice for game apps.
 ### 500 page Wireframes
 
 <img src="assets/images/readme/500_page.png" width="500" alt="500 page wireframe">
+
+# Project Structure
+
+## Architecture
+
+<table>
+<tr>
+   <td><img src="./assets/images/readme/architecture_fun.webp" alt="architecture fun image" width="400"></td>
+   <td>Having a good architecture for a JavaScript project is crucial for several reasons:
+      <ol>
+         <li><strong>Maintainability</strong>: A well-structured project makes it easier to understand, 
+            modify, and extend the codebase, reducing the risk of introducing bugs when making changes.</li>
+         <li><strong>Scalability</strong>: good architecture allows the project to scale and add 
+            new features without becoming unwieldy or difficult to manage.</li>
+         <li><strong>Collaboration</strong>: clear separation of concerns and organized code facilitates 
+            teamwork, enabling multiple developers to work on different project parts simultaneously 
+            without conflicts.</li>
+      </ol>
+   </td>
+</tr>
+</table>
+
+### Project Architecture Overview
+
+The project architecture is organized into three levels:
+
+<img src="./assets/images/readme/project_architecture.webp" alt="project architecture image" width="900">
+
+1. **Main Level**: This level houses the main.js file, which serves as a router to dynamically load the content of all other pages.
+
+2. **Page Level**: This level comprises JavaScript files for individual pages, such as the landing page, rules page, and game page. Each file contains the specific content and functionality for its corresponding page.
+
+3. **Component Level**: This level consists of component JavaScript files. These components act as building blocks that are utilized by the page-level JavaScript files to construct the overall page logic and functionality.
+
+## JavaScript Structure
 
 # Technologies
 
