@@ -178,7 +178,7 @@ If the user wants to start a new game with a different name, they should go to t
 
 ### F11 Outcome page - aminated stars
 
-<video src="https://github.com/tayapro/wizy/assets/35047495/b189ffdb-d8fb-4b8e-94e5-148a40457f9f" width="230"></video>
+<img src="./assets/images/readme/3_stars_animation.gif" alt="3 stars animation">
 
 ### F12 Outcome page - select form
 
@@ -363,6 +363,7 @@ The WIZY project architecture is organized into three levels:
 | [Pixelcut](https://create.pixelcut.ai/background-remover) | Remove image's background                               |
 | [Vmake.ai](https://vmake.ai/image-outpainting)            | Expand the image                                        |
 | [Imagecolorpicker](https://imagecolorpicker.com)          | Color picker                                            |
+| [Ezgif](https://ezgif.com/)                               | Video editor                                            |
 | Balsamiq                                                  | Build interface website wireframes                      |
 | Git                                                       | Use for version control                                 |
 | GitHub                                                    | Store the source code and deploy and host the live site |
