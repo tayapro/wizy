@@ -69,7 +69,7 @@ The playful pineapple, catchy tagline, and game invitation convey the website's 
 
 <p float="left">
   <img src="assets/images/readme/f02_desktop.png" width="500" alt="cartoon pineapple floating on an inflatable ring desktop image"/>
-  <img src="assets/images/readme/f02_mobile.png" width="200" alt="cartoon pineapple floating on an inflatable ring mobile image"/> 
+  <img src="assets/images/readme/f02_mobile.png" width="176" alt="cartoon pineapple floating on an inflatable ring mobile image"/> 
 </p>
 
 A fun and inviting call to action with an input field for user's name and a "Play" button makes starting the WIZY game exciting and easy.
@@ -78,7 +78,7 @@ A fun and inviting call to action with an input field for user's name and a "Pla
 
 A friendly input field with the placeholder "Enter your name" and a "Play" button offers a straightforward and complete way for users to log in and start playing.
 
-  <img src="assets/images/readme/f03_input_form.png" width="500" alt="log in input form image"/>
+  <img src="assets/images/readme/f03_input_form.png" width="300" alt="log in input form image"/>
 
 The LocalStorage will store a **Username** record as a key and the entered name as a value.
 
@@ -91,15 +91,15 @@ Every game needs rules! The WIZY rules page offers them with the icons and brief
 The Rules page's design has two versions, one for mobile devices and another for laptops.
 
 <p float="left">
-  <img src="assets/images/readme/f04_desktop.png" width="500" alt="rules page desktop view image"/>
-  <img src="assets/images/readme/f04_mobile.png" width="200" alt="rules page mobile view image"/> 
+  <img src="assets/images/readme/f04_desktop.png" width="420" alt="rules page desktop view image"/>
+  <img src="assets/images/readme/f04_mobile.png" width="150" alt="rules page mobile view image"/> 
 </p>
 
 ### F05 Rules page - select form
 
 The Rules page includes a user-friendly form where players can choose the game's difficulty level from a dropdown menu.
 
-<img src="assets/images/readme/f05_mobile.png" width="500" alt="rules page select game level image"/>
+<img src="assets/images/readme/f05_mobile.png" width="300" alt="rules page select game level image"/>
 
 The LocalStorage will store a **Complexity** record as a key and LEVEL number as value.
 
@@ -119,7 +119,7 @@ In the top right corner of the header, users can see their name's first letter d
 
 <p float="left">
   <img src="assets/images/readme/f06_desktop.png" width="500" alt="user's icon on rules page desktop view image"/>
-  <img src="assets/images/readme/f06_mobile.png" width="200" alt="user's icon on rules page mobile view image"/> 
+  <img src="assets/images/readme/f06_mobile.png" width="151" alt="user's icon on rules page mobile view image"/> 
 </p>
 
 The user's name is stored in localStorage, as explained in the _F03 Home page - input form_ section above. <br >
@@ -140,8 +140,8 @@ Regardless of the game's result, players always want to see their outcome. In th
   - One gold star after animation
   - The image (adapted to different screen sizes):
       <p float="left">
-         <img src="assets/images/readme/f10_park_desktop.png" width="213" alt="park outcome page desktop view image"/>
-         <img src="assets/images/readme/f10_park_mobile.png" width="100" alt="park outcome page mobile view image"/>
+         <img src="assets/images/readme/f10_park_desktop.png" width="319" alt="park outcome page desktop view image"/>
+         <img src="assets/images/readme/f10_park_mobile.png" width="150" alt="park outcome page mobile view image"/>
       </p>
   - "Grab your bike and go to a park" message
 
@@ -150,24 +150,26 @@ Regardless of the game's result, players always want to see their outcome. In th
   - Two gold stars after animation
   - The image (adapted to different screen sizes):
       <p float="left">
-         <img src="assets/images/readme/f10_village_desktop.png" width="231" alt="park outcome page desktop view image"/>
-         <img src="assets/images/readme/f10_village_mobile.png" width="100" alt="park outcome page mobile view image"/>
+         <img src="assets/images/readme/f10_village_desktop.png" width="345" alt="park outcome page desktop view image"/>
+         <img src="assets/images/readme/f10_village_mobile.png" width="150" alt="park outcome page mobile view image"/>
       </p>
   - "Pack your backpack and visit your granny" message
+
+- For three stars:
 
   - Three gold stars after animation
   - The image (adapted to different screen sizes):
       <p float="left">
-         <img src="assets/images/readme/f10_beach_desktop.png" width="228" alt="beach outcome page desktop view image"/>
-         <img src="assets/images/readme/f10_beach_mobile.png" width="100" alt="beach outcome page mobile view image"/> 
+         <img src="assets/images/readme/f10_beach_desktop.png" width="342" alt="beach outcome page desktop view image"/>
+         <img src="assets/images/readme/f10_beach_mobile.png" width="150" alt="beach outcome page mobile view image"/> 
       </p>
   - "Sounds like someone is going to Hawai" message
 
 If luck isn't on player's side and they lose, the Outcome page offers encouraging messages alongside a humorous picture of a girl in heart-shaped glasses.
 
 <p float="left">
-   <img src="assets/images/readme/f10_girl_desktop.png" width="210" alt="funny girl outcome page desktop view image"/>
-   <img src="assets/images/readme/f10_girl_mobile.png" width="100" alt="funny girl outcome page mobile view image"/> 
+   <img src="assets/images/readme/f10_girl_desktop.png" width="314" alt="funny girl outcome page desktop view image"/>
+   <img src="assets/images/readme/f10_girl_mobile.png" width="150" alt="funny girl outcome page mobile view image"/> 
 </p>
 
 Regardless of the game's outcome, the player is encouraged to start a new game by selecting the difficulty level and keeping the same name.
