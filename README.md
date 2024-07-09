@@ -190,18 +190,31 @@ If the user wants to start a new game with a different name, they should go to t
 
 ### F16 page 404
 
-The design of 404 page is simple and cute.
-"LOOKS LIKE YOU ARE LOST Go back to WIZY"
+A relaxed cartoon watermelon on a swim ring continues the fun theme started by the pineapple on the WIZY landing page.
+The text "_LOOKS LIKE YOU ARE LOST Go back to WIZY_" seems to say, don’t worry, we’re here to guide you
+and help you find your way to the WIZY web application.
+
+<img src="assets/images/readme/f16_watermelon_desktop.png" width="300" alt="watermelon 404 page desktop view image"/>
 
 The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
 Hover the "WIZY" link has a hover effect, it slightly grows (5%).
+
+The design of 404 page is simple, cute, and consistent across all devices.
 
 ### F17 page 500
 
-"OOPS! SOMETHING WENT WRONG... Start from WIZY"
+A cartoon pineapple rushing on a surfboard seems to hint that the application developers are rushing to
+the rescue and the problem will be fixed in the near future.
+
+<img src="assets/images/readme/f17_pineapple_desktop.png" width="300" alt="pineapple 500 page desktop view image"/>
+
+The text "_OOPS! SOMETHING WENT WRONG... Start from WIZY_" lets users know that the developers are aware of the issue
+and provides a friendly link to return to the main page.
 
 The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
 Hover the "WIZY" link has a hover effect, it slightly grows (5%).
+
+The design of 500 page is simple, cute, and consistent across all devices.
 
 ## Future features
 
