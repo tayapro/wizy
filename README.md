@@ -27,7 +27,7 @@ The goals are to create a challenging and enjoyable experience with different di
 
 The WIZY web app is built using HTML, CSS and Javascript as a Portfolio Project#2 for the Code Institute's Full Stack Developer(e-Commerce) course.
 
-[The live WIZY website](https://tayapro.github.io/wizy/)
+[The live WIZY web application](https://tayapro.github.io/wizy/)
 
 ---
 
@@ -122,7 +122,7 @@ In the top right corner of the header, users can see their name's first letter d
   <img src="assets/images/readme/f06_mobile.png" width="200" alt="user's icon on rules page mobile view image"/> 
 </p>
 
-The user's name is stored in localStorage, as explained in the F03 Home page - input form section. <br >
+The user's name is stored in localStorage, as explained in the _F03 Home page - input form_ section above. <br >
 This information is used by a JavaScript function to read and update the DOM element on the Rules page.
 
 ### F07 Game page
@@ -131,23 +131,60 @@ This information is used by a JavaScript function to read and update the DOM ele
 
 ### F09 Game page - alphabet buttons
 
-### F07 Game page
-
 ### F10 Outcome page
 
-### F11 Outcome page - stars
+Regardless of the game's result, players always want to see their outcome. In the WIZY game, the outcome page provides a visual representation based on the stars earned:
 
-### F12 Outcome page - outcome result (image and text)
+- For one star:
 
-### F13 Outcome page - select form
+  - One gold star after animation
+  - The image (adapted to different screen sizes):
+      <p float="left">
+         <img src="assets/images/readme/f10_park_desktop.png" width="213" alt="park outcome page desktop view image"/>
+         <img src="assets/images/readme/f10_park_mobile.png" width="100" alt="park outcome page mobile view image"/>
+      </p>
+  - "Grab your bike and go to a park" message
 
-### F14 Champions page
+- For two stars:
 
-### F15 Champions page - initial champion's list
+  - Two gold stars after animation
+  - The image (adapted to different screen sizes):
+      <p float="left">
+         <img src="assets/images/readme/f10_village_desktop.png" width="231" alt="park outcome page desktop view image"/>
+         <img src="assets/images/readme/f10_village_mobile.png" width="100" alt="park outcome page mobile view image"/>
+      </p>
+  - "Pack your backpack and visit your granny" message
 
-### F16 Champions page - current champions list
+  - Three gold stars after animation
+  - The image (adapted to different screen sizes):
+      <p float="left">
+         <img src="assets/images/readme/f10_beach_desktop.png" width="228" alt="beach outcome page desktop view image"/>
+         <img src="assets/images/readme/f10_beach_mobile.png" width="100" alt="beach outcome page mobile view image"/> 
+      </p>
+  - "Sounds like someone is going to Hawai" message
 
-### F17 page 404
+If luck isn't on player's side and they lose, the Outcome page offers encouraging messages alongside a humorous picture of a girl in heart-shaped glasses.
+
+<p float="left">
+   <img src="assets/images/readme/f10_girl_desktop.png" width="210" alt="funny girl outcome page desktop view image"/>
+   <img src="assets/images/readme/f10_girl_mobile.png" width="100" alt="funny girl outcome page mobile view image"/> 
+</p>
+
+Regardless of the game's outcome, the player is encouraged to start a new game by selecting the difficulty level and keeping the same name.
+
+If the user wants to start a new game with a different name, they should go to the main page and enter the new name.
+
+### F11 Outcome page - aminated stars
+
+### F12 Outcome page - select form
+
+### F13 Champions page
+
+### F14 Champions page - initial champion's list
+
+### F15 Champions page - current champions list
+
+### F16 page 404
 
 The design of 404 page is simple and cute.
 "LOOKS LIKE YOU ARE LOST Go back to WIZY"
@@ -155,7 +192,7 @@ The design of 404 page is simple and cute.
 The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
 Hover the "WIZY" link has a hover effect, it slightly grows (5%).
 
-### F18 page 500
+### F17 page 500
 
 "OOPS! SOMETHING WENT WRONG... Start from WIZY"
 
