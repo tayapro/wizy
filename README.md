@@ -17,7 +17,8 @@
 
 # Purpose
 
-Who wouldn't want to be on a sandy beach by the ocean when it's raining in Ireland in the middle of July? <br >
+Who wouldn't want to be on a sandy beach by the ocean when it's raining in Ireland in the middle of July?
+
 The WIZY hangman web application is a classic word-guessing game with a sunny vacation theme. Guess a word, save as many lives as possible, and discover your destination. It could be a stroll in the nearest park, a quick weekend trip to see your grandma, or a long vacation on a beach by the ocean.
 
 In this game, lives are represented by travel essentials such as sunglasses, a suitcase, a hat, a camera, etc. The words to guess are based on common themes and vary in difficulty levels.
@@ -37,10 +38,11 @@ The WIZY web app is built using HTML, CSS and Javascript as a Portfolio Project#
 ### As a **user**
 
 - I want to easily understand the primary objective of the website.
+- I want to see something personal, like my name or initials.
 - I want to view a tutorial or instructions, so that I understand how to play the game.
 - I want to select the difficulty level of the game, so that I can choose how challenging the game will be.
 - I want to see animations when I guess a letter correctly or incorrectly, so that the game feels more interactive and engaging.
-- want to see a win or lose animation, images, message at the end of the game, so that I know the outcome.
+- I want to see a win or lose animation, images, message at the end of the game, so that I know the outcome.
 - I want to view a leaderboard of top scores, so that I can compare my performance with others.
 - I want to easily navigate the website.
 - I want to make sure I don't get lost on this website.
@@ -53,37 +55,99 @@ The WIZY web app is built using HTML, CSS and Javascript as a Portfolio Project#
 
 Each page has a sticky navigation bar at the top that is fully responsive. It includes a logo linking to the Home page, as well as links to the Home, Champions pages. The navigation bar layout is consistent across all devices, making navigation simple and intuitive. The underline appears when you move the mouse over the menu links.
 
-<img src="assets/images/readme/menu_desktop.png" width="400">
+<img src="assets/images/readme/menu_desktop.png" width="400" alt="menu desktop image">
 
 For mobile devices, it transforms into a compact "hamburger menu." This dropdown menu contains the same items, displayed in a column on a semitransparent background.
 
-<img src="assets/images/readme/menu_mobile.png" width="400">
+<img src="assets/images/readme/menu_mobile.png" width="400" alt="menu mobile image">
 
 ### F02 Home page - image and call to action
 
+When you visit the WIZY website, you're greeted by a cheerful cartoon pineapple floating on an inflatable ring in a pool or the sea. His big sunglasses and laid-back pose show he's really having a great time on his vacation. This instantly sets a positive tone.
+
+The playful pineapple, catchy tagline, and game invitation convey the website's overall fun and engaging theme.
+
+<p float="left">
+  <img src="assets/images/readme/f02_desktop.png" width="500" alt="cartoon pineapple floating on an inflatable ring desktop image"/>
+  <img src="assets/images/readme/f02_mobile.png" width="200" alt="cartoon pineapple floating on an inflatable ring mobile image"/> 
+</p>
+
+A fun and inviting call to action with an input field for user's name and a "Play" button makes starting the WIZY game exciting and easy.
+
 ### F03 Home page - input form
+
+A friendly input field with the placeholder "Enter your name" and a "Play" button offers a straightforward and complete way for users to log in and start playing.
+
+  <img src="assets/images/readme/f03_input_form.png" width="500" alt="log in input form image"/>
+
+The LocalStorage will store a **Username** record as a key and the entered name as a value.
+
+   <img src="assets/images/readme/f03_local_storage.png" width="500" alt="log in localStorage image"/>
 
 ### F04 Rules page
 
+Every game needs rules! The WIZY rules page offers them with the icons and brief instructions. Here, users can choose a game level, from easy ("Picnic in the Park") to hard ("Sunny Beach"). <br > The theme and level names match the main page, keeping the vacation vibe going.
+
+The Rules page's design has two versions, one for mobile devices and another for laptops.
+
+<p float="left">
+  <img src="assets/images/readme/f04_desktop.png" width="500" alt="rules page desktop view image"/>
+  <img src="assets/images/readme/f04_mobile.png" width="200" alt="rules page mobile view image"/> 
+</p>
+
 ### F05 Rules page - select form
 
-### F06 Game page
+The Rules page includes a user-friendly form where players can choose the game's difficulty level from a dropdown menu.
 
-### F07 Game page - lives blocks
+<img src="assets/images/readme/f05_mobile.png" width="500" alt="rules page select game level image"/>
 
-### F08 Game page - alphabet buttons
+The LocalStorage will store a **Complexity** record as a key and LEVEL number as value.
 
-### F09 Outcome page
+<img src="assets/images/readme/f05_local_storage.png" width="500" alt="complexity localStorage image"/>
 
-### F10 Outcome page - stars
+Complexity levels mapping:
 
-### F11 Outcome page - outcome result (image and text)
+| Complexity's name    | number in WIZY system |
+| :------------------- | :-------------------- |
+| _Picnic in the Park_ | 0                     |
+| _Campfire Tales_     | 1                     |
+| _Sunny Beach_        | 2                     |
 
-### F12 Outcome page - select form
+### F06 Rules page - user's icon
 
-### F13 Champions page
+In the top right corner of the header, users can see their name's first letter displayed as an icon (this applies to all screen sizes).
 
-### F14 page 404
+<p float="left">
+  <img src="assets/images/readme/f06_desktop.png" width="500" alt="user's icon on rules page desktop view image"/>
+  <img src="assets/images/readme/f06_mobile.png" width="200" alt="user's icon on rules page mobile view image"/> 
+</p>
+
+The user's name is stored in localStorage, as explained in the F03 Home page - input form section. <br >
+This information is used by a JavaScript function to read and update the DOM element on the Rules page.
+
+### F07 Game page
+
+### F08 Game page - lives blocks
+
+### F09 Game page - alphabet buttons
+
+### F07 Game page
+
+### F10 Outcome page
+
+### F11 Outcome page - stars
+
+### F12 Outcome page - outcome result (image and text)
+
+### F13 Outcome page - select form
+
+### F14 Champions page
+
+### F15 Champions page - initial champion's list
+
+### F16 Champions page - current champions list
+
+### F17 page 404
 
 The design of 404 page is simple and cute.
 "LOOKS LIKE YOU ARE LOST Go back to WIZY"
@@ -91,7 +155,7 @@ The design of 404 page is simple and cute.
 The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
 Hover the "WIZY" link has a hover effect, it slightly grows (5%).
 
-### F15 page 500
+### F18 page 500
 
 "OOPS! SOMETHING WENT WRONG... Start from WIZY"
 
@@ -101,11 +165,10 @@ Hover the "WIZY" link has a hover effect, it slightly grows (5%).
 ## Future features
 
 > - Create a personal account to track user's progress.
-> - Leave game on pause.
+> - Option to pause the game.
 > - Get hints or clues, when a user is stuck.
-> - Log out, click on the icon with the first letter of your username in the header and accept it.
-> - Add the weight of the complexity level to the score calculation. For instance, easy level scores will be
->   multiplied by 0.6, for medium level - by 0.8, and for hard level - no change.
+> - Allow a user to log out by clicking the icon with the first letter of your username in the header and confirming.
+> - Add the weight of the complexity level to the score calculation.
 
 # Design
 
