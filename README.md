@@ -17,9 +17,14 @@
 
 # Purpose
 
-Our goals:
+Who wouldn't want to be on a sandy beach by the ocean when it's raining in Ireland in the middle of July? <br >
+The WIZY hangman web application is a classic word-guessing game with a sunny vacation theme. Guess a word, save as many lives as possible, and discover your destination. It could be a stroll in the nearest park, a quick weekend trip to see your grandma, or a long vacation on a beach by the ocean.
 
-The website is built using HTML, CSS and Javascript as a Portfolio Project#2 for the Code Institute's Full Stack Developer(e-Commerce) course.
+In this game, lives are represented by travel essentials such as sunglasses, a suitcase, a hat, a camera, etc. The words to guess are based on common themes and vary in difficulty levels.
+
+The goals are to create a challenging and enjoyable experience with different difficulty levels, easy-to-use controls, and attractive animations. The main objective is to make learning new words fun and entertaining.
+
+The WIZY web app is built using HTML, CSS and Javascript as a Portfolio Project#2 for the Code Institute's Full Stack Developer(e-Commerce) course.
 
 [The live WIZY website](https://tayapro.github.io/wizy/)
 
@@ -29,12 +34,14 @@ The website is built using HTML, CSS and Javascript as a Portfolio Project#2 for
 
 ## User stories
 
-### As a **first time user**
+### As a **user**
 
 - I want to easily understand the primary objective of the website.
-
-### As a **returning** and a **frequent user**
-
+- I want to view a tutorial or instructions, so that I understand how to play the game.
+- I want to select the difficulty level of the game, so that I can choose how challenging the game will be.
+- I want to see animations when I guess a letter correctly or incorrectly, so that the game feels more interactive and engaging.
+- want to see a win or lose animation, images, message at the end of the game, so that I know the outcome.
+- I want to view a leaderboard of top scores, so that I can compare my performance with others.
 - I want to easily navigate the website.
 - I want to make sure I don't get lost on this website.
 
@@ -54,7 +61,7 @@ For mobile devices, it transforms into a compact "hamburger menu." This dropdown
 
 ### F02 Home page - image and call to action
 
-### F03 Home page - input Form
+### F03 Home page - input form
 
 ### F04 Rules page
 
@@ -95,6 +102,7 @@ Hover the "WIZY" link has a hover effect, it slightly grows (5%).
 
 > - Create a personal account to track user's progress.
 > - Leave game on pause.
+> - Get hints or clues, when a user is stuck.
 > - Log out, click on the icon with the first letter of your username in the header and accept it.
 > - Add the weight of the complexity level to the score calculation. For instance, easy level scores will be
 >   multiplied by 0.6, for medium level - by 0.8, and for hard level - no change.
