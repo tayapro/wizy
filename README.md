@@ -178,6 +178,8 @@ If the user wants to start a new game with a different name, they should go to t
 
 ### F11 Outcome page - aminated stars
 
+https://github.com/tayapro/wizy/assets/35047495/b189ffdb-d8fb-4b8e-94e5-148a40457f9f
+
 ### F12 Outcome page - select form
 
 ### F13 Champions page
