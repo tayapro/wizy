@@ -178,15 +178,63 @@ If the user wants to start a new game with a different name, they should go to t
 
 ### F11 Outcome page - aminated stars
 
-<img src="./assets/images/readme/3_stars_animation.gif" alt="3 stars animation">
+<table>
+<tr>
+   <td width="220px">
+      <img src="./assets/images/readme/3_stars_animation.gif" width="210" alt="3 stars animation">
+   </td>
+   <td>
+      The outcome of the game decides how many stars turn from gray to gold during the animation, <br >
+      starting from the left star and moving to the right.<br >
+      In the event of the user's loss, the animation will not occur, and the stars will retain their gray color.
+   </td>
+   </tr>
+   </table>
 
 ### F12 Outcome page - select form
 
+Using the form, a user can easily change the difficulty level for a new game, just like on the rules page, see **F05 Rules page - select form**.
+
+<img src="assets/images/readme/f12_desktop.png" width="210" alt="select form outcome page image"/>
+
+The LocalStorage will store a new **Complexity** record as a key and LEVEL number as value, overwriting the existing complexity LEVEL number.
+
 ### F13 Champions page
+
+The champions page has a clean card design, with a stars image and a list of champions ranked from first to fifth place.
+The design of Champions page is consistent across all devices.
+
+<p float="left">
+   <img src="assets/images/readme/f13_desktop.png" width="342" alt="champions page desktop view image"/>
+   <img src="assets/images/readme/f13_mobile.png" width="150" alt="champions page mobile view image"/> 
+</p>
+
+The data for this page is loaded from the local store and contains value of the `Champions` record.
 
 ### F14 Champions page - initial champion's list
 
+When you first visit the site or after clearing the cache, the site loads an initial list of champions from local storage.
+
+The structure of `Champions` record:
+
+```
+Champions: [
+{name: "Alice", score: 505, timeStamp: 1720376662705},
+{name: "David", score: 450, timeStamp: 1720376662712},
+{name: "Frank", score: 478, timeStamp: 1720376662743},
+{name: "Grace", score: 580, timeStamp: 1720376661735},
+{name: "Jack", score: 637, timeStamp: 1720376661705}]
+```
+
+Screenshots see under **F13 Champions page** section.
+
 ### F15 Champions page - current champions list
+
+If the user has achieved enough points to be listed on the champions board,
+the WIZY application will calculate their position and update the entry in the local store. <br >
+As a result, the list of champions on the champions page will be updated.
+
+<img src="assets/images/readme/f15_champions_desktop.png" width="500" alt="champions page desktop view image"/>
 
 ### F16 page 404
 

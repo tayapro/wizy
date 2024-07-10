@@ -19,8 +19,11 @@ function clamp(value) {
  */
 function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
   const mistakesContribution = (totalMiskates * 100) / maxMistakes;
+  console.log("mistakesContribution: ", mistakesContribution);
   const timeContribution = (totalTime * 100) / maxTime;
+  console.log("timeContribution: ", timeContribution);
   const score = mistakesContribution + timeContribution;
+  console.log("getScore, score: ", score);
 
   const normalizedScore = Math.trunc(clamp(1 - score / 200) * 1000);
 
@@ -46,6 +49,7 @@ export function getScoreTier(
   complexity
 ) {
   const score = getScore(totalMiskates, maxMistakes, totalTime, maxTime);
+  console.log("getScoreTier, score: ", score);
 
   // Determine the tier by comparing the score with predefined cutoffs for the specified complexity level
   let tier = 3;
