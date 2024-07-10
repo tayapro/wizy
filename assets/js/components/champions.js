@@ -4,11 +4,11 @@
 export function setDefaultChampions() {
   // Default list of champions with their names and scores
   const champions = [
-    { name: "Alice", score: 505, timeStamp: Date.now() },
-    { name: "David", score: 450, timeStamp: Date.now() },
-    { name: "Frank", score: 478, timeStamp: Date.now() },
-    { name: "Grace", score: 580, timeStamp: Date.now() },
-    { name: "Jack", score: 637, timeStamp: Date.now() },
+    { name: "Alice", score: 505, timeStamp: 1720376662705 },
+    { name: "David", score: 450, timeStamp: 1720376662712 },
+    { name: "Frank", score: 478, timeStamp: 1720376662743 },
+    { name: "Grace", score: 580, timeStamp: 1720376661735 },
+    { name: "Jack", score: 637, timeStamp: 1720376661705 },
   ];
 
   // Check if there is any existing champion data in local storage
