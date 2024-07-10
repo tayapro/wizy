@@ -74,6 +74,9 @@ The playful pineapple, catchy tagline, and game invitation convey the website's 
 
 A fun and inviting call to action with an input field for user's name and a "Play" button makes starting the WIZY game exciting and easy.
 
+> [!NOTE]
+> The picture cropping on small screens is intentional and reflects the author's personal style.
+
 ### F03 Home page - input form
 
 A friendly input field with the placeholder "Enter your name" and a "Play" button offers a straightforward and complete way for users to log in and start playing.
@@ -254,6 +257,9 @@ As a result, the list of champions on the champions page will be updated.
    </tr>
 </table>
 
+> [!NOTE]
+> The picture cropping on small screens is intentional and reflects the author's personal style.
+
 ### F17 page 500
 
 <table style="border:none;">
@@ -273,9 +279,12 @@ As a result, the list of champions on the champions page will be updated.
    </tr>
 </table>
 
+> [!NOTE]
+> The picture cropping on small screens is intentional and reflects the author's personal style.
+
 ## Future features
 
-> - Create a personal account to track user's progress.
+> - Create a unique personal account to track user's progress.
 > - Option to pause the game.
 > - Get hints or clues, when a user is stuck.
 > - Allow a user to log out by clicking the icon with the first letter of your username in the header and confirming.
@@ -299,33 +308,33 @@ It’s designed to evoke a sense of relaxation and joy, whether users are solvin
 <img src="assets/images/readme/color_palette.png" width="400" alt="WIZY color palette image"/>
 <br ><br >
 
-- <img src="assets/images/readme/066D82.png" width="20" alt="066D82 color image"/> #066D82 "Carribean current" <br >
+- <img src="assets/images/readme/066D82.png" width="20" alt="066D82 color image"/> #066D82 - **Carribean current** <br >
   A deep, vibrant teal, reminiscent of tropical waters. This color provides a refreshing and calming backdrop, evoking the serenity of a beach vacation.
 
-- <img src="assets/images/readme/D03B3E.png" width="20" alt="D03B3E color image"/> #D03B3E "Poppy" <br >
+- <img src="assets/images/readme/D03B3E.png" width="20" alt="D03B3E color image"/> #D03B3E - **Poppy** <br >
   A bold and striking red that brings energy and excitement. This vibrant hue captures attention and adds a lively touch, perfect for highlighting important elements.
 
-- <img src="assets/images/readme/F27858.png" width="20" alt="F27858 color image"/> #F27858 "Burned sienna" <br >
+- <img src="assets/images/readme/F27858.png" width="20" alt="F27858 color image"/> #F27858 - **Burned sienna** <br >
   A warm, earthy orange that adds a rustic charm. This color is akin to a beautiful sunset or autumn leaves, providing a cozy and inviting feel.
 
-- <img src="assets/images/readme/88CBD7.png" width="20" alt="88CBD7 color image"/> #88CBD7 "Non photo blue" <br >
+- <img src="assets/images/readme/88CBD7.png" width="20" alt="88CBD7 color image"/> #88CBD7 - **Non photo blue** <br >
   A light, airy blue reminiscent of clear skies. This uplifting color adds a breezy, cheerful touch, promoting a sense of clarity and openness.
 
-- <img src="assets/images/readme/9FBC5A.png" width="20" alt="9FBC5A color image"/> #9FBC5A "Olivine" <br >
+- <img src="assets/images/readme/9FBC5A.png" width="20" alt="9FBC5A color image"/> #9FBC5A - **Olivine** <br >
   A soothing, natural green that brings a hint of nature. This color is similar to fresh foliage, offering a grounding and balancing effect.
 
-- <img src="assets/images/readme/E6C149.png" width="20" alt="E6C149 color image"/> #E6C149 "Saffron" <br >
+- <img src="assets/images/readme/E6C149.png" width="20" alt="E6C149 color image"/> #E6C149 - **Saffron** <br >
   A rich, golden yellow that exudes warmth and positivity. This cheerful hue is reminiscent of sunflowers, adding a sunny and optimistic vibe to the palette.
 
-- <img src="assets/images/readme/FAEBD7.png" width="20" alt="FAEBD7 color image"/> #FAEBD7 "Antique white" <br >
+- <img src="assets/images/readme/FAEBD7.png" width="20" alt="FAEBD7 color image"/> #FAEBD7 - **Antique white** <br >
   A soft, creamy off-white that serves as a neutral backdrop. This elegant color provides a timeless quality, helping to tie the other colors together harmoniously.
 
 To ensure clear visibility and readability, the following contrast colors have been chosen for the WIZY application:
 
-- <img src="assets/images/readme/3B3B3B.png" width="20" alt="3B3B3B color image"/> #3B3B3B "Onyx":
+- <img src="assets/images/readme/3B3B3B.png" width="20" alt="3B3B3B color image"/> #3B3B3B - **Onyx**:
   A dark gray color that shows up well against lighter backgrounds. It's used for text and important elements so they're easy to read.
 
-- #FFFFFF "White"
+- #FFFFFF - **White**
   A bright white color that stands out against darker and more colorful backgrounds. It's great for text and icons, making them clear and easy to see.
 
 These contrast colors help make sure everything on the app is easy to read and use.
@@ -398,7 +407,10 @@ The WIZY project architecture is organized into three levels:
 3. **Components Level**: This level consists of component JavaScript files. These components act as building blocks that are utilized by the page-level JavaScript files to construct the overall page logic and functionality.
    There are no horizontal dependencies at this level. The component js files depend only on library `animate.js` file.
 
-4. **Libraries**: This section contains project-wide libraries used as external dependencies, with the potential to be released as npm packages. It currently includes an animation library that provides animation capabilities for HTML elements.
+4. **Libraries**: This section contains project-wide libraries used as external dependencies, with the potential to be released as npm packages. <br >
+   It currently includes an animation library that provides animation capabilities for HTML elements.
+   In the current stage of the WIZY project, this library is imported into component JS files.
+   However, it could be used on other levels of the project if necessary.
 
 ## JavaScript Structure
 
