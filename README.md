@@ -292,6 +292,41 @@ As a result, the list of champions on the champions page will be updated.
 
 # Design
 
+## Game logic
+
+The WIZY hangman game follows a classic word-guessing format where players attempt to guess a hidden word letter
+by letter within a limited number of attempts.
+
+- **Initialization**:
+  The game randomly selects a word from a predefined list based on the chosen difficulty level.
+  An initial number of lives (represented by icons like sunglasses or a hat) is set.
+  The game interface displays placeholders for each letter of the word.
+
+- **Gameplay**:
+  Players guess letters one by one.
+  Correct guesses fill in the corresponding placeholders in the word.
+  Incorrect guesses decrease the number of remaining lives (or increase a mistake counter) and hides a wasted life using animation.
+
+- **Winning and Losing**:
+
+  - Win Condition: If the player successfully guesses all letters in the word before running out of lives, they win.
+  - Lose Condition: If the player exhausts all their lives or exceeds the maximum allowed mistakes without guessing the word correctly, they lose.
+
+- **Score Calculation**:
+  The player's score is calculated based on their performance:
+
+  - Mistakes Contribution: Percentage of allowed mistakes used.
+  - Time Contribution: Time taken to guess the word relative to the maximum allowed time.
+
+  The score is normalized and adjusted to fit within a predefined scoring range.<br >
+  Score thresholds are used to determine the player's rating (one, two, or three stars) based on their final score. These thresholds vary depending on the difficulty level chosen by the player (see following table, where x is user's score).
+
+  |         | 0 difficulty level | 1 difficulty level | 2 difficulty level |
+  | ------- | :----------------: | :----------------: | :----------------: |
+  | 1 star  |      x < 400       |      x < 300       |      x < 200       |
+  | 2 stars |   400 < x < 800    |   300 < x < 700    |   200 < x < 600    |
+  | 3 stars |      x > 800       |      x > 700       |      x > 600       |
+
 ## Imagery
 
 The WIZY application includes fun cartoon characters, like a pineapple floating on an inflatable ring or a slice
