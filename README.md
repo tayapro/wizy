@@ -179,18 +179,18 @@ After every game, a player is encouraged to start a new game by selecting the di
 
 ### F11 Outcome page - aminated stars
 
-<table>
-<tr>
-   <td width="220px">
-      <img src="./assets/images/readme/3_stars_animation.gif" width="210" alt="3 stars animation">
-   </td>
-   <td>
-      The outcome of the game decides how many stars turn from gray to gold during the animation, <br >
-      starting from the left star and moving to the right.<br >
-      In the event of the user's loss, the animation will not occur, and the stars will retain their gray color.
-   </td>
+<table style="border:none;">
+   <tr>
+      <td width="220px">
+         <img src="./assets/images/readme/3_stars_animation.gif" width="210" alt="3 stars animation">
+      </td>
+      <td>
+         The outcome of the game decides how many stars turn from gray to gold during the animation, <br >
+         starting from the left star and moving to the right.<br >
+         In the event of the user's loss, the animation will not occur, and the stars will retain their gray color.
+      </td>
    </tr>
-   </table>
+</table>
 
 ### F12 Outcome page - select form
 
@@ -231,39 +231,47 @@ Screenshots see under **F13 Champions page** section above.
 
 ### F15 Champions page - current champions list
 
-If the user has achieved enough points to be listed on the champions board,
-the WIZY application will calculate their position and update the entry in the local store. <br >
+If the user has achieved enough points to be listed on the champions board, the WIZY application will calculate their position and update the entry in the local store. <br >
 As a result, the list of champions on the champions page will be updated.
 
-<img src="assets/images/readme/f15_champions_desktop.png" width="700" alt="champions page desktop view image"/>
+<img src="assets/images/readme/f15_champions_desktop.png" width="700px" alt="champions page desktop view image"/>
 
 ### F16 page 404
 
-A relaxed cartoon watermelon on a swim ring continues the fun theme started by the pineapple on the WIZY landing page.
-The text "_LOOKS LIKE YOU ARE LOST Go back to WIZY_" seems to say, don’t worry, we’re here to guide you
-and help you find your way to the WIZY web application.
-
-<img src="assets/images/readme/f16_watermelon_desktop.png" width="300" alt="watermelon 404 page desktop view image"/>
-
-The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
-Hover the "WIZY" link has a hover effect, it slightly grows (5%).
-
-The design of 404 page is simple, cute, and consistent across all devices.
+<table style="border:none;">
+   <tr>
+      <td width="220px">
+         <img src="assets/images/readme/f16_watermelon_desktop.png" alt="watermelon 404 page desktop view image"/>
+      </td>
+      <td>
+         A relaxed cartoon watermelon on a swim ring continues the fun theme started by the pineapple on the WIZY landing page.
+         The text "LOOKS LIKE YOU ARE LOST Go back to WIZY" seems to say, don’t worry, we’re here to guide you
+         and help you find your way to the WIZY web application.<br >
+         The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
+         Hover the "WIZY" link has a hover effect, it slightly grows (5%).<br >
+         The design of 404 page is simple, cute, and consistent across all devices.
+      </td>
+   </tr>
+</table>
 
 ### F17 page 500
 
-A cartoon pineapple rushing on a surfboard seems to hint that the application developers are rushing to
-the rescue and the problem will be fixed in the near future.
-
-<img src="assets/images/readme/f17_pineapple_desktop.png" width="300" alt="pineapple 500 page desktop view image"/>
-
-The text "_OOPS! SOMETHING WENT WRONG... Start from WIZY_" lets users know that the developers are aware of the issue
-and provides a friendly link to return to the main page.
-
-The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
-Hover the "WIZY" link has a hover effect, it slightly grows (5%).
-
-The design of 500 page is simple, cute, and consistent across all devices.
+<table style="border:none;">
+   <tr>
+      <td width="220px">
+         <img src="assets/images/readme/f17_pineapple_desktop.png" alt="pineapple 500 page desktop view image"/>
+      </td>
+      <td>
+         A cartoon pineapple rushing on a surfboard seems to hint that the application developers are rushing to
+         the rescue and the problem will be fixed in the near future.<br >
+         The text "OOPS! SOMETHING WENT WRONG... Start from WIZY" lets users know that the developers are aware of the issue
+         and provides a friendly link to return to the main page.<br >
+         The linkable word "WIZY" in a gradient color helps users find their way back to the WIZY app home page.
+         Hover the "WIZY" link has a hover effect, it slightly grows (5%).<br >
+         The design of 500 page is simple, cute, and consistent across all devices.
+      </td>
+   </tr>
+</table>
 
 ## Future features
 
@@ -276,6 +284,10 @@ The design of 500 page is simple, cute, and consistent across all devices.
 # Design
 
 ## Imagery
+
+The WIZY application features fun cartoon characters like a pineapple or a slice of watermelon.<br >
+It also uses flat design vector images with a vacation theme.<br >
+The consistent background across all pages, resembling a swimming pool, ties everything together nicely.
 
 ## Colour Scheme
 
