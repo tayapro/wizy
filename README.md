@@ -80,7 +80,7 @@ A friendly input field with the placeholder "Enter your name" and a "Play" butto
 
   <img src="assets/images/readme/f03_input_form.png" width="300" alt="log in input form image"/>
 
-The LocalStorage will store a **Username** record as a key and the entered name as a value.
+The LocalStorage will store a `Username` record as a key and the entered name as a value.
 
    <img src="assets/images/readme/f03_local_storage.png" width="500" alt="log in localStorage image"/>
 
@@ -101,7 +101,7 @@ The Rules page includes a user-friendly form where players can choose the game's
 
 <img src="assets/images/readme/f05_mobile.png" width="300" alt="rules page select game level image"/>
 
-The LocalStorage will store a **Complexity** record as a key and LEVEL number as value.
+The LocalStorage will store a `Complexity` record as a key and LEVEL number as value.
 
 <img src="assets/images/readme/f05_local_storage.png" width="500" alt="complexity localStorage image"/>
 
@@ -172,9 +172,10 @@ If luck isn't on player's side and they lose, the Outcome page offers encouragin
    <img src="assets/images/readme/f10_girl_mobile.png" width="150" alt="funny girl outcome page mobile view image"/> 
 </p>
 
-Regardless of the game's outcome, the player is encouraged to start a new game by selecting the difficulty level and keeping the same name.
+After every game, a player is encouraged to start a new game by selecting the difficulty level and keeping the same name.
 
-If the user wants to start a new game with a different name, they should go to the main page and enter the new name.
+> [!NOTE]
+> If the user wants to start a new game with a different name, they should go to the main page and enter the new name.
 
 ### F11 Outcome page - aminated stars
 
@@ -193,11 +194,11 @@ If the user wants to start a new game with a different name, they should go to t
 
 ### F12 Outcome page - select form
 
-Using the form, a user can easily change the difficulty level for a new game, just like on the rules page, see **F05 Rules page - select form**.
+Using the form, a user can easily change the difficulty level for a new game, just like on the rules page, see **F05 Rules page - select form** section above.
 
 <img src="assets/images/readme/f12_desktop.png" width="210" alt="select form outcome page image"/>
 
-The LocalStorage will store a new **Complexity** record as a key and LEVEL number as value, overwriting the existing complexity LEVEL number.
+The LocalStorage will store a new `Complexity` record as a key and LEVEL number as value, overwriting the existing complexity LEVEL number.
 
 ### F13 Champions page
 
@@ -213,7 +214,7 @@ The data for this page is loaded from the local store and contains value of the 
 
 ### F14 Champions page - initial champion's list
 
-When you first visit the site or after clearing the cache, the site loads an initial list of champions from local storage.
+When you first visit the site or after clearing the cache, the site loads an initial list of champions from localStorage.
 
 The structure of `Champions` record:
 
@@ -226,7 +227,7 @@ Champions: [
 {name: "Jack", score: 637, timeStamp: 1720376661705}]
 ```
 
-Screenshots see under **F13 Champions page** section.
+Screenshots see under **F13 Champions page** section above.
 
 ### F15 Champions page - current champions list
 
@@ -234,7 +235,7 @@ If the user has achieved enough points to be listed on the champions board,
 the WIZY application will calculate their position and update the entry in the local store. <br >
 As a result, the list of champions on the champions page will be updated.
 
-<img src="assets/images/readme/f15_champions_desktop.png" width="500" alt="champions page desktop view image"/>
+<img src="assets/images/readme/f15_champions_desktop.png" width="700" alt="champions page desktop view image"/>
 
 ### F16 page 404
 
