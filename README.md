@@ -136,7 +136,8 @@ This information is used by a JavaScript function to read and update the DOM ele
 
 ### F08 Game page
 
-And finally, let's talk about the main page of the game itself. The design matches the overall style of the app, and the screen is logically divided into three sections:
+And finally, let's talk about the main page of the game itself. The design matches the overall style of the app. <br >
+The screen is logically divided into three sections:
 
 - The first section shows life blocks with colorful pictures of vacation items. These blocks animate when a life is lost.
 - The second section has empty blocks for the hidden word, which reveal a letter when a correct guess is made.
@@ -153,7 +154,7 @@ The chosen word is randomly selected according to the complexity level.
 ### F09 Game page - lives blocks
 
 The vacation-themed images blend seamlessly with the WIZY app's design, adding simplicity and vibrant colors.
-When players fail to guess a letter, a random card is revealed as part of the experience.
+When a player fails to guess a letter during the game, a random card is flipped over with an animation.
 
 Animation for live blocks is randomly chosen for each game. There are 3 types of animation:
 
@@ -161,7 +162,28 @@ Animation for live blocks is randomly chosen for each game. There are 3 types of
 - Swipe
 - Swirle
 
+Short video with lives blocks animation:
+
+<img src="./assets/images/readme/f09_live_blocks.gif" alt="WIZY alphabet buttons gif">
+
+> [!NOTE]
+> During the process of video file compression to GIF format by **Ezgif** app,
+> the animation seems a little jerky. Link to [original video](./assets/images/readme/1.mov)
+
 ### F10 Game page - alphabet buttons
+
+Alright, so everything is working smoothly with the live blocks animations, but what about the letter buttons? <br >
+
+With them, it's a bit simpler - when each button is pressed, it undergoes a small transformation.
+After that, the button becomes inactive, the color of the letter changes to a more muted shade, and pressing it is then blocked.
+
+Short GIF video how alphabet buttons work:
+
+<img src="./assets/images/readme/f10_alphabet_buttons.gif" alt="WIZY alphabet buttons gif">
+
+> [!NOTE]
+> During the process of video file compression to GIF format by **Ezgif** app,
+> the transformation is not visible when the some buttons are pressed. Link to [original video](https://drive.google.com/file/d/1sR3cLCFBkjeDa6RM5dBDCHwQZj6A_Owu/view?usp=drive_link).
 
 ### F11 Outcome page
 
