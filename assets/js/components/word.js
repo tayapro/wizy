@@ -144,8 +144,8 @@ let theMatchedLetters = new Set(); // `Set` constructor for variable to store ma
 /**
  * Randomly pick a word from a given word list
  *
- * @param {Array} wordList - words array to choose from
- * @returns {String} - a randomly selected word from the wordList
+ * @param {array} wordList - words array to choose from
+ * @returns {string} - a randomly selected word from the wordList
  */
 function pickRandomWord(wordList) {
   return wordList[Math.floor(Math.random() * wordList.length)];

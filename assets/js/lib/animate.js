@@ -13,9 +13,9 @@
  * (2) animationName CSS class must have "transform" property
  *
  * @param {*} element - element for animation
- * @param {String} animationName - CSS animation class name
- * @param {Function} middleCallBack - callback function in the middle of animation
- * @param {Function} endCallBack - callback function in the end of animation
+ * @param {string} animationName - CSS animation class name
+ * @param {function} middleCallBack - callback function in the middle of animation
+ * @param {function} endCallBack - callback function in the end of animation
  */
 export function animate(element, animationName, middleCallBack, endCallBack) {
   element.classList.add(animationName);

@@ -2,7 +2,7 @@
  * Sets the default list of champions if no champion data exists in local storage.
  */
 export function setDefaultChampions() {
-  // Default list of champions with their names and scores
+  // Default list of champions with their names, scores and time
   const champions = [
     { name: "Alice", score: 505, timeStamp: 1720376662705 },
     { name: "David", score: 450, timeStamp: 1720376662712 },
@@ -24,7 +24,7 @@ export function setDefaultChampions() {
  * Get the list of champions from local storage
  * Throws an error if no champion data is found
  *
- * @returns {Array} - the parsed list of champions from localStorage
+ * @returns {array} - the parsed list of champions from localStorage
  * @throws {Error} - throws an error if champion data is not found
  */
 export function getChampions() {
@@ -40,7 +40,7 @@ export function getChampions() {
 /**
  * Set the list of champions to localStorage
  *
- * @param {Array} champions - the list of champions
+ * @param {array} champions - the list of champions
  */
 export function setChampions(champions) {
   // convert the list of champions to a JSON string and store it in local storage
@@ -51,7 +51,7 @@ export function setChampions(champions) {
  * Converts a zero-based index into a place index on the champion's board,
  * see `recordUserScore` function below
  *
- * @param {Number} index - user's index in champion's list
+ * @param {number} index - user's index in champion's list
  * @returns user's index on the champion's board or -1
  */
 function turnIndexIntoPlace(index) {
@@ -63,10 +63,10 @@ function turnIndexIntoPlace(index) {
 /**
  *  Record a user's score in the champions list, updating if it exists or adding if new
  *
- * @param {String} username - the name of the user
- * @param {Number} score - the score achieved by the user
+ * @param {string} username - the name of the user
+ * @param {number} score - the score achieved by the user
  * @param {Date} timeStamp - the timestamp when the score was achieved
- * @returns {Number} - the place on the champion's board or -1
+ * @returns {number} - the place on the champion's board or -1
  */
 export function recordUserScore(username, score, timeStamp) {
   let champions = getChampions();

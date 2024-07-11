@@ -28,7 +28,7 @@ function setAlphabetButtons() {
 /**
  * Adds click event listeners to all alphabet buttons
  *
- * @param {Function} onClickLetter - The event handler function
+ * @param {function} onClickLetter - The event handler function
  */
 function setAlphabetButtonsListener(onClickLetter) {
   const buttons = document.querySelectorAll(".alphabet-button");
@@ -42,7 +42,7 @@ function setAlphabetButtonsListener(onClickLetter) {
 /**
  * Initializes the alphabet buttons and sets their click event listener
  *
- * @param {Function} onClickLetter - the event handler function
+ * @param {function} onClickLetter - the event handler function
  */
 export function newAlphabet(onClickLetter) {
   setAlphabetButtons();
@@ -52,7 +52,7 @@ export function newAlphabet(onClickLetter) {
 /**
  * Disables a specific alphabet button by changing its appearance and setting it to disabled
  *
- * @param {String} letter - The letter of the alphabet button
+ * @param {string} letter - The letter of the alphabet button
  */
 export function disableAlphabetButton(letter) {
   // Get button by ID based on the provided letter

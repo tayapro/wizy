@@ -3,7 +3,7 @@ import { animate } from "../lib/animate.js";
 /**
  * Validate the outcome object to ensure it contains valid data
  *
- * @param {Object} outcome - the outcome object to validate
+ * @param {object} outcome - the outcome object to validate
  *
  * @throws an error if any parameter is invalid
  */
@@ -34,7 +34,7 @@ function validateOutcome(outcome) {
 /**
  * Get the game outcome from local storage and validates it
  *
- * @returns {Object} - the validated game outcome
+ * @returns {object} - the validated game outcome
  * @throws an error if the outcome is not found or invalid
  */
 export function getGameOutcome() {
@@ -51,7 +51,7 @@ export function getGameOutcome() {
  * Store the given game outcome in local storage
  * (the outcome is stringified before being saved)
  *
- * @param {Object} outcome - The game outcome to be stored.
+ * @param {object} outcome - The game outcome to be stored.
  */
 export function setGameOutcome(outcome) {
   localStorage.setItem("Outcome", JSON.stringify(outcome));
@@ -113,7 +113,7 @@ export function newGameOutcome(place) {
  * Animate the stars bar based on the game outcome
  * Reveal the stars bar and animate the stars sequentially based on the player's tier
  *
- * @param {Object} outcome - the game outcome object containing the player's tier
+ * @param {object} outcome - the game outcome object containing the player's tier
  */
 function amimateStarsBar(outcome) {
   const starsBar = document.getElementById("stars-bar");

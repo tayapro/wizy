@@ -24,7 +24,7 @@ export function onComplexitySubmit(event) {
 /**
  * Get the selected game complexity level from localStorage
  *
- * @returns {String} - the selected game complexity
+ * @returns {string} - the selected game complexity
  * @throws {Error} - if complexity data is not found
  */
 export function getComplexity() {

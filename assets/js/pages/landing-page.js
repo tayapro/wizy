@@ -5,6 +5,8 @@ import { setDefaultChampions } from "../components/champions.js";
  * Handle index.html page loading
  */
 export function onLandingPageLoad() {
+  clearLocalStorage();
+
   // Read champions list from array and write it to localStorage
   setDefaultChampions();
 
@@ -32,4 +34,14 @@ function onClickPlay(event) {
 
   // Redirect to the `rules.html` page
   window.location.replace("rules.html");
+}
+
+/**
+ * Remove the stored username, game complexity level,
+ * and game outcome items from localStorage to reset the game's state
+ */
+function clearLocalStorage() {
+  localStorage.removeItem("Username");
+  localStorage.removeItem("Complexity");
+  localStorage.removeItem("Outcome");
 }

@@ -24,6 +24,9 @@ let complexity; // Game complexity level variable
  * Handle game.html page loading
  */
 export function onGamePageLoad() {
+  // Remove the stored previous game outcome
+  localStorage.removeItem("Outcome");
+
   // Set icon on header DOM element with first username' letter
   setUserIcon();
 
@@ -70,7 +73,7 @@ function newGame() {
 /**
  * Set and save game results to localStorage
  *
- * @param {Boolean} isVictory - win or loss scenario
+ * @param {boolean} isVictory - win or loss scenario
  */
 function gameOver(isVictory) {
   // Set default outcome values

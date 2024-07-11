@@ -18,8 +18,8 @@ const twoStarCutoff = [800, 700, 600];
  * If the value is greater than 1, it returns 1.
  * Otherwise, it returns the value itself.
  *
- * @param {Number} value - the input value to be clamped
- * @returns {Number} - the clamped value between 0 and 1
+ * @param {number} value - the input value to be clamped
+ * @returns {number} - the clamped value between 0 and 1
  */
 function clamp(value) {
   return Math.min(Math.max(value, 0), 1);
@@ -29,12 +29,12 @@ function clamp(value) {
  * Evaluate the player's performance by considering the total mistakes made
  * and the total time taken, relative to their maximum allowable values
  *
- * @param {Number} totalMistakes - the total number of mistakes made by the player
- * @param {Number} maxMistakes - the maximum allowable mistakes
- * @param {Number} totalTime - the total time taken by the player
- * @param {Number} maxTime - the maximum allowable time
+ * @param {number} totalMistakes - the total number of mistakes made by the player
+ * @param {number} maxMistakes - the maximum allowable mistakes
+ * @param {number} totalTime - the total time taken by the player
+ * @param {number} maxTime - the maximum allowable time
  *
- * @returns {Number} - the calculated normalized score
+ * @returns {number} - the calculated game score
  */
 function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
   // Normalize the total mistakes to a range [0, 1]
@@ -43,14 +43,15 @@ function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
   // Normalize the total time to a range [0, 1]
   const timeContribution = clamp(totalTime / maxTime);
 
-  //Sum the normalized mistakes and time contributions, a range [0, 2]
-  const score = mistakesContribution + timeContribution;
+  // Average the contributions to get a combined contribution
+  // less number means better player's performance
+  const totalContribution = (mistakesContribution + timeContribution) / 2;
 
-  // Convert the score to a value between 0 and 1000
+  // Invert the combined contribution, scale it to a range of 0 to 1000, and floor the value
   // to display on the game outcome page
-  const normalizedScore = (score / 2) * 1000;
+  const score = Math.floor((1 - totalContribution) * 1000);
 
-  return normalizedScore;
+  return score;
 }
 
 /**
@@ -62,7 +63,7 @@ function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
  * @param {number} maxTime - the maximum allowed time
  * @param {number} complexity - the complexity level of the game
  *
- * @returns {Object} - an object containing the score and tier
+ * @returns {object} - an object containing the score and tier
  */
 export function getScoreTier(
   totalMiskates,

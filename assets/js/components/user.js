@@ -12,7 +12,7 @@ export function setUserIcon() {
 /**
  * Sets the username in localStorage
  *
- * @param {String} username - the username to be stored
+ * @param {string} username - the username to be stored
  */
 export function setUser(username) {
   localStorage.setItem("Username", username);
@@ -21,7 +21,7 @@ export function setUser(username) {
 /**
  * Get the username from local storage
  *
- * @returns {String} - the stored username
+ * @returns {string} - the stored username
  * @throws {Error} - if username data is not found
  */
 export function getUser() {

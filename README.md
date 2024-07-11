@@ -77,7 +77,13 @@ A fun and inviting call to action with an input field for user's name and a "Pla
 > [!NOTE]
 > The picture cropping on small screens is intentional and reflects the author's personal style.
 
-### F03 Home page - input form
+### F03 Home page - initial state
+
+Initially, the local store will only contain an actual list of champions.
+When the user goes to the home page of the application to change their name, their champion achievements will be saved.
+However, any existing records with the keys `Username`, `Complexity`, and `Outcome` will be deleted.
+
+### F04 Home page - input form
 
 A friendly input field with the placeholder "Enter your name" and a "Play" button offers a straightforward and complete way for users to log in and start playing.
 
@@ -87,7 +93,7 @@ The LocalStorage will store a `Username` record as a key and the entered name as
 
    <img src="assets/images/readme/f03_local_storage.png" width="500" alt="log in localStorage image"/>
 
-### F04 Rules page
+### F05 Rules page
 
 Every game needs rules! The WIZY rules page offers them with the icons and brief instructions. Here, users can choose a game level, from easy ("Picnic in the Park") to hard ("Sunny Beach"). <br > The theme and level names match the main page, keeping the vacation vibe going.
 
@@ -98,7 +104,7 @@ The Rules page's design has two versions, one for mobile devices and another for
   <img src="assets/images/readme/f04_mobile.png" width="150" alt="rules page mobile view image"/> 
 </p>
 
-### F05 Rules page - select form
+### F06 Rules page - select form
 
 The Rules page includes a user-friendly form where players can choose the game's difficulty level from a dropdown menu.
 
@@ -116,7 +122,7 @@ Complexity levels mapping:
 | _Campfire Tales_     | 1                     |
 | _Sunny Beach_        | 2                     |
 
-### F06 Rules page - user's icon
+### F07 Rules page - user's icon
 
 In the top right corner of the header, users can see their name's first letter displayed as an icon (this applies to all screen sizes).
 
@@ -128,9 +134,26 @@ In the top right corner of the header, users can see their name's first letter d
 The user's name is stored in localStorage, as explained in the _F03 Home page - input form_ section above. <br >
 This information is used by a JavaScript function to read and update the DOM element on the Rules page.
 
-### F07 Game page
+### F08 Game page
 
-### F08 Game page - lives blocks
+And finally, let's talk about the main page of the game itself. The design matches the overall style of the app, and the screen is logically divided into three sections:
+
+- The first section shows life blocks with colorful pictures of vacation items. These blocks animate when a life is lost.
+- The second section has empty blocks for the hidden word, which reveal a letter when a correct guess is made.
+- The third section contains the letters of the English alphabet.
+
+<p float="left">
+  <img src="assets/images/readme/f08_desktop.png" width="567" alt="game page desktop view image"/>
+  <img src="assets/images/readme/f08_mobile.png" width="151" alt="game page mobile view image"/> 
+</p>
+
+On the Game page, the user's `Username` and `Complexity` records in localStorage are preset based on previous steps.
+The chosen word is randomly selected according to the complexity level.
+
+### F09 Game page - lives blocks
+
+The vacation-themed images blend seamlessly with the WIZY app's design, adding simplicity and vibrant colors.
+When players fail to guess a letter, a random card is revealed as part of the experience.
 
 Animation for live blocks is randomly chosen for each game. There are 3 types of animation:
 
@@ -138,11 +161,13 @@ Animation for live blocks is randomly chosen for each game. There are 3 types of
 - Swipe
 - Swirle
 
-### F09 Game page - alphabet buttons
+### F10 Game page - alphabet buttons
 
-### F10 Outcome page
+### F11 Outcome page
 
-Regardless of the game's result, players always want to see their outcome. In the WIZY game, the outcome page provides a visual representation based on the stars earned:
+Regardless of the game's result, players always want to see their outcome.
+
+In the WIZY game, the outcome page provides a visual representation based on the stars earned:
 
 - For one star:
 
@@ -181,12 +206,14 @@ If luck isn't on player's side and they lose, the Outcome page offers encouragin
    <img src="assets/images/readme/f10_girl_mobile.png" width="150" alt="funny girl outcome page mobile view image"/> 
 </p>
 
+The score, tier, win/loss, and time data for the Outcome page are stored in a localStorage record called `Outcome`.
+
 After every game, a player is encouraged to start a new game by selecting the difficulty level and keeping the same name.
 
 > [!NOTE]
 > If the user wants to start a new game with a different name, they should go to the main page and enter the new name.
 
-### F11 Outcome page - aminated stars
+### F12 Outcome page - aminated stars
 
 <table style="border:none;">
    <tr>
@@ -194,6 +221,7 @@ After every game, a player is encouraged to start a new game by selecting the di
          <img src="./assets/images/readme/3_stars_animation.gif" width="210" alt="3 stars animation">
       </td>
       <td>
+         Winners of the game will enjoy a delightful star animation as a small reward.
          The outcome of the game decides how many stars turn from gray to gold during the animation, <br >
          starting from the left star and moving to the right.<br >
          In the event of the user's loss, the animation will not occur, and the stars will retain their gray color.
@@ -201,15 +229,15 @@ After every game, a player is encouraged to start a new game by selecting the di
    </tr>
 </table>
 
-### F12 Outcome page - select form
+### F13 Outcome page - select form
 
-Using the form, a user can easily change the difficulty level for a new game, just like on the rules page, see **F05 Rules page - select form** section above.
+Using the form, a user can easily change the difficulty level for a new game, just like on the rules page, see **F06 Rules page - select form** section above.
 
 <img src="assets/images/readme/f12_desktop.png" width="210" alt="select form outcome page image"/>
 
 The LocalStorage will store a new `Complexity` record as a key and LEVEL number as value, overwriting the existing complexity LEVEL number.
 
-### F13 Champions page
+### F14 Champions page
 
 The champions page has a clean card design, with a stars image and a list of champions ranked from first to fifth place.
 The design of Champions page is consistent across all devices.
@@ -221,10 +249,12 @@ The design of Champions page is consistent across all devices.
 
 The data for this page is loaded from the local store and contains value of the `Champions` record.
 
-### F14 Champions page - initial champion's list
+### F15 Champions page - initial champion's list
 
 When you first visit the site or after clearing the cache, the site loads an initial list of champions from localStorage,
 to provide content to the Champions page.
+
+During the initial site visit, champions are loaded from localStorage to provide content to the Champions page.
 
 The initial `Champions` record:
 
@@ -237,16 +267,16 @@ Champions: [
 {name: "Jack", score: 637, timeStamp: 1720376661705}]
 ```
 
-Screenshots see under **F13 Champions page** section above.
+Screenshots see under **F14 Champions page** section above.
 
-### F15 Champions page - current champions list
+### F16 Champions page - current champions list
 
 If the user has achieved enough points to be listed on the champions board, the WIZY application will calculate their position and update the entry in the local store. <br >
 As a result, the list of champions on the champions page will be updated.
 
 <img src="assets/images/readme/f15_champions_desktop.png" width="700" alt="champions page desktop view image"/>
 
-### F16 page 404
+### F17 page 404
 
 <table style="border:none;">
    <tr>
@@ -267,7 +297,7 @@ As a result, the list of champions on the champions page will be updated.
 > [!NOTE]
 > The picture cropping on small screens is intentional and reflects the author's personal style.
 
-### F17 page 500
+### F18 page 500
 
 <table style="border:none;">
    <tr>
@@ -408,7 +438,7 @@ approachable feel, making it a great choice for game apps.
 
 ### Champions Wireframes
 
-<img src="assets/images/readme/outcome_page.png" width="500" alt="champions page wireframe">
+<img src="assets/images/readme/champions_page.png" width="500" alt="champions page wireframe">
 
 ### 404 page Wireframes
 
@@ -566,14 +596,14 @@ This section shows connection between [Features](#features) and [UX design](#ux-
 - I want to easily navigate the website.
 
   > The user can locate the necessary pages by using the links in the navigation bar. \
-  > For more details, see [F01 Navigation bar](#f01-navigation-bar)
+  > For more details, see **F01 Navigation bar** feature section.
 
 - I want to feel welcomed on WIZY website.
 
 - I want to make sure I don't get lost on this website.
 
   > In case of the user find themself on 404 page, they easily to find a link to HEPY home page. \
-  > For more details, see [#F09 page 404](#f09-page-404).
+  > For more details, see **#F16 page 404** features section.
 
 ## Validator testing
 
