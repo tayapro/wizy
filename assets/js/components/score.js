@@ -29,12 +29,6 @@ function clamp(value) {
  * Evaluate the player's performance by considering the total mistakes made
  * and the total time taken, relative to their maximum allowable values
  *
- * The score calculation involves the following steps:
- * 1. Mistakes contribution: Normalizes the total mistakes to a range [0, 1]
- * 2. Time contribution: Normalizes the total time to a range [0, 1]
- * 3. Score: Sums the normalized mistakes and time contributions
- * 4. Normalized score: Converts the score to a value between 0 and 1000
- *
  * @param {Number} totalMistakes - the total number of mistakes made by the player
  * @param {Number} maxMistakes - the maximum allowable mistakes
  * @param {Number} totalTime - the total time taken by the player

@@ -132,6 +132,12 @@ This information is used by a JavaScript function to read and update the DOM ele
 
 ### F08 Game page - lives blocks
 
+Animation for live blocks is randomly chosen for each game. There are 3 types of animation:
+
+- Flip
+- Swipe
+- Swirle
+
 ### F09 Game page - alphabet buttons
 
 ### F10 Outcome page
@@ -217,9 +223,10 @@ The data for this page is loaded from the local store and contains value of the 
 
 ### F14 Champions page - initial champion's list
 
-When you first visit the site or after clearing the cache, the site loads an initial list of champions from localStorage.
+When you first visit the site or after clearing the cache, the site loads an initial list of champions from localStorage,
+to provide content to the Champions page.
 
-The structure of `Champions` record:
+The initial `Champions` record:
 
 ```
 Champions: [
@@ -398,6 +405,10 @@ approachable feel, making it a great choice for game apps.
 ### Outcome Wireframes
 
 <img src="assets/images/readme/outcome_page.png" width="500" alt="outcome page wireframe">
+
+### Champions Wireframes
+
+<img src="assets/images/readme/outcome_page.png" width="500" alt="champions page wireframe">
 
 ### 404 page Wireframes
 
@@ -815,17 +826,23 @@ Testing has been carried out on the following devices:
 
 ## Content
 
-- The hamburger menu for mobile devices and footer icons as ideas were taken from "Love running" lesson.
+- The hamburger menu for mobile devices as idea was taken from "Love running" lesson.
 - All other content was written by the developer.
 
 ## Media
 
 ## Code
 
+- Knowledge of [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- Understanding of [callback functions](https://www.freecodecamp.org/news/what-is-a-callback-function-in-javascript/)
+- Inspiring of [animation JS](https://javascript.info/js-animation)
+- Understanding of [css-transform-and-css-transition](https://medium.com/@nimritee876/a-complete-guide-to-css-transform-and-css-transition-919a2ab025b6) of animation
+- Knowledge of [localStorage property](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
+
 ## Media
 
 - The fonts used were imported from [Google Fonts](https://fonts.google.com/)
-- The icons in the header, footer were taken from [Font Awesome](https://fontawesome.com/icons)
+- The icons in the header was taken from [Font Awesome](https://fontawesome.com/icons)
 
 # Acknowledgments
 

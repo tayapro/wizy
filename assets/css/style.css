@@ -776,6 +776,10 @@ main {
   background: url("../images/500.webp") no-repeat bottom right / cover;
 }
 
+#server-error-h2 {
+  text-align: center;
+}
+
 /* Amination styles */
 .transition-in-out {
   transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
