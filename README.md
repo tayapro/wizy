@@ -164,11 +164,11 @@ Animation for live blocks is randomly chosen for each game. There are 3 types of
 
 Short video with lives blocks animation:
 
-<img src="./assets/images/readme/f09_live_blocks.gif" alt="WIZY alphabet buttons gif">
+<img src="./assets/images/readme/f09_live_blocks.gif" width="300" alt="WIZY alphabet buttons gif">
 
 > [!NOTE]
 > During the process of video file compression to GIF format by **Ezgif** app,
-> the animation seems a little jerky. Link to [original video](./assets/images/readme/1.mov)
+> the animation seems a little jerky. Link to [original video](./assets/images/readme/f09_live_blocks.mov)
 
 ### F10 Game page - alphabet buttons
 
@@ -183,7 +183,7 @@ Short GIF video how alphabet buttons work:
 
 > [!NOTE]
 > During the process of video file compression to GIF format by **Ezgif** app,
-> the transformation is not visible when the some buttons are pressed. Link to [original video](https://drive.google.com/file/d/1sR3cLCFBkjeDa6RM5dBDCHwQZj6A_Owu/view?usp=drive_link).
+> the transformation is not visible when the some buttons are pressed. Link to [original video](./assets/images/readme/f10_alphabet_buttons.mov).
 
 ### F11 Outcome page
 
