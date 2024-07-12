@@ -459,7 +459,10 @@ The WIZY web application is organized to ensure a seamless user experience, intu
 
 <img src="assets/images/readme/information_architecture.png" alt="information architecture image"/><br >
 
-The structure includes the following main UI components:
+Users can transition from the left side of the diagram to the right side by clicking the **Play** button.
+Click the **Start** button to go to the `Game` page from the `Rules` page. The `Outcome` page displays a player's results regardless of the game's result. By clicking the **Start** button on the `Outcome` page, they can return to the `Game` page. Using the links in the menu, players can always navigate from the right side to the left side of the diagram.
+
+The WIZY UI structure includes the following main UI components:
 
 - **Home Page**: The landing page where users are welcomed and can enter their name to start the game.
 - **Rules Page**: Provides game instructions and allows users to select the difficulty level.
@@ -496,7 +499,7 @@ The WIZY project architecture is organized into three levels:
 
 <img src="./assets/images/readme/architecture_project.webp" alt="project architecture image" width="900">
 
-**MAIN LEVEL (1 LEVEL)**: This level consists of the main.js file, which serves as a router to dynamically load the right content based on the page URL. When the page is fully loaded, it checks the URL and calls the specific function for the landing, rules, game, outcome, or champions page. If something goes wrong, it redirects to a custom error page.
+**MAIN LEVEL (1 LEVEL)**: This level consists of the `main.js` file, which serves as a router to dynamically load the right content based on the page URL. When the page is fully loaded, it checks the URL and calls the specific function for the landing, rules, game, outcome, or champions page. If something goes wrong, it redirects to a custom error page.
 
 > [!NOTE]
 > Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
