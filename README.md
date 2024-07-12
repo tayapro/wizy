@@ -569,29 +569,30 @@ Score thresholds are used to determine the player's rating (one, two, or three s
 The WIZY web application uses several libraries and tools to enhance functionality and streamline development. Each library is chosen for its ability to simplify tasks and improve the overall user experience:
 
 - **Animate.js**: A custom library providing animation capabilities for various HTML elements. This library is currently imported in component JS files but can be utilized at other levels of the project structure as well.
-- **LocalStorage**: WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_.
+- **LocalStorage**: WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_. There are two types of localStorage data:
+  game session data (username, complexity, outcome) and persistent (champions).
   LocalStorage enables data to persist across page reloads and sessions. It offers a simple and efficient method for storing user preferences, game scores, or settings directly in the user's browser.
 
-     <details><summary><b>Username</b></summary>
-        localStorage record has <code>{Username: NAME}</code> format, where <code>NAME</code> is a string with 2 to 10 characters.
-        The username will be changed to a new one every time, then they fill the username and click <b>Play</b> button on the landing WIZY page.
-     </details>
+   <details><summary><b>Username</b></summary>
+          localStorage record has <code>{Username: NAME}</code> format, where <code>NAME</code> is a string with 2 to 10 characters.
+          The username will be changed to a new one every time, then they fill the username and click <b>Play</b> button on the landing WIZY page.
+   </details>
 
-     <details><summary><b>Complexity</b></summary>
-        localStorage record has <code>{Complexity: NUMBER}</code> format, where <code>NUMBER</code> is a integer between 0 and 2.
-        0 is easy level, 1 is middle complexity level, 2 is hard level.
-        The selected complexity level on <b>Rules</b> page is saved on localStorage and displayed on the game's outcome page as current level for new game. <br >
-        If the user wants to play a new game at the same level, they can do so, just click <b>Play</b> button.
-        Alternatively, users can change the complexity and click the <b>Play</b> button to start a new game at the
-        chosen level of complexity on the game's outcome page.
-      </details>
+   <details><summary><b>Complexity</b></summary>
+          localStorage record has <code>{Complexity: NUMBER}</code> format, where <code>NUMBER</code> is a integer between 0 and 2.
+          0 is easy level, 1 is middle complexity level, 2 is hard level.
+          The selected complexity level on <b>Rules</b> page is saved on localStorage and displayed on the game's outcome page as current level for new game. <br >
+          If the user wants to play a new game at the same level, they can do so, just click <b>Play</b> button.
+          Alternatively, users can change the complexity and click the <b>Play</b> button to start a new game at the
+          chosen level of complexity on the game's outcome page.
+   </details>
 
-      <details><summary><b>Champions</b></summary>
-         localStorage record has <code>Champions</code> as key and array of 5 objects with following structure: <code>{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}</code> as value, where <code>USERNAME</code> is string, <code>SCORE_NUMBER</code> is total score number less 1000, <code>TIMESTAMP_NUMBER</code> - Unix epoch time.
-         The initial champions list is read and downloaded from the <code>champions</code> array in <code>champions.js</code> file. If a user achieves a score better than the minimum score in this list, they will be added to the champions list. The list will be updated
-         (contains the 5 best players). A user can have a few records in the list of champions. <br >
-         If a user refreshes the outcome page of the game multiple times, the champions page will not display any duplicates (the localStorage will also not contain duplicates).
-      </details>
+   <details><summary><b>Champions</b></summary>
+           localStorage record has <code>Champions</code> as key and array of 5 objects with following structure: <code>{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}</code> as value, where <code>USERNAME</code> is string, <code>SCORE_NUMBER</code> is total score number less 1000, <code>TIMESTAMP_NUMBER</code> - Unix epoch time.
+           The initial champions list is read and downloaded from the <code>champions</code> array in <code>champions.js</code> file. If a user achieves a score better than the minimum score in this list, they will be added to the champions list. The list will be updated
+           (contains the 5 best players). A user can have a few records in the list of champions. <br >
+           If a user refreshes the outcome page of the game multiple times, the champions page will not display any duplicates (the localStorage will also not contain duplicates).
+   </details>
 
 ## Main JS features
 
