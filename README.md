@@ -16,7 +16,7 @@
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Future Features](#future-features)
-- [Project UI Structure and Infomation Architecture](#project-structure-and-infomation-architecture)
+- [Project UI Structure and Infomation Architecture](#project-ui-structure-and-infomation-architecture)
 - [Project Architecture](#project-architecture)
   - [Architecture](#architecture)
   - [Code Structure](#code-structure)
