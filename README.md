@@ -20,7 +20,6 @@
 - [Project Architecture](#project-architecture)
   - [Architecture](#architecture)
   - [Code Structure](#code-structure)
-  - [Main components](#main-components)
   - [Game Logic](#game-logic)
   - [Score Calculation](#score-calculation)
   - [Libraries](#libraries)
@@ -497,40 +496,29 @@ The WIZY project architecture is organized into three levels:
 
 <img src="./assets/images/readme/architecture_project.webp" alt="project architecture image" width="900">
 
-1. **Main Level**: This level consists of the main.js file, which serves as a router to dynamically load the content of all other pages.
+1. **Main Level**: This level consists of the main.js file, which serves as a router to dynamically load the right content based on the page URL. When the page is fully loaded, it checks the URL and calls the specific function for the landing, rules, game, outcome, or champions page. If something goes wrong, it redirects to a custom error page.
+
+   > [!NOTE]
+   > Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
 
 2. **Pages Level**: This level comprises JavaScript files for individual pages, such as the landing page, rules page, and game page. Each file contains the specific content and functionality for its corresponding page.
-   There are no horizontal dependencies at this levels. The pages js files depend only on components js files.
+
+   > [!NOTE]
+   > There are no horizontal dependencies at this levels. The pages js files depend only on components js files.
+   > The files have quite detailed comments for more in-depth information.
 
 3. **Components Level**: This level consists of component JavaScript files. These components act as building blocks that are utilized by the page-level JavaScript files to construct the overall page logic and functionality.
-   There are no horizontal dependencies at this level. The component js files depend only on library `animate.js` file.
+
+   > [!NOTE]
+   > There are no horizontal dependencies at this level. The component js files depend only on library `animate.js` file.
+   > The files have quite detailed comments for more in-depth information.
 
 4. **Libraries**: This section contains project-wide libraries used as external dependencies, with the potential to be released as npm packages. <br >
-   It currently includes an animation library that provides animation capabilities for HTML elements.
-   In the current stage of the WIZY project, this library is imported into component JS files.
-   However, it could be used on other levels of the project if necessary.
+   It currently includes an animation library that provides animation capabilities for HTML elements. The `animate.js` library adds fun animations to elements like life cards and stars on the outcome page. It uses a function to add an animation class to an element, listens for when the animation finishes, and runs callback functions in the middle and at the end of the animation. Once the animation is done, it removes the animation class to keep things tidy.
 
-### Main components
-
-1. On the **Main Level**, there's a `main.js` file that takes care of loading the right content based on the page URL. When the page is fully loaded, it checks the URL and calls the specific function for the landing, rules, game, outcome, or champions page. If something goes wrong, it redirects to a custom error page.
-
-> [!NOTE]
-> Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
-
-2. **Pages Level**
-
-Contains the logic and content for each specific page (e.g., landing page, rules page, game page).
-
-3. **Component Level**
-
-Modular pieces of code that can be reused across different pages for building the game's logic and UI.
-
-4. **Libraries**
-
-The `animate.js` library adds fun animations to elements like life cards and stars on the outcome page. It uses a function to add an animation class to an element, listens for when the animation finishes, and runs callback functions in the middle and at the end of the animation. Once the animation is done, it removes the animation class to keep things tidy.
-
-> [!NOTE]
-> The files have quite detailed comments for more in-depth information.
+   > [!NOTE]
+   > In the current stage of the WIZY project, this library is imported into component JS files.
+   > However, it could be used on other levels of the project if necessary.
 
 ### Game Logic
 
@@ -571,7 +559,7 @@ Score thresholds are used to determine the player's rating (one, two, or three s
 
 The WIZY web application uses several libraries and tools to enhance functionality and streamline development. Each library is chosen for its ability to simplify tasks and improve the overall user experience:
 
-- **Animate.js**: A custom library providing animation capabilities for various HTML elements. This library is currently imported in component JS files but can be utilized at other levels of the project structure as well.
+- **animate.js**: A custom library providing animation capabilities for various HTML elements. This library is currently imported in component JS files but can be utilized at other levels of the project structure as well.
 - **LocalStorage**: WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_. There are two types of localStorage data:
   game session data (username, complexity, outcome) and persistent (champions).
   LocalStorage enables data to persist across page reloads and sessions. It offers a simple and efficient method for storing user preferences, game scores, or settings directly in the user's browser.
