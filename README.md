@@ -22,7 +22,7 @@
   - [Code Structure](#code-structure)
   - [Game Logic](#game-logic)
   - [Score Calculation](#score-calculation)
-  - [Libraries](#libraries)
+  - [Libraries and Tools](#libraries-and-tools)
 - [Technologies](#technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -555,7 +555,7 @@ Score thresholds are used to determine the player's rating (one, two, or three s
 | 2 stars |   400 < x < 800    |   300 < x < 700    |   200 < x < 600    |
 | 3 stars |      x > 800       |      x > 700       |      x > 600       |
 
-### Libraries
+### Libraries and Tools
 
 The WIZY web application uses several libraries and tools to enhance functionality and streamline development. Each library is chosen for its ability to simplify tasks and improve the overall user experience:
 
@@ -584,33 +584,6 @@ The WIZY web application uses several libraries and tools to enhance functionali
            (contains the 5 best players). A user can have a few records in the list of champions. <br >
            If a user refreshes the outcome page of the game multiple times, the champions page will not display any duplicates (the localStorage will also not contain duplicates).
    </details>
-
-## Main JS features
-
-- _Dispatcher event handler function_, where using the corresponding onloading page js functions redirect to to the required HTML page based on the URL.
-- The WIZY application utilizes `throw new Error` statement for error handling to gracefully manage unexpected conditions and provide informative feedback, contributing to a more reliable and user-friendly experience.
-- WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_.
-  LocalStorage enables data to persist across page reloads and sessions. It offers a simple and efficient method for storing user preferences, game scores, or settings directly in the user's browser.
-
-  - **Username** localStorage record has `{Username: NAME}` format, where `NAME` is a string with 2 to 10 characters.
-    The username will be changed to a new one every time, then they fill the username and click `Play` button
-    on the landing WIZY page.
-
-  - **Complexity** localStorage record has `{Complexity: NUMBER}` format, where `NUMBER` is a integer between 0 and 2.
-    0 is easy level, 1 is middle complexity level, 2 is hard level.
-    The selected complexity level on `Rules` page is saved on localStorage and displayed on the game's outcome page as current level for new game. <br >
-    If the user wants to play a new game at the same level, they can do so, just click `Play` button.
-    Alternatively, users can change the complexity and click the `Play` button to start a new game at the
-    chosen level of complexity on the game's outcome page.
-
-  - **Champions** localStorage record has `Champions` as key and array of 5 objects with following structure:
-    `{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}` as value, where `USERNAME` is string, `SCORE_NUMBER` is total score number less 1000, `TIMESTAMP_NUMBER` - Unix epoch time. <br >
-    The initial champions list is read and downloaded from the `champions` array in `champions.js` file. If a user achieves a score better than the minimum score in this list, they will be added to the champions list. The list will be updated
-    (contains the 5 best players). A user can have a few records in the list of champions. <br >
-    If a user refreshes the outcome page of the game multiple times, the champions page will not display any duplicates (the localStorage will also not contain duplicates).
-
-> [!NOTE]
-> There is no need to clean up localStorage before writing data because it will overwrite the `Username` and `Complexity` records. The `Champions` record will be updated based on a user's scores.
 
 # Technologies
 
