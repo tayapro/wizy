@@ -2,20 +2,35 @@
 
 ![Website Mock Up](assets/images/readme/mockup.png)
 
-## Index – Table of Contents
+## Table of Contents
 
-- [Purpose](#purpose)
-- [UX Design](#ux-design)
+- [Introduction](#introduction)
+- [UX design](#ux-design)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+  - [Key Design Decisions](#key-design-decisions)
+    - [Imagery](#imagery)
+    - [Color Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Interactive Elements](#interactive-elements)
 - [Features](#features)
-- [Design](#design)
-- [Project Structure (JS)](#project-structure-js)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
+- [Project UI Structure and Infomation Architecture](#project-structure-and-infomation-architecture)
+- [Project Architecture](#project-architecture)
+  - [Architecture](#architecture)
+  - [Code Structure](#code-structure)
+  - [Main components](#main-components)
+  - [Game Logic](#game-logic)
+  - [Score Calculation](#score-calculation)
+  - [Libraries](#libraries)
 - [Technologies](#technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 
-# Purpose
+# Introduction
 
 Who wouldn't want to be on a sandy beach by the ocean when it's raining in Ireland in the middle of July?
 
@@ -33,9 +48,11 @@ The WIZY web app is built using HTML, CSS and Javascript as a Portfolio Project#
 
 # UX Design
 
-## User stories
+The WIZY Hangman Game aims to provide an engaging and enjoyable user experience. The design focuses on simplicity, clarity, and fun to keep users entertained and motivated.
 
-### As a **user**
+## User Stories
+
+As a **user**,
 
 - I want to easily understand the primary objective of the website.
 - I want to see something personal, like my name or initials.
@@ -46,6 +63,92 @@ The WIZY web app is built using HTML, CSS and Javascript as a Portfolio Project#
 - I want to view a leaderboard of top scores, so that I can compare my performance with others.
 - I want to easily navigate the website.
 - I want to make sure I don't get lost on this website.
+
+## Wireframes
+
+### Main Page Wireframes
+
+<img src="assets/images/readme/landing_page.png" width="500" alt="home page wireframe">
+
+### Rules Wireframes
+
+<img src="assets/images/readme/rules_page.png" width="500" alt="rules page wireframe">
+
+### Game Wireframes
+
+<img src="assets/images/readme/game_page.png" width="500" alt="game page wireframe">
+
+### Outcome Wireframes
+
+<img src="assets/images/readme/outcome_page.png" width="500" alt="outcome page wireframe">
+
+### Champions Wireframes
+
+<img src="assets/images/readme/champions_page.png" width="500" alt="champions page wireframe">
+
+### 404 page Wireframes
+
+<img src="assets/images/readme/404_page.png" width="500" alt="404 page wireframe">
+
+### 500 page Wireframes
+
+<img src="assets/images/readme/500_page.png" width="500" alt="500 page wireframe">
+
+## Key Design Decisions
+
+### Imagery
+
+The WIZY application includes fun cartoon characters, like a pineapple floating on an inflatable ring or a slice of watermelon lounging by the pool. It also features vibrant flat design vector images with a vacation theme, such as sunglasses, beach balls, and surfboards. All pages have a consistent background that resembles a swimming pool, creating a cohesive and inviting visual experience. This playful design theme aims to put users in a cheerful mood and enhance the overall gaming experience.
+
+### Colour Scheme
+
+The WIZY application's color palette is thoughtfully crafted to evoke feelings of warmth, fun.<br >
+It’s designed to evoke a sense of relaxation and joy, whether users are solving a puzzle or exploring the app.
+<br ><br >
+<img src="assets/images/readme/color_palette.png" width="400" alt="WIZY color palette image"/>
+<br ><br >
+
+- <img src="assets/images/readme/066D82.png" width="20" alt="066D82 color image"/> #066D82 - **Carribean current** <br >
+  A deep, vibrant teal, reminiscent of tropical waters. This color provides a refreshing and calming backdrop, evoking the serenity of a beach vacation.
+
+- <img src="assets/images/readme/D03B3E.png" width="20" alt="D03B3E color image"/> #D03B3E - **Poppy** <br >
+  A bold and striking red that brings energy and excitement. This vibrant hue captures attention and adds a lively touch, perfect for highlighting important elements.
+
+- <img src="assets/images/readme/F27858.png" width="20" alt="F27858 color image"/> #F27858 - **Burned sienna** <br >
+  A warm, earthy orange that adds a rustic charm. This color is akin to a beautiful sunset or autumn leaves, providing a cozy and inviting feel.
+
+- <img src="assets/images/readme/88CBD7.png" width="20" alt="88CBD7 color image"/> #88CBD7 - **Non photo blue** <br >
+  A light, airy blue reminiscent of clear skies. This uplifting color adds a breezy, cheerful touch, promoting a sense of clarity and openness.
+
+- <img src="assets/images/readme/9FBC5A.png" width="20" alt="9FBC5A color image"/> #9FBC5A - **Olivine** <br >
+  A soothing, natural green that brings a hint of nature. This color is similar to fresh foliage, offering a grounding and balancing effect.
+
+- <img src="assets/images/readme/E6C149.png" width="20" alt="E6C149 color image"/> #E6C149 - **Saffron** <br >
+  A rich, golden yellow that exudes warmth and positivity. This cheerful hue is reminiscent of sunflowers, adding a sunny and optimistic vibe to the palette.
+
+- <img src="assets/images/readme/FAEBD7.png" width="20" alt="FAEBD7 color image"/> #FAEBD7 - **Antique white** <br >
+  A soft, creamy off-white that serves as a neutral backdrop. This elegant color provides a timeless quality, helping to tie the other colors together harmoniously.
+
+To ensure clear visibility and readability, the following contrast colors have been chosen for the WIZY application:
+
+- <img src="assets/images/readme/3B3B3B.png" width="20" alt="3B3B3B color image"/> #3B3B3B - **Onyx**:
+  A dark gray color that shows up well against lighter backgrounds. It's used for text and important elements so they're easy to read.
+
+- #FFFFFF - **White**
+  A bright white color that stands out against darker and more colorful backgrounds. It's great for text and icons, making them clear and easy to see.
+
+These contrast colors help make sure everything on the app is easy to read and use.
+
+### Typography
+
+For this project Rubik (logo) and Varela Round (body text) are used as fonts. <br>
+Rubik font is great for a game app logo because its bold, modern design makes it stand out.<br>
+Varela Round, with its friendly and rounded design, offers excellent readability and a warm,
+approachable feel, making it a great choice for game apps.
+
+### Inrecactive Elements
+
+Animations were added to the stars and life icons to make the WIZY game more dynamic and engaging. The animations are subtle yet effective in providing feedback to the user.
 
 # Features
 
@@ -148,6 +251,8 @@ The screen is logically divided into three sections:
   <img src="assets/images/readme/f08_mobile.png" width="151" alt="game page mobile view image"/> 
 </p>
 
+In the top right corner of the header, users can see their name's first letter displayed as an icon (this applies to all screen sizes).
+
 On the Game page, the user's `Username` and `Complexity` records in localStorage are preset based on previous steps.
 The chosen word is randomly selected according to the complexity level.
 
@@ -168,7 +273,7 @@ Short video with lives blocks animation:
 
 > [!NOTE]
 > During the process of video file compression to GIF format by **Ezgif** app,
-> the animation seems a little jerky. Link to [original video](./assets/images/readme/f09_live_blocks.mov)
+> the animation seems a little jerky. Link to [original video](./assets/images/readme/f09_live_blocks.mov).
 
 ### F10 Game page - alphabet buttons
 
@@ -188,8 +293,8 @@ Short GIF video how alphabet buttons work:
 ### F11 Outcome page
 
 Regardless of the game's result, players always want to see their outcome.
-
-In the WIZY game, the outcome page provides a visual representation based on the stars earned:
+In the WIZY game, the outcome page provides a visual representation based on the stars earned.<br >
+If the player wins, they see their points and, if they’re in the top five, a link to the champion's scoreboard with their ranking.
 
 - For one star:
 
@@ -341,7 +446,7 @@ As a result, the list of champions on the champions page will be updated.
 > [!NOTE]
 > The picture cropping on small screens is intentional and reflects the author's personal style.
 
-## Future features
+## Future Features
 
 > - Create a unique personal account to track user's progress.
 > - Option to pause the game.
@@ -349,128 +454,23 @@ As a result, the list of champions on the champions page will be updated.
 > - Allow a user to log out by clicking the icon with the first letter of your username in the header and confirming.
 > - Add the weight of the complexity level to the score calculation.
 
-# Design
+# Project UI Structure and Infomation Architecture
 
-## Game logic
+The WIZY web application is organized to ensure a seamless user experience, intuitive navigation, and efficient data management.
 
-The WIZY hangman game follows a classic word-guessing format where players attempt to guess a hidden word letter
-by letter within a limited number of attempts.
+<img src="assets/images/readme/information_architecture.png" alt="information architecture image"/><br >
 
-- **Initialization**:
-  The game randomly selects a word from a predefined list based on the chosen difficulty level.
-  An initial number of lives (represented by icons like sunglasses or a hat) is set.
-  The game interface displays placeholders for each letter of the word.
+The structure includes the following main UI components:
 
-- **Gameplay**:
-  Players guess letters one by one.
-  Correct guesses fill in the corresponding placeholders in the word.
-  Incorrect guesses decrease the number of remaining lives (or increase a mistake counter) and hides a wasted life using animation.
+- **Home Page**: The landing page where users are welcomed and can enter their name to start the game.
+- **Rules Page**: Provides game instructions and allows users to select the difficulty level.
+- **Game Page**: The core of the application where users play the WIZY game.
+- **Outcome Page**: Displays the results of the game, including animations and messages based on performance.
+- **Champions Page**: Lists the top players based on their scores.
 
-- **Winning and Losing**:
+Regarding the JS part of the WIZY project, please refer to the next section for more information.
 
-  - Win Condition: If the player successfully guesses all letters in the word before running out of lives, they win.
-  - Lose Condition: If the player exhausts all their lives or exceeds the maximum allowed mistakes without guessing the word correctly, they lose.
-
-- **Score Calculation**:
-  The player's score is calculated based on their performance:
-
-  - Mistakes Contribution: Percentage of allowed mistakes used.
-  - Time Contribution: Time taken to guess the word relative to the maximum allowed time.
-
-  The score is normalized and adjusted to fit within a predefined scoring range.<br >
-  Score thresholds are used to determine the player's rating (one, two, or three stars) based on their final score. These thresholds vary depending on the difficulty level chosen by the player (see following table, where x is user's score).
-
-  |         | 0 difficulty level | 1 difficulty level | 2 difficulty level |
-  | ------- | :----------------: | :----------------: | :----------------: |
-  | 1 star  |      x < 400       |      x < 300       |      x < 200       |
-  | 2 stars |   400 < x < 800    |   300 < x < 700    |   200 < x < 600    |
-  | 3 stars |      x > 800       |      x > 700       |      x > 600       |
-
-## Imagery
-
-The WIZY application includes fun cartoon characters, like a pineapple floating on an inflatable ring or a slice
-of watermelon lounging by the pool. It also features vibrant flat design vector images with a vacation theme,
-such as sunglasses, beach balls, and surfboards. All pages have a consistent background that resembles a swimming pool,
-creating a cohesive and inviting visual experience. This playful design theme aims to put users in a cheerful
-mood and enhance the overall gaming experience.
-
-## Colour Scheme
-
-The WIZY application's color palette is thoughtfully crafted to evoke feelings of warmth, fun.<br >
-It’s designed to evoke a sense of relaxation and joy, whether users are solving a puzzle or exploring the app.
-<br ><br >
-<img src="assets/images/readme/color_palette.png" width="400" alt="WIZY color palette image"/>
-<br ><br >
-
-- <img src="assets/images/readme/066D82.png" width="20" alt="066D82 color image"/> #066D82 - **Carribean current** <br >
-  A deep, vibrant teal, reminiscent of tropical waters. This color provides a refreshing and calming backdrop, evoking the serenity of a beach vacation.
-
-- <img src="assets/images/readme/D03B3E.png" width="20" alt="D03B3E color image"/> #D03B3E - **Poppy** <br >
-  A bold and striking red that brings energy and excitement. This vibrant hue captures attention and adds a lively touch, perfect for highlighting important elements.
-
-- <img src="assets/images/readme/F27858.png" width="20" alt="F27858 color image"/> #F27858 - **Burned sienna** <br >
-  A warm, earthy orange that adds a rustic charm. This color is akin to a beautiful sunset or autumn leaves, providing a cozy and inviting feel.
-
-- <img src="assets/images/readme/88CBD7.png" width="20" alt="88CBD7 color image"/> #88CBD7 - **Non photo blue** <br >
-  A light, airy blue reminiscent of clear skies. This uplifting color adds a breezy, cheerful touch, promoting a sense of clarity and openness.
-
-- <img src="assets/images/readme/9FBC5A.png" width="20" alt="9FBC5A color image"/> #9FBC5A - **Olivine** <br >
-  A soothing, natural green that brings a hint of nature. This color is similar to fresh foliage, offering a grounding and balancing effect.
-
-- <img src="assets/images/readme/E6C149.png" width="20" alt="E6C149 color image"/> #E6C149 - **Saffron** <br >
-  A rich, golden yellow that exudes warmth and positivity. This cheerful hue is reminiscent of sunflowers, adding a sunny and optimistic vibe to the palette.
-
-- <img src="assets/images/readme/FAEBD7.png" width="20" alt="FAEBD7 color image"/> #FAEBD7 - **Antique white** <br >
-  A soft, creamy off-white that serves as a neutral backdrop. This elegant color provides a timeless quality, helping to tie the other colors together harmoniously.
-
-To ensure clear visibility and readability, the following contrast colors have been chosen for the WIZY application:
-
-- <img src="assets/images/readme/3B3B3B.png" width="20" alt="3B3B3B color image"/> #3B3B3B - **Onyx**:
-  A dark gray color that shows up well against lighter backgrounds. It's used for text and important elements so they're easy to read.
-
-- #FFFFFF - **White**
-  A bright white color that stands out against darker and more colorful backgrounds. It's great for text and icons, making them clear and easy to see.
-
-These contrast colors help make sure everything on the app is easy to read and use.
-
-## Typography
-
-For this project Rubik (logo) and Varela Round (body text) are used as fonts. <br>
-Rubik font is great for a game app logo because its bold, modern design makes it stand out.<br>
-Varela Round, with its friendly and rounded design, offers excellent readability and a warm,
-approachable feel, making it a great choice for game apps.
-
-## Wireframes
-
-### Main Page Wireframes
-
-<img src="assets/images/readme/landing_page.png" width="500" alt="home page wireframe">
-
-### Rules Wireframes
-
-<img src="assets/images/readme/rules_page.png" width="500" alt="rules page wireframe">
-
-### Game Wireframes
-
-<img src="assets/images/readme/game_page.png" width="500" alt="game page wireframe">
-
-### Outcome Wireframes
-
-<img src="assets/images/readme/outcome_page.png" width="500" alt="outcome page wireframe">
-
-### Champions Wireframes
-
-<img src="assets/images/readme/champions_page.png" width="500" alt="champions page wireframe">
-
-### 404 page Wireframes
-
-<img src="assets/images/readme/404_page.png" width="500" alt="404 page wireframe">
-
-### 500 page Wireframes
-
-<img src="assets/images/readme/500_page.png" width="500" alt="500 page wireframe">
-
-# Project Structure (JS)
+# Project Architecture
 
 ## Architecture
 
@@ -491,7 +491,7 @@ approachable feel, making it a great choice for game apps.
 </tr>
 </table>
 
-### Project Architecture Overview
+### Code structure
 
 The WIZY project architecture is organized into three levels:
 
@@ -510,19 +510,9 @@ The WIZY project architecture is organized into three levels:
    In the current stage of the WIZY project, this library is imported into component JS files.
    However, it could be used on other levels of the project if necessary.
 
-## JavaScript Structure
+### Main components
 
-1. On the **Main Level**, there is a `main.js` file that imports all the pages JavaScript files such as:
-
-   - `champions-page.js`
-   - `game-page.js`
-   - `landing-page.js`
-   - `outcome-page.js`
-   - `rules-page.js`
-
-   Inside the `main.js` file, there is an handler function attached to the `DOMContentLoaded` event listener, which includes a `try...catch` statement to handle any internal errors.
-
-   In case of an error, the user will be redirected to the `500.html` page.
+1. On the **Main Level**, there's a `main.js` file that takes care of loading the right content based on the page URL. When the page is fully loaded, it checks the URL and calls the specific function for the landing, rules, game, outcome, or champions page. If something goes wrong, it redirects to a custom error page.
 
 > [!NOTE]
 > Use `if...else if` instead of `switch...case` to avoid creating additional functions for parsing URLs.
@@ -534,10 +524,74 @@ The WIZY project architecture is organized into three levels:
 
 3. **Component Level**
 
-**Library** `animate.js` file
+4. **Libraries**
 
 > [!NOTE]
 > The files have quite detailed comments for more in-depth information.
+
+### Game Logic
+
+The WIZY hangman game follows a classic word-guessing format where players attempt to guess a hidden word letter by letter within a limited number of attempts.
+
+- **Initialization**:
+  The game randomly selects a word from a predefined list based on the chosen difficulty level.
+  An initial number of lives (represented by icons like sunglasses or a hat) is set.
+  The game interface displays placeholders for each letter of the word.
+
+- **Gameplay**:
+  Players guess letters one by one.
+  Correct guesses fill in the corresponding placeholders in the word.
+  Incorrect guesses decrease the number of remaining lives (or increase a mistake counter) and hides a wasted life using animation.
+
+- **Winning and Losing**:
+
+  - Win Condition: If the player successfully guesses all letters in the word before running out of lives, they win.
+  - Lose Condition: If the player exhausts all their lives or exceeds the maximum allowed mistakes without guessing the word correctly, they lose.
+
+### Score Calculation
+
+The player's score is calculated based on their performance:
+
+- Mistakes Contribution: Percentage of allowed mistakes used.
+- Time Contribution: Time taken to guess the word relative to the maximum allowed time.
+
+The score is normalized and adjusted to fit within a predefined scoring range.<br >
+Score thresholds are used to determine the player's rating (one, two, or three stars) based on their final score. These thresholds vary depending on the difficulty level chosen by the player (see following table, where x is user's score).
+
+|         | 0 difficulty level | 1 difficulty level | 2 difficulty level |
+| ------- | :----------------: | :----------------: | :----------------: |
+| 1 star  |      x < 400       |      x < 300       |      x < 200       |
+| 2 stars |   400 < x < 800    |   300 < x < 700    |   200 < x < 600    |
+| 3 stars |      x > 800       |      x > 700       |      x > 600       |
+
+### Libraries
+
+The WIZY web application uses several libraries and tools to enhance functionality and streamline development. Each library is chosen for its ability to simplify tasks and improve the overall user experience:
+
+- **Animate.js**: A custom library providing animation capabilities for various HTML elements. This library is currently imported in component JS files but can be utilized at other levels of the project structure as well.
+- **LocalStorage**: WIZY app is a project without server-side storage and _use localStorage to store pairs: key and value_.
+  LocalStorage enables data to persist across page reloads and sessions. It offers a simple and efficient method for storing user preferences, game scores, or settings directly in the user's browser.
+
+     <details><summary><b>Username</b></summary>
+        localStorage record has <code>{Username: NAME}</code> format, where <code>NAME</code> is a string with 2 to 10 characters.
+        The username will be changed to a new one every time, then they fill the username and click <b>Play</b> button on the landing WIZY page.
+     </details>
+
+     <details><summary><b>Complexity</b></summary>
+        localStorage record has <code>{Complexity: NUMBER}</code> format, where <code>NUMBER</code> is a integer between 0 and 2.
+        0 is easy level, 1 is middle complexity level, 2 is hard level.
+        The selected complexity level on <b>Rules</b> page is saved on localStorage and displayed on the game's outcome page as current level for new game. <br >
+        If the user wants to play a new game at the same level, they can do so, just click <b>Play</b> button.
+        Alternatively, users can change the complexity and click the <b>Play</b> button to start a new game at the
+        chosen level of complexity on the game's outcome page.
+      </details>
+
+      <details><summary><b>Champions</b></summary>
+         localStorage record has <code>Champions</code> as key and array of 5 objects with following structure: <code>{name: USERNAME, score: SCORE_NUMBER, timeStamp: TIMESTAMP_NUMBER}</code> as value, where <code>USERNAME</code> is string, <code>SCORE_NUMBER</code> is total score number less 1000, <code>TIMESTAMP_NUMBER</code> - Unix epoch time.
+         The initial champions list is read and downloaded from the <code>champions</code> array in <code>champions.js</code> file. If a user achieves a score better than the minimum score in this list, they will be added to the champions list. The list will be updated
+         (contains the 5 best players). A user can have a few records in the list of champions. <br >
+         If a user refreshes the outcome page of the game multiple times, the champions page will not display any duplicates (the localStorage will also not contain duplicates).
+      </details>
 
 ## Main JS features
 
