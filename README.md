@@ -519,12 +519,15 @@ The WIZY project architecture is organized into three levels:
 
 2. **Pages Level**
 
-   2.1. `champions-page.js` file is responsible for Champions page view with actual list of game leaders.
-   Sets the default list of champions if no champion data exists in local storage.
+Contains the logic and content for each specific page (e.g., landing page, rules page, game page).
 
 3. **Component Level**
 
+Modular pieces of code that can be reused across different pages for building the game's logic and UI.
+
 4. **Libraries**
+
+The `animate.js` library adds fun animations to elements like life cards and stars on the outcome page. It uses a function to add an animation class to an element, listens for when the animation finishes, and runs callback functions in the middle and at the end of the animation. Once the animation is done, it removes the animation class to keep things tidy.
 
 > [!NOTE]
 > The files have quite detailed comments for more in-depth information.
