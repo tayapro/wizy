@@ -145,7 +145,7 @@ Rubik font is great for a game app logo because its bold, modern design makes it
 Varela Round, with its friendly and rounded design, offers excellent readability and a warm,
 approachable feel, making it a great choice for game apps.
 
-### Inrecactive Elements
+### Interactive Elements
 
 Animations were added to the stars and life icons to make the WIZY game more dynamic and engaging. The animations are subtle yet effective in providing feedback to the user.
 
