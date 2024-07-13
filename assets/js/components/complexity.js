@@ -1,5 +1,5 @@
 /**
- * Handles the form submission event for selecting game complexity level
+ * Handle the form submission event for selecting game complexity level
  *
  * @param {Event} event - the form submission event
  * @throws {Error} - if complexity data is not submitted

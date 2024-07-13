@@ -54,13 +54,13 @@ function newGame() {
     // Check letter for correctness
     if (!testLetter(letter)) {
       removeLife(() => {
-        // Loss game scenario
+        // Defeat scenario
         disableAllAlphabetButtons();
         gameOver(false);
       });
     }
 
-    // Win game scenario
+    // Victory scenario
     if (isWordSolved()) {
       disableAllAlphabetButtons();
       gameOver(true);
@@ -77,7 +77,7 @@ function newGame() {
  */
 function gameOver(isVictory) {
   // Set default outcome values
-  let outcome = { score: 0, tier: 0, isWin: false, timeStamp: Date.now() };
+  const outcome = { score: 0, tier: 0, isWin: false, timeStamp: Date.now() };
 
   if (isVictory) {
     // Get total game time

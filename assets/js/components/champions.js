@@ -1,5 +1,5 @@
 /**
- * Sets the default list of champions if no champion data exists in local storage.
+ * Set the default list of champions if no champion data exists in localStorage
  */
 export function setDefaultChampions() {
   // Default list of champions with their names, scores and time
@@ -11,18 +11,17 @@ export function setDefaultChampions() {
     { name: "Jack", score: 637, timeStamp: 1720376661705 },
   ];
 
-  // Check if there is any existing champion data in local storage
+  // Check if there is any existing champion data in localStorage
   const current = localStorage.getItem("Champions");
 
-  // If no data exists, save the default list to local storage
+  // If no data exists, save the default list to localStorage
   if (!current) {
     localStorage.setItem("Champions", JSON.stringify(champions));
   }
 }
 
 /**
- * Get the list of champions from local storage
- * Throws an error if no champion data is found
+ * Get the list of champions from localStorage
  *
  * @returns {array} - the parsed list of champions from localStorage
  * @throws {Error} - throws an error if champion data is not found
@@ -43,12 +42,12 @@ export function getChampions() {
  * @param {array} champions - the list of champions
  */
 export function setChampions(champions) {
-  // convert the list of champions to a JSON string and store it in local storage
+  // convert the list of champions to a JSON string and store it in localStorage
   localStorage.setItem("Champions", JSON.stringify(champions));
 }
 
 /**
- * Converts a zero-based index into a place index on the champion's board,
+ * Convert a zero-based index into a place index on the champion's board,
  * see `recordUserScore` function below
  *
  * @param {number} index - user's index in champion's list
@@ -61,7 +60,7 @@ function turnIndexIntoPlace(index) {
 }
 
 /**
- *  Record a user's score in the champions list, updating if it exists or adding if new
+ *  Record a user's score in to the champions list, updating if it exists or adding if new
  *
  * @param {string} username - the name of the user
  * @param {number} score - the score achieved by the user

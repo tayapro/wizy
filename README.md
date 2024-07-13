@@ -751,7 +751,7 @@ The JS files passed without any errors.
 </details>
 
 <details><summary>js/main.js</summary>
-<img src="assets/images/readme/main_validation.png" width="300px">
+<img src="assets/images/readme/main_validation.png" width="300">
 </details>
 
 ## Performance
@@ -761,13 +761,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### Home
 
 <details><summary>Home desktop</summary>
-<img src="assets/images/readme/landing_desktop.png" width="500px">
+<img src="assets/images/readme/landing_desktop.png" width="500">
 </details>
 
 ![Landing desktop numbers](assets/images/readme/landing_desktop_numbers.png)
 
 <details><summary>Home mobile</summary>
-<img src="assets/images/readme/landing_mobile.png" width="500px">
+<img src="assets/images/readme/landing_mobile.png" width="500">
 </details>
 
 ![Landing mobile numbers](assets/images/readme/landing_mobile_numbers.png)

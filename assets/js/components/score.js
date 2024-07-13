@@ -13,10 +13,7 @@ const oneStarCutoff = [400, 300, 200];
 const twoStarCutoff = [800, 700, 600];
 
 /**
- * This function ensures that the value stays within the range [0, 1].
- * If the value is less than 0, it returns 0.
- * If the value is greater than 1, it returns 1.
- * Otherwise, it returns the value itself.
+ * Clamp number from 0 to 1
  *
  * @param {number} value - the input value to be clamped
  * @returns {number} - the clamped value between 0 and 1

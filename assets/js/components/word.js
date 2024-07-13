@@ -139,7 +139,7 @@ const dictionary = [
 ];
 
 let theWord = ""; // variable to store the word to be guessed
-let theMatchedLetters = new Set(); // `Set` constructor for variable to store matched letters guessed by the player
+let theMatchedLetters = new Set(); // matched letters guessed by the player
 
 /**
  * Randomly pick a word from a given word list
@@ -153,6 +153,7 @@ function pickRandomWord(wordList) {
 
 /**
  * Generate a new word for the game based on complexity level
+ *
  * @param {number} complexity - the complexity level
  */
 export function newWord(complexity) {

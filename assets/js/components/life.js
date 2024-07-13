@@ -1,6 +1,6 @@
 import { animate } from "../lib/animate.js";
 
-let lifeIndexArray = new Set(); // `Set` constructor for variable to store life's indexes
+let lifeIndexArray = new Set(); // use set in order to avoid duplications
 
 const animations = ["swirle", "flip", "swipe"]; // array with animation CSS classes
 let randomAnimation = animations[0]; // Set initial CSS class for animation
@@ -44,7 +44,9 @@ export function setLives(num) {
 
 /**
  * Remove a randomly selected life from the display
- * Calls the provided callback function on game over
+ *
+ * On removal it plays animation, when the last live removed it calls `onGameOver`
+ * callback when the last life animation ends.
  *
  * @param {function} onGameOver - callback function triggered when lives are exhausted
  */
@@ -72,9 +74,9 @@ export function removeLife(onGameOver) {
 }
 
 /**
- * Get the current count of used lives
+ * Retrieve the current number of remaining lives
  *
- * @returns {number} - number of used lives
+ * @returns {number} - number of remaining lives
  */
 export function getLifeCount() {
   return lifeIndexArray.size;

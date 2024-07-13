@@ -32,7 +32,7 @@ function validateOutcome(outcome) {
 }
 
 /**
- * Get the game outcome from local storage and validates it
+ * Get the game outcome from localStorage and validate it
  *
  * @returns {object} - the validated game outcome
  * @throws an error if the outcome is not found or invalid
@@ -48,10 +48,10 @@ export function getGameOutcome() {
 }
 
 /**
- * Store the given game outcome in local storage
- * (the outcome is stringified before being saved)
+ * Take an object, convert it to a string using JSON.stringify,
+ * and then save the resulting string to the Outcome key
  *
- * @param {object} outcome - The game outcome to be stored.
+ * @param {object} outcome - the game outcome to be stored
  */
 export function setGameOutcome(outcome) {
   localStorage.setItem("Outcome", JSON.stringify(outcome));
@@ -63,7 +63,7 @@ export function setGameOutcome(outcome) {
  * @param {number} place - the player's ranking place on the champions' board
  */
 export function newGameOutcome(place) {
-  // Get the game outcome from local storage
+  // Get the game outcome from localStorage
   const outcome = getGameOutcome();
 
   const message = document.getElementById("game-outcome");

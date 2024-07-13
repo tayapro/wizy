@@ -5,7 +5,7 @@
 const theAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 /**
- * Sets up the alphabet buttons
+ * Set up the alphabet buttons
  */
 function setAlphabetButtons() {
   // Select the HTML element with the ID "alphabet-container"
@@ -26,7 +26,7 @@ function setAlphabetButtons() {
 }
 
 /**
- * Adds click event listeners to all alphabet buttons
+ * Add click event listeners to all alphabet buttons
  *
  * @param {function} onClickLetter - The event handler function
  */
@@ -40,7 +40,7 @@ function setAlphabetButtonsListener(onClickLetter) {
 }
 
 /**
- * Initializes the alphabet buttons and sets their click event listener
+ * Initialize the alphabet buttons and set their click event listener
  *
  * @param {function} onClickLetter - the event handler function
  */
@@ -50,7 +50,7 @@ export function newAlphabet(onClickLetter) {
 }
 
 /**
- * Disables a specific alphabet button by changing its appearance and setting it to disabled
+ * Disable a specific alphabet button by changing its appearance and setting it to disabled
  *
  * @param {string} letter - The letter of the alphabet button
  */
@@ -65,7 +65,7 @@ export function disableAlphabetButton(letter) {
 }
 
 /**
- * Disables a all alphabet buttons by setting them to disabled
+ * Disable all alphabet buttons by setting `disabled` property to true
  */
 export function disableAllAlphabetButtons() {
   const buttons = document.querySelectorAll(".alphabet-button");

@@ -1,6 +1,7 @@
 /**
- * Sets the user icon based on the first letter of the username
- * Get the username from localStorage and update the DOM element
+ * Retrieve the username from localStorage,
+ * take the first letter, capitalize it,
+ * and update the corresponding DOM element.
  */
 export function setUserIcon() {
   const name = getUser();
@@ -10,7 +11,7 @@ export function setUserIcon() {
 }
 
 /**
- * Sets the username in localStorage
+ * Set the username in localStorage
  *
  * @param {string} username - the username to be stored
  */
@@ -19,7 +20,7 @@ export function setUser(username) {
 }
 
 /**
- * Get the username from local storage
+ * Get the username from localStorage
  *
  * @returns {string} - the stored username
  * @throws {Error} - if username data is not found
