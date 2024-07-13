@@ -25,8 +25,18 @@
   - [Libraries and Tools](#libraries-and-tools)
 - [Technologies](#technologies)
 - [Testing](#testing)
+  - [Features testing](#features-testing)
+  - [User stories testing](#user-stories-testing)
+  - [Validator testing](#validator-testing)
+  - [Performance](#performance)
+  - [Device/Browser Compatibility](#devicebrowser-compatibility)
 - [Deployment](#deployment)
+  - [How to fork and deploy](#how-to-fork-and-deploy)
+  - [How to clone](#how-to-clone)
 - [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+  - [Code](#code)
 - [Acknowledgments](#acknowledgments)
 
 # Introduction
@@ -633,9 +643,7 @@ Responsive layout has been check for all screen sizes, and focused on most popul
 
 This section shows connection between [Features](#features) and [UX design](#ux-design) sections.
 
-### As a first time user
-
-### As a returning/frequent user
+### As a user
 
 - I want to easily navigate the website.
 
@@ -905,6 +913,9 @@ Testing has been carried out on the following devices:
 
 ## Media
 
+- The fonts used were imported from [Google Fonts](https://fonts.google.com/)
+- The icons in the header was taken from [Font Awesome](https://fontawesome.com/icons)
+
 ## Code
 
 - Knowledge of [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
@@ -912,11 +923,6 @@ Testing has been carried out on the following devices:
 - Inspiring of [animation JS](https://javascript.info/js-animation)
 - Understanding of [css-transform-and-css-transition](https://medium.com/@nimritee876/a-complete-guide-to-css-transform-and-css-transition-919a2ab025b6) of animation
 - Knowledge of [localStorage property](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
-
-## Media
-
-- The fonts used were imported from [Google Fonts](https://fonts.google.com/)
-- The icons in the header was taken from [Font Awesome](https://fontawesome.com/icons)
 
 # Acknowledgments
 
