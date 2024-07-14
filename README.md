@@ -699,7 +699,7 @@ The W3C Jigsaw CSS Validation Service was employed to check the HTML of the webs
 The CSS page passed without any errors or warnings.
 
 <details><summary>CSS</summary>
-<img src="assets/images/readme/W3C_validation.png" width="500px">
+<img src="assets/images/readme/W3C_validation.png" width="500">
 </details>
 
 ### JS Validator
@@ -708,59 +708,59 @@ The JSHint Validation Service was employed to check the JS files. <br>
 The JS files passed without any errors.
 
 <details><summary>js/components/alphabet.js</summary>
-<img src="assets/images/readme/alphabet_validation.png" width="300px">
+<img src="assets/images/readme/alphabet_validation.png" width="300">
 </details>
 
 <details><summary>js/components/champions.js</summary>
-<img src="assets/images/readme/champions_validation.png" width="300px">
+<img src="assets/images/readme/champions_validation.png" width="300">
 </details>
 
 <details><summary>js/components/complexity.js</summary>
-<img src="assets/images/readme/complexity_validation.png" width="300px">
+<img src="assets/images/readme/complexity_validation.png" width="300">
 </details>
 
 <details><summary>js/components/life.js</summary>
-<img src="assets/images/readme/life_validation.png" width="300px">
+<img src="assets/images/readme/life_validation.png" width="300">
 </details>
 
 <details><summary>js/components/outcome.js</summary>
-<img src="assets/images/readme/outcome_validation.png" width="300px">
+<img src="assets/images/readme/outcome_validation.png" width="300">
 </details>
 
 <details><summary>js/components/score.js</summary>
-<img src="assets/images/readme/score_validation.png" width="300px">
+<img src="assets/images/readme/score_validation.png" width="300">
 </details>
 
 <details><summary>js/components/user.js</summary>
-<img src="assets/images/readme/user_validation.png" width="300px">
+<img src="assets/images/readme/user_validation.png" width="300">
 </details>
 
 <details><summary>js/components/word.js</summary>
-<img src="assets/images/readme/word_validation.png" width="300px">
+<img src="assets/images/readme/word_validation.png" width="300">
 </details>
 
 <details><summary>js/lib/animate.js</summary>
-<img src="assets/images/readme/animate_validation.png" width="300px">
+<img src="assets/images/readme/animate_validation.png" width="300">
 </details>
 
 <details><summary>js/pages/champions-page.js</summary>
-<img src="assets/images/readme/champions_page_validation.png" width="300px">
+<img src="assets/images/readme/champions_page_validation.png" width="300">
 </details>
 
 <details><summary>js/pages/game-page.js</summary>
-<img src="assets/images/readme/game_page_validation.png" width="300px">
+<img src="assets/images/readme/game_page_validation.png" width="300">
 </details>
 
 <details><summary>js/pages/landing-page.js</summary>
-<img src="assets/images/readme/landing_page_validation.png" width="300px">
+<img src="assets/images/readme/landing_page_validation.png" width="300">
 </details>
 
 <details><summary>js/pages/outcome-page.js</summary>
-<img src="assets/images/readme/outcome_page_validation.png" width="300px">
+<img src="assets/images/readme/outcome_page_validation.png" width="300">
 </details>
 
 <details><summary>js/pages/rules-page.js</summary>
-<img src="assets/images/readme/rules_page_validation.png" width="300px">
+<img src="assets/images/readme/rules_page_validation.png" width="300">
 </details>
 
 <details><summary>js/main.js</summary>

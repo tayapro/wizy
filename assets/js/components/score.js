@@ -4,12 +4,12 @@
 
 // The oneStarCutoff array contains the score thresholds for earning one star
 // based on different difficulty levels. Each index represents a different
-// level of difficulty, with higher scores required for easier levels.
+// level of difficulty, with higher scores required for easier levels
 const oneStarCutoff = [400, 300, 200];
 
 // The twoStarCutoff array contains the score thresholds for earning two stars
 // based on different difficulty levels. Each index represents a different
-// level of difficulty, with higher scores required for easier levels.
+// level of difficulty, with higher scores required for easier levels
 const twoStarCutoff = [800, 700, 600];
 
 /**

@@ -76,7 +76,7 @@ export function newGameOutcome(place) {
     // Animate stars bar with a delay
     setTimeout(() => amimateStarsBar(outcome), 300);
 
-    // Updates the champions' board if applicable
+    // Update the champions' board if applicable
     if (place !== -1) {
       const championsMessage = document.getElementById("game-champion-message");
       championsMessage.classList.remove("hidden");
@@ -96,6 +96,8 @@ export function newGameOutcome(place) {
       const beachImg = document.getElementById("outcome-beach-image");
       beachImg.classList.remove("hidden");
       outcomeMessage.innerHTML = "Sounds like <br>someone is going to Hawai.";
+    } else {
+      throw new Error(`Outcome tier ${outcome.tier} is not valid`);
     }
 
     const score = document.getElementById("game-score");

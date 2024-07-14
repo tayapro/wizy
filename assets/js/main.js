@@ -4,8 +4,12 @@ import { onGamePageLoad } from "./pages/game-page.js";
 import { onOutcomePageLoad } from "./pages/outcome-page.js";
 import { onChampionsPageLoad } from "./pages/champions-page.js";
 
+/**
+ * Add an event listener to run the function when the DOM is fully loaded
+ */
 document.addEventListener("DOMContentLoaded", () => {
   try {
+    // Check the current page URL and call the corresponding function to load the appropriate content
     if (
       document.documentURI.includes("index.html") ||
       document.documentURI.endsWith("/")
@@ -20,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (document.documentURI.includes("champions.html")) {
       onChampionsPageLoad();
     }
-    // to catch an error, need to modify following line to `catch(e)` and add console.log(e) to block
+    // If an error occurs, redirect the user to a custom error page
   } catch {
     window.location.replace("500.html");
   }
