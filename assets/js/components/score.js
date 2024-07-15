@@ -16,7 +16,8 @@ const twoStarCutoff = [800, 700, 600];
  * Clamp number from 0 to 1
  *
  * @param {number} value - the input value to be clamped
- * @returns {number} - the clamped value between 0 and 1
+ *
+ * @return {number} - the clamped value between 0 and 1
  */
 function clamp(value) {
   return Math.min(Math.max(value, 0), 1);
@@ -31,7 +32,7 @@ function clamp(value) {
  * @param {number} totalTime - the total time taken by the player
  * @param {number} maxTime - the maximum allowable time
  *
- * @returns {number} - the calculated game score
+ * @return {number} - the calculated game score
  */
 function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
   // Normalize the total mistakes to a range [0, 1]
@@ -60,7 +61,7 @@ function getScore(totalMiskates, maxMistakes, totalTime, maxTime) {
  * @param {number} maxTime - the maximum allowed time
  * @param {number} complexity - the complexity level of the game
  *
- * @returns {object} - an object containing the score and tier
+ * @return {object} - an object containing the score and tier
  */
 export function getScoreTier(
   totalMiskates,

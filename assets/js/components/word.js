@@ -145,7 +145,8 @@ let theMatchedLetters = new Set(); // matched letters guessed by the player
  * Randomly pick a word from a given word list
  *
  * @param {array} wordList - words array to choose from
- * @returns {string} - a randomly selected word from the wordList
+ *
+ * @return {string} - a randomly selected word from the wordList
  */
 function pickRandomWord(wordList) {
   return wordList[Math.floor(Math.random() * wordList.length)];
@@ -176,7 +177,8 @@ export function newWord(complexity) {
  * Check if the letter matches any in the word
  *
  * @param {string} c - the letter to test
- * @returns {boolean} - true if the letter matches, false otherwise
+ *
+ * @return {boolean} - true if the letter matches, false otherwise
  */
 export function testLetter(c) {
   if (theWord.search(c) === -1) {
@@ -203,7 +205,7 @@ export function drawWord() {
 /**
  * Check if all letters in the word have been matched
  *
- * @returns {boolean} - true if the word is solved, false otherwise
+ * @return {boolean} - true if the word is solved, false otherwise
  */
 export function isWordSolved() {
   for (const letter of theWord) {

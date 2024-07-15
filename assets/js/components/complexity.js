@@ -2,7 +2,8 @@
  * Handle the form submission event for selecting game complexity level
  *
  * @param {Event} event - the form submission event
- * @throws {Error} - if complexity data is not submitted
+ *
+ * @throw {Error} - if complexity data is not submitted
  */
 export function onComplexitySubmit(event) {
   event.preventDefault();
@@ -24,8 +25,8 @@ export function onComplexitySubmit(event) {
 /**
  * Get the selected game complexity level from localStorage
  *
- * @returns {string} - the selected game complexity
- * @throws {Error} - if complexity data is not found
+ * @return {string} - the selected game complexity
+ * @throw {Error} - if complexity data is not found
  */
 export function getComplexity() {
   const complexity = localStorage.getItem("Complexity");

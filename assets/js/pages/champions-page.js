@@ -62,7 +62,7 @@ function newChampions(champions) {
  * @param {string} text - text for innerHTML property
  * @param  {...string} classList - class / list classes
  *
- * @returns DOM div element
+ * @return DOM div element
  */
 function createDiv(id, text, ...classList) {
   const div = document.createElement("div");

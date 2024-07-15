@@ -23,8 +23,8 @@ export function setDefaultChampions() {
 /**
  * Get the list of champions from localStorage
  *
- * @returns {array} - the parsed list of champions from localStorage
- * @throws {Error} - throws an error if champion data is not found
+ * @return {array} - the parsed list of champions from localStorage
+ * @throw {Error} - if champion data is not found
  */
 export function getChampions() {
   const champions = localStorage.getItem("Champions");
@@ -51,7 +51,8 @@ export function setChampions(champions) {
  * see `recordUserScore` function below
  *
  * @param {number} index - user's index in champion's list
- * @returns user's index on the champion's board or -1
+ *
+ * @return {number} - user's index on the champion's board or -1
  */
 function turnIndexIntoPlace(index) {
   if (index === -1) return -1;
@@ -65,7 +66,8 @@ function turnIndexIntoPlace(index) {
  * @param {string} username - the name of the user
  * @param {number} score - the score achieved by the user
  * @param {Date} timeStamp - the timestamp when the score was achieved
- * @returns {number} - the place on the champion's board or -1
+ *
+ * @return {number} - the place on the champion's board or -1
  */
 export function recordUserScore(username, score, timeStamp) {
   let champions = getChampions();

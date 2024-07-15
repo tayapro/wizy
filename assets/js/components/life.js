@@ -8,7 +8,7 @@ let randomAnimation = animations[0]; // Set initial CSS class for animation
 /**
  * Retrieve a random index of used life
  *
- * @returns {number} - random index of used life
+ * @return {number} - random index of used life
  */
 function getRandomLifeIndex() {
   let items = Array.from(lifeIndexArray);
@@ -76,7 +76,7 @@ export function removeLife(onGameOver) {
 /**
  * Retrieve the current number of remaining lives
  *
- * @returns {number} - number of remaining lives
+ * @return {number} - number of remaining lives
  */
 export function getLifeCount() {
   return lifeIndexArray.size;

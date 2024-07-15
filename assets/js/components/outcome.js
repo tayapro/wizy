@@ -5,7 +5,7 @@ import { animate } from "../lib/animate.js";
  *
  * @param {object} outcome - the outcome object to validate
  *
- * @throws an error if any parameter is invalid
+ * @throw an error if any parameter is invalid
  */
 function validateOutcome(outcome) {
   const { score, tier, isWin, timeStamp } = outcome;
@@ -34,8 +34,8 @@ function validateOutcome(outcome) {
 /**
  * Get the game outcome from localStorage and validate it
  *
- * @returns {object} - the validated game outcome
- * @throws an error if the outcome is not found or invalid
+ * @return {object} - the validated game outcome
+ * @throw an error if the outcome is not found or invalid
  */
 export function getGameOutcome() {
   const outcomeStr = localStorage.getItem("Outcome");

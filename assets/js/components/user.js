@@ -22,8 +22,8 @@ export function setUser(username) {
 /**
  * Get the username from localStorage
  *
- * @returns {string} - the stored username
- * @throws {Error} - if username data is not found
+ * @return {string} - the stored username
+ * @throw {Error} - if username data is not found
  */
 export function getUser() {
   const username = localStorage.getItem("Username");
