@@ -64,14 +64,15 @@ The WIZY Hangman Game aims to provide an engaging and enjoyable user experience.
 
 As a **user**,
 
+- I want to easily navigate the website.
 - I want to easily understand the primary objective of the website.
 - I want to see something personal, like my name or initials.
 - I want to view a tutorial or instructions, so that I understand how to play the game.
 - I want to select the difficulty level of the game, so that I can choose how challenging the game will be.
 - I want to see animations when I guess a letter correctly or incorrectly, so that the game feels more interactive and engaging.
 - I want to see a win or lose animation, images, message at the end of the game, so that I know the outcome.
+- I want to easily start a new game under my current username and quickly select level of new game.
 - I want to view a leaderboard of top scores, so that I can compare my performance with others.
-- I want to easily navigate the website.
 - I want to make sure I don't get lost on this website.
 
 ## Wireframes
@@ -379,7 +380,7 @@ The LocalStorage will store a new `Complexity` record as a key and LEVEL number 
 
 ### F14 Champions page
 
-The champions page has a clean card design, with a stars image and a list of champions ranked from first to fifth place.
+The champions page has a clean card design, with a stars image and a list of current champions ranked from first to fifth place.
 The design of Champions page is consistent across all devices.
 
 <p float="left">
@@ -620,7 +621,7 @@ The WIZY web application uses several libraries and tools to enhance functionali
 | Font Awesome                                              | Icons                                                   |
 | Favicon.cc                                                | Create website favicon                                  |
 | [Photopea](https://www.photopea.com/)                     | Work with images (resize, convert, etc)                 |
-| [GoDaddy](https://www.godaddy.com/)                       | Generate HEPY logo                                      |
+| [GoDaddy](https://www.godaddy.com/)                       | Generate WIZY logo                                      |
 | [Pixelcut](https://create.pixelcut.ai/background-remover) | Remove image's background                               |
 | [Vmake.ai](https://vmake.ai/image-outpainting)            | Expand the image                                        |
 | [Imagecolorpicker](https://imagecolorpicker.com)          | Color picker                                            |
@@ -656,12 +657,51 @@ This section shows connection between [Features](#features) and [UX design](#ux-
   > The user can locate the necessary pages by using the links in the navigation bar. \
   > For more details, see **F01 Navigation bar** feature section.
 
-- I want to feel welcomed on WIZY website.
+- I want to easily understand the primary objective of the website.
+
+  > The website uses the playful pineapple, along with a catchy tagline and a prompt to start playing, to create a fun theme. There's a button to enter your name and start the game easily. \
+  > For more details, see **F02 Home page - image and call to action** feature section.
+
+- I want to see something personal, like my name or initials.
+
+  > On `Rules` and `Game` pages a player could see their name's first letter displayed as an icon (this applies to all screen sizes). \
+  > For more details, see **F07 Rules page - user's icon** feature section.
+
+- I want to view a tutorial or instructions, so that I understand how to play the game.
+
+  > Users can learn the game rules on the `Rules` page, where everything is explained clearly and simply. \
+  > For more details, see **F05 Rules page** feature section.
+
+- I want to select the difficulty level of the game, so that I can choose how challenging the game will be.
+
+  > The dropdown menu on `Rules` page lets players choose from three different difficulty levels for the next game. \
+  > For more details, see **F06 Rules page - select form** feature section.
+
+- I want to see animations when I guess a letter correctly or incorrectly, so that the game feels more interactive and engaging.
+
+  > A random life block flips over with animation when the player makes a wrong guess.
+  > When pressed, each button transforms slightly, becomes inactive, and changes to a muted color, blocking further presses. \
+  > For more details, see **F09 Game page - lives blocks**, **F10 Game page - alphabet buttons** feature sections.
+
+- I want to see a win or lose animation, images, message at the end of the game, so that I know the outcome.
+
+  > The `Outcome` page offers different views, including mobile and desktop versions with various animations for the stars earned. If the player loses, the page displays a humorous image of a girl and encourages them to play again. \
+  > For more details, see **F11 Outcome page**, **F12 Outcome page - aminated stars**, feature sections.
+
+- I want to easily start a new game under my current username and quickly select level of new game.
+
+  > The `Outcome` page features a dropdown menu listing different difficulty levels, allowing users to easily select a level for their next game. \
+  > For more details, see **F13 Outcome page - select form** feature section.
+
+- I want to view a leaderboard of top scores, so that I can compare my performance with others.
+
+  > The `Champions` page displays a leaderboard showcasing the top 5 scores achieved by players. \
+  > For more details, see **F14 Champions page** feature section.
 
 - I want to make sure I don't get lost on this website.
 
-  > In case of the user find themself on 404 page, they easily to find a link to HEPY home page. \
-  > For more details, see **#F16 page 404** features section.
+  > In case of the user find themself on 404 or 500 pages, they easily to find a link to WIZY home page. \
+  > For more details, see **#F17 page 404** & **#F18 page 500** features sections.
 
 ## Validator testing
 
@@ -901,7 +941,7 @@ Testing has been carried out on the following devices:
 ## Known Bugs
 
 The WIZY game is adapted for portrait view on mobile devices. <br>
-On such devices, the horizontal display of the game (game.html) is incomplete (cropped).
+On such devices, the landscape display of the game (game.html) is incomplete (cropped).
 
 # Deployment
 
