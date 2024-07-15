@@ -159,7 +159,7 @@ approachable feel, making it a great choice for game apps.
 
 ### Interactive Elements
 
-Animations were added to the stars and life icons to make the WIZY game more dynamic and engaging. The animations are subtle yet effective in providing feedback to the user.
+Animations were added to the stars and life icons to make the WIZY game more dynamic and engaging. They are effective in providing feedback to the user.
 
 # Features
 
@@ -230,7 +230,7 @@ The LocalStorage will store a `Complexity` record as a key and LEVEL number as v
 
 Complexity levels mapping:
 
-| Complexity's name    | number in WIZY system |
+| Complexity's name    | Number in WIZY system |
 | :------------------- | :-------------------- |
 | _Picnic in the Park_ | 0                     |
 | _Campfire Tales_     | 1                     |
@@ -291,7 +291,7 @@ Short video with lives blocks animation:
 
 ### F10 Game page - alphabet buttons
 
-Alright, so everything is working smoothly with the live blocks animations, but what about the letter buttons? <br >
+Alright, so everything works smoothly with the life blocks animations, but what about the letter buttons? <br >
 
 With them, it's a bit simpler - when each button is pressed, it undergoes a small transformation.
 After that, the button becomes inactive, the color of the letter changes to a more muted shade, and pressing it is then blocked.
@@ -358,7 +358,7 @@ After every game, a player is encouraged to start a new game by selecting the di
 
 <table style="border:none;">
    <tr>
-      <td width="220px">
+      <td width="220">
          <img src="./assets/images/readme/3_stars_animation.gif" width="210" alt="3 stars animation">
       </td>
       <td>
@@ -421,7 +421,7 @@ As a result, the list of champions on the champions page will be updated.
 
 <table style="border:none;">
    <tr>
-      <td width="220px">
+      <td width="220">
          <img src="assets/images/readme/f16_watermelon_desktop.png" alt="watermelon 404 page desktop view image"/>
       </td>
       <td>
@@ -442,7 +442,7 @@ As a result, the list of champions on the champions page will be updated.
 
 <table style="border:none;">
    <tr>
-      <td width="220px">
+      <td width="220">
          <img src="assets/images/readme/f17_pineapple_desktop.png" alt="pineapple 500 page desktop view image"/>
       </td>
       <td>
@@ -642,7 +642,15 @@ The WIZY web application uses several libraries and tools to enhance functionali
 
 ## Features testing
 
-[Test results]() as Google sheets.
+[UX test results](https://docs.google.com/spreadsheets/d/1rfyoy3ob9CIXVh3fwx9dyyEkgKEeYpvD35Xp1f9pLkM/edit?gid=29067541#gid=29067541) as Google sheets.
+
+<details><summary>UX test results as screenshots</summary>
+  <img src="assets/images/readme/ux_feature_test_results1.png" width="1000" alt="ux feature test results">
+  <img src="assets/images/readme/ux_feature_test_results2.png" width="1000" alt="ux feature test results">
+  <img src="assets/images/readme/ux_feature_test_results3.png" width="1000" alt="ux feature test results">
+  <img src="assets/images/readme/ux_feature_test_results4.png" width="1000" alt="ux feature test results">
+  <img src="assets/images/readme/ux_feature_test_results5.png" width="1000" alt="ux feature test results">
+</details>
 
 Responsive layout has been check for all screen sizes, and focused on most popular, based on [screen-resolution-stats](https://gs.statcounter.com/screen-resolution-stats/all/worldwide/2023).
 
@@ -712,31 +720,31 @@ All pages passed without any errors or warnings <br>
 (except for the `outcome.html` page, where the `game-outcome` header changes based on the game's result).
 
 <details><summary>Home</summary>
-<img src="assets/images/readme/W3HTML_validation_landing.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_landing.png" width="500">
 </details>
 
 <details><summary>Rules</summary>
-<img src="assets/images/readme/W3HTML_validation_rules.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_rules.png" width="500">
 </details>
 
 <details><summary>Game</summary>
-<img src="assets/images/readme/W3HTML_validation_game.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_game.png" width="500">
 </details>
 
 <details><summary>Outcome</summary>
-<img src="assets/images/readme/W3HTML_validation_outcome.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_outcome.png" width="500">
 </details>
 
 <details><summary>Champions</summary>
-<img src="assets/images/readme/W3HTML_validation_champions.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_champions.png" width="500">
 </details>
 
 <details><summary>404 page</summary>
-<img src="assets/images/readme/W3HTML_validation_404page.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_404page.png" width="500">
 </details>
 
 <details><summary>500 page</summary>
-<img src="assets/images/readme/W3HTML_validation_500page.png" width="500px">
+<img src="assets/images/readme/W3HTML_validation_500page.png" width="500">
 </details>
 
 ### CSS Validator
@@ -752,6 +760,13 @@ The CSS page passed without any errors or warnings.
 
 The JSHint Validation Service was employed to check the JS files. <br>
 The JS files passed without any errors.
+
+Right now, there are some warnings about ES6 compatibility.
+Based on https://caniuse.com/?search=es6
+
+> _As ES6 refers to a huge specification and browsers have various levels of support, "Supported" means at least 95% of the spec is supported_.
+
+they can be safely ignored for WIZY project.
 
 <details><summary>js/components/alphabet.js</summary>
 <img src="assets/images/readme/alphabet_validation.png" width="300">
@@ -834,13 +849,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### Rules
 
 <details><summary>Rules desktop</summary>
-<img src="assets/images/readme/rules_desktop.png" width="500px">
+<img src="assets/images/readme/rules_desktop.png" width="500">
 </details>
 
 ![Rules desktop numbers](assets/images/readme/rules_desktop_numbers.png)
 
 <details><summary>Rules mobile</summary>
-<img src="assets/images/readme/rules_mobile.png" width="500px">
+<img src="assets/images/readme/rules_mobile.png" width="500">
 </details>
 
 ![Rules mobile numbers](assets/images/readme/rules_mobile_numbers.png)
@@ -848,13 +863,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### Game
 
 <details><summary>Game desktop</summary>
-<img src="assets/images/readme/game_desktop.png" width="500px">
+<img src="assets/images/readme/game_desktop.png" width="500">
 </details>
 
 ![Game desktop numbers](assets/images/readme/game_desktop_numbers.png)
 
 <details><summary>Game mobile</summary>
-<img src="assets/images/readme/game_mobile.png" width="500px">
+<img src="assets/images/readme/game_mobile.png" width="500">
 </details>
 
 ![Game mobile numbers](assets/images/readme/game_mobile_numbers.png)
@@ -862,13 +877,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### Outcome
 
 <details><summary>Outcome desktop</summary>
-<img src="assets/images/readme/outcome_desktop.png" width="500px">
+<img src="assets/images/readme/outcome_desktop.png" width="500">
 </details>
 
 ![Outcome desktop numbers](assets/images/readme/outcome_desktop_numbers.png)
 
 <details><summary>Outcome mobile</summary>
-<img src="assets/images/readme/outcome_mobile.png" width="500px">
+<img src="assets/images/readme/outcome_mobile.png" width="500">
 </details>
 
 ![Outcome mobile numbers](assets/images/readme/outcome_mobile_numbers.png)
@@ -876,13 +891,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### Champions
 
 <details><summary>Champions desktop</summary>
-<img src="assets/images/readme/champions_desktop.png" width="500px">
+<img src="assets/images/readme/champions_desktop.png" width="500">
 </details>
 
 ![Champions desktop numbers](assets/images/readme/champions_desktop_numbers.png)
 
 <details><summary>Champions mobile</summary>
-<img src="assets/images/readme/champions_mobile.png" width="500px">
+<img src="assets/images/readme/champions_mobile.png" width="500">
 </details>
 
 ![Champions mobile numbers](assets/images/readme/champions_mobile_numbers.png)
@@ -890,13 +905,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### 404 page
 
 <details><summary>404 page desktop</summary>
-<img src="assets/images/readme/404page_desktop.png" width="500px">
+<img src="assets/images/readme/404page_desktop.png" width="500">
 </details>
 
 ![404 page desktop numbers](assets/images/readme/404page_desktop_numbers.png)
 
 <details><summary>404 page mobile</summary>
-<img src="assets/images/readme/404page_mobile.png" width="500px">
+<img src="assets/images/readme/404page_mobile.png" width="500">
 </details>
 
 ![404 page mobile numbers](assets/images/readme/404page_mobile_numbers.png)
@@ -904,13 +919,13 @@ Google Lighthouse in Google Chrome Developer Tools was used to check the website
 ### 500 page
 
 <details><summary>500 page desktop</summary>
-<img src="assets/images/readme/500page_desktop.png" width="500px">
+<img src="assets/images/readme/500page_desktop.png" width="500">
 </details>
 
 ![500 page desktop numbers](assets/images/readme/500page_desktop_numbers.png)
 
 <details><summary>500 page mobile</summary>
-<img src="assets/images/readme/500page_mobile.png" width="500px">
+<img src="assets/images/readme/500page_mobile.png" width="500">
 </details>
 
 ![500 page mobile numbers](assets/images/readme/500page_mobile_numbers.png)
@@ -928,7 +943,6 @@ Testing has been carried out on the following devices:
 2. Samsung S20:
 
    - Chrome Version 125.0.6422.165
-   - Samsung Internet Version 25.0.1.3
 
 3. iPad Air 5th generation:
 
@@ -940,8 +954,8 @@ Testing has been carried out on the following devices:
 
 ## Known Bugs
 
-The WIZY game is adapted for portrait view on mobile devices. <br>
-On such devices, the landscape display of the game (game.html) is incomplete (cropped).
+- The WIZY game is adapted for portrait view on mobile devices. <br>
+  On such devices, the landscape display of the game (game.html) is incomplete (cropped).
 
 # Deployment
 

@@ -159,7 +159,6 @@ function pickRandomWord(wordList) {
  */
 export function newWord(complexity) {
   theWord = pickRandomWord(dictionary[complexity]);
-  console.log(theWord);
   theMatchedLetters = new Set();
   const container = document.getElementById("letter-container");
   container.innerHTML = "";

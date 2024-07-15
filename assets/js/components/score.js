@@ -70,12 +70,6 @@ export function getScoreTier(
   maxTime,
   complexity
 ) {
-  console.log("totalMiskates: ", totalMiskates);
-  console.log("maxMistakes: ", maxMistakes);
-  console.log("totalTime: ", totalTime);
-  console.log("maxTime: ", maxTime);
-  console.log("complexity: ", complexity);
-
   const score = getScore(totalMiskates, maxMistakes, totalTime, maxTime);
 
   // Determine the tier by comparing the score with predefined cutoffs for the specified complexity level
