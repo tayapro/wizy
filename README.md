@@ -30,6 +30,7 @@
   - [Validator testing](#validator-testing)
   - [Performance](#performance)
   - [Device/Browser Compatibility](#devicebrowser-compatibility)
+  - [Known Bugs](#known-bugs)
 - [Deployment](#deployment)
   - [How to fork and deploy](#how-to-fork-and-deploy)
   - [How to clone](#how-to-clone)
@@ -265,6 +266,9 @@ In the top right corner of the header, users can see their name's first letter d
 On the Game page, the user's `Username` and `Complexity` records in localStorage are preset based on previous steps.
 The chosen word is randomly selected according to the complexity level.
 
+> [!NOTE]
+> Right now, the Game page has some issues in landscape mode for mobile devices. Check out the [Future Features](#future-features) section for more details.
+
 ### F09 Game page - lives blocks
 
 The vacation-themed images blend seamlessly with the WIZY app's design, adding simplicity and vibrant colors.
@@ -457,11 +461,13 @@ As a result, the list of champions on the champions page will be updated.
 
 ## Future Features
 
+> - Block mobile device rotation to landscape mode OR improve CSS styles.
 > - Create a unique personal account to track user's progress.
 > - Option to pause the game.
 > - Get hints or clues, when a user is stuck.
 > - Allow a user to log out by clicking the icon with the first letter of your username in the header and confirming.
 > - Add the weight of the complexity level to the score calculation.
+> - On the current stage, there are no `removeEventListeners` in the WIZY project, which could potentially lead to memory leaks if not properly managed in the future, but this will be addressed in upcoming updates to ensure optimal performance.
 
 # Project UI Structure and Infomation Architecture
 
@@ -892,6 +898,11 @@ Testing has been carried out on the following devices:
 4. Windows PC:
    - Chrome Version 124.0.6367.61 (Official Build) (arm64)
 
+## Known Bugs
+
+The WIZY game is adapted for portrait view on mobile devices. <br>
+On such devices, the horizontal display of the game (game.html) is incomplete (cropped).
+
 # Deployment
 
 ## How to fork and deploy
@@ -942,6 +953,6 @@ Testing has been carried out on the following devices:
 
 # Acknowledgments
 
-I want to give a big thanks to my mentor, Ronan McClelland. He gave me awesome advice on how to plan and do this project. <br>
-Plus, he showed me useful stuff for coding and testing. <br>
-Thanks to the Slack Community for always being there to answer my questions, sometimes even before I asked them!
+I want to say a big thank you to my mentor, Ronan McClelland. He gave me great advice on planning and doing this project. He also taught me a lot about coding and testing. <br>
+
+Thanks to the Slack Community too! They were always ready to help and answer my questions, sometimes even before I asked them.
