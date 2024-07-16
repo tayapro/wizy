@@ -460,6 +460,10 @@ As a result, the list of champions on the champions page will be updated.
 > [!NOTE]
 > The picture cropping on small screens is intentional and reflects the author's personal style.
 
+### F19 Error Handling and Page Redirection
+
+The WIZY application is designed to ensure a smooth user experience by catching all errors during the loading process or in case of incorrect data. When the application detects an error, it automatically redirects the user to a custom error page (500.html). This proactive error handling helps maintain the app's stability and provides users with a clear indication that something went wrong, along with a path to get back on track.
+
 ## Future Features
 
 > - Block mobile device rotation to landscape mode OR improve CSS styles.
