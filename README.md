@@ -642,15 +642,21 @@ The WIZY web application uses several libraries and tools to enhance functionali
 
 ## Features testing
 
-[UX test results](https://docs.google.com/spreadsheets/d/1rfyoy3ob9CIXVh3fwx9dyyEkgKEeYpvD35Xp1f9pLkM/edit?gid=29067541#gid=29067541) as Google sheets.
+  <details><summary><a href="https://docs.google.com/spreadsheets/d/1rfyoy3ob9CIXVh3fwx9dyyEkgKEeYpvD35Xp1f9pLkM/edit?gid=29067541#gid=29067541">UX test results</a></summary>
+    <img src="assets/images/readme/ux_feature_test_results1.png" width="1000" alt="ux feature test results">
+    <img src="assets/images/readme/ux_feature_test_results2.png" width="1000" alt="ux feature test results">
+    <img src="assets/images/readme/ux_feature_test_results3.png" width="1000" alt="ux feature test results">
+    <img src="assets/images/readme/ux_feature_test_results4.png" width="1000" alt="ux feature test results">
+    <img src="assets/images/readme/ux_feature_test_results5.png" width="1000" alt="ux feature test results">
+  </details>
 
-<details><summary>UX test results as screenshots</summary>
-  <img src="assets/images/readme/ux_feature_test_results1.png" width="1000" alt="ux feature test results">
-  <img src="assets/images/readme/ux_feature_test_results2.png" width="1000" alt="ux feature test results">
-  <img src="assets/images/readme/ux_feature_test_results3.png" width="1000" alt="ux feature test results">
-  <img src="assets/images/readme/ux_feature_test_results4.png" width="1000" alt="ux feature test results">
-  <img src="assets/images/readme/ux_feature_test_results5.png" width="1000" alt="ux feature test results">
-</details>
+  <details><summary><a href="https://docs.google.com/spreadsheets/d/1rfyoy3ob9CIXVh3fwx9dyyEkgKEeYpvD35Xp1f9pLkM/edit?gid=0#gid=0">JS manual test results</a></summary>
+    <img src="assets/images/readme/js_manual_test_results1.png" width="1000" alt="js manual test results">
+    <img src="assets/images/readme/js_manual_test_results2.png" width="1000" alt="js manual test results">
+    <img src="assets/images/readme/js_manual_test_results3.png" width="1000" alt="js manual test results">
+    <img src="assets/images/readme/js_manual_test_results4.png" width="1000" alt="js manual test results">
+    <img src="assets/images/readme/js_manual_test_results5.png" width="1000" alt="js manual test results">
+  </details>
 
 Responsive layout has been check for all screen sizes, and focused on most popular, based on [screen-resolution-stats](https://gs.statcounter.com/screen-resolution-stats/all/worldwide/2023).
 
