@@ -1017,6 +1017,6 @@ Testing has been carried out on the following devices:
 
 # Acknowledgments
 
-I want to say a big thank you to my mentor, Ronan McClelland. He gave me great advice on planning and doing this project. He also taught me a lot about coding and testing. <br>
+I want to give a big thanks to my mentor, Ronan McClelland, for his helpful feedback, great advices, and constant support. <br>
 
 Thanks to the Slack Community too! They were always ready to help and answer my questions, sometimes even before I asked them.
